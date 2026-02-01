@@ -8,54 +8,161 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+struct CardView: View {
+    let nativeLanguage: String = "ru"
 
+    var data: Card
+    @State var isFlipped: Bool = false
+    
+    var onComplete: () -> Void
+    
+    private func complete() {
+        isFlipped = false
+        onComplete()
+    }
+    
+    @ViewBuilder
+    var defaultState: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Text(data.category)
+                    .fontDesign(.serif)
+                Spacer()
+                Text("🗣️")
+                    .font(.system(size: 40))
+                    .onTapGesture {
+                    }
+            }
+            .padding()
+            Spacer()
+            Text(data.word)
+                .fontDesign(.serif)
+                .font(.largeTitle)
+            Text(data.partOfSpeech)
+                .fontDesign(.serif)
+                .font(.headline)
+                .fontWeight(.thin)
+                .foregroundStyle(Color.secondary)
+
+            Spacer()
+            
+            HStack(spacing: 32) {
+                Button {
+                    
+                } label: {
+                    Text("Ignore")
+                }
+            }
+            .padding(.vertical)
+        }
+    }
+    
+    @ViewBuilder
+    var flippedState: some View {
+        let sentence = data.getRandomSentence(translation: nativeLanguage)
+        VStack {
+            HStack {
+                Spacer()
+                Text(data.category)
+                Spacer()
+                Text("🗣️")
+                    .font(.system(size: 40))
+                    .onTapGesture {
+                    }
+            }
+            .padding()
+            Spacer()
+            Text(data.getTranslation(nativeLanguage))
+                .fontDesign(.serif)
+                .font(.largeTitle)
+            Text(data.word)
+                .fontDesign(.serif)
+                .foregroundStyle(Color.secondary)
+                .font(.headline)
+            Text(data.partOfSpeech)
+                .fontDesign(.serif)
+                .font(.headline)
+                .fontWeight(.thin)
+                .foregroundStyle(Color.secondary)
+            
+            Divider().padding(.vertical)
+            
+            Text(sentence.text)
+                .fontDesign(.serif)
+                .italic()
+                .font(.title2)
+                .padding(.vertical)
+            Text(sentence.translation)
+                .fontDesign(.serif)
+                .foregroundStyle(Color.secondary)
+                .font(.default)
+
+            Spacer()
+            
+            HStack(spacing: 32) {
+                Button {
+                    complete()
+                } label: {
+                    Text("Easy")
+                }
+
+                Button {
+                    complete()
+                } label: {
+                    Text("Good")
+                }
+                
+                Button {
+                    complete()
+                } label: {
+                    Text("Hard")
+                }
+            }
+            .padding(.vertical)
+        }
+        .multilineTextAlignment(.center)
+        .padding()
+    }
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+        ZStack {
+            Color.white
+            Group {
+                if isFlipped {
+                    flippedState
+                } else {
+                    defaultState
                 }
             }
-        } detail: {
-            Text("Select an item")
+            .contentShape(.rect)
         }
+        .onTapGesture {
+            isFlipped.toggle()
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 24))
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+struct ContentView: View {
+    let cards: [Card]
+    @State var activeCard: Card
+    
+    var body: some View {
+        CardView(data: activeCard) {
+            activeCard = cards.randomElement()!
         }
+        .padding()
+        .background(Color.gray)
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+    
+    init(cards: [Card]) {
+        self.cards = cards
+        self.activeCard = cards.randomElement()!
     }
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    let cardsProvider = CardsProvider()
+    ContentView(cards: cardsProvider.getAllCards(for: "en"))
 }

@@ -1,0 +1,3495 @@
+{
+  "metadata": {
+    "source": "summarizer.org",
+    "sentences_per_word": 10,
+    "level": "A1",
+    "total_words": 276
+  },
+  "words": [
+    {
+      "word": "he",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "He goes to the store to buy some bread and milk today.",
+        "Every morning, he wakes up early and makes a big breakfast for himself.",
+        "He likes to read a book in the park during his free time.",
+        "After dinner, he washes the dishes and cleans the kitchen every evening.",
+        "He enjoys watching movies at home when it is a rainy day.",
+        "At work, he helps his coworkers and shares ideas for better projects often.",
+        "He plays soccer with his friends every weekend in the local park.",
+        "During summer, he goes swimming at the beach and enjoys the sun a lot.",
+        "He takes his dog for a walk every day after he finishes lunch.",
+        "Before sleeping, he listens to music and thinks about his day calmly."
+      ]
+    },
+    {
+      "word": "her",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "She loves to read her favorite book every day after dinner.",
+        "Her brother plays soccer in the park with his friends every weekend.",
+        "Every Saturday, she goes shopping with her mother for groceries.",
+        "Her cat sleeps on the couch while she watches TV in the evening.",
+        "They see her friend at the coffee shop every morning before work.",
+        "Her teachers give her fun homework that she enjoys doing at home.",
+        "She takes her dog for a walk around the neighborhood after dinner.",
+        "In summer, her family visits the beach to swim and build sandcastles.",
+        "She likes to wear her blue dress on special days like birthdays.",
+        "Her grandmother tells her stories about the past during their evening chats."
+      ]
+    },
+    {
+      "word": "him",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "I see him at the park every day after school and smile.",
+        "When I have lunch, I like to share my food with him sometimes.",
+        "He helps me with my homework when I do not understand it.",
+        "I walk my dog in the evening, and he walks with us too.",
+        "We watch movies together at home, and he always picks funny ones.",
+        "I call him on the phone when I need help with cooking.",
+        "He tells me stories about his life that make me laugh a lot.",
+        "After work, we often meet at the cafe to drink coffee together.",
+        "I ask him questions about the book we are reading in class.",
+        "On weekends, we play soccer in the park and have fun together."
+      ]
+    },
+    {
+      "word": "I",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "I like to drink coffee every morning before I go to work.",
+        "I go to the supermarket after work, and I buy fresh vegetables and fruits for dinner with my family this evening.",
+        "I read a book in the park during my lunch break every day.",
+        "I enjoy walking my dog in the evenings while listening to music and thinking about my day, which helps me relax after work.",
+        "I often call my sister to talk about our weekend plans and share news about our lives because we live far apart.",
+        "I like to cook dinner for my friends on Saturday nights, and we always have a great time sharing stories and laughing together.",
+        "I listen to the radio in the car while driving to work every morning.",
+        "I write in my journal before bed to remember my thoughts and feelings from the day, which helps me sleep better at night.",
+        "I practice speaking English with my classmates to improve my language skills and feel more confident when I talk to others.",
+        "I enjoy going to the gym after work because it helps me feel healthy, and I like to meet new people there as well."
+      ]
+    },
+    {
+      "word": "it",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "It is sunny today, so I will go for a long walk.",
+        "It is important to eat breakfast every day because it gives us energy.",
+        "I think it will rain tomorrow, so I need to take an umbrella.",
+        "It is nice to drink hot coffee when it is cold outside in winter.",
+        "It sounds like fun to play games with friends at the park today.",
+        "It feels good to relax on the sofa after a long day at work.",
+        "I believe it is good to practice English every day with friends and family.",
+        "It can be hard to learn new words, but it is very helpful.",
+        "It is also fun to watch movies at home with popcorn and friends.",
+        "It seems like a good idea to read a book before going to sleep."
+      ]
+    },
+    {
+      "word": "me",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "My friend gives me a book that I read every day after dinner.",
+        "When I go to the store, I always buy some bread and milk for me.",
+        "After work, my coworker invites me to join her for coffee at the café.",
+        "Every Sunday, my sister calls me to talk about our week and share news.",
+        "In the morning, my dog helps me get up by jumping on my bed.",
+        "At the gym, I see a trainer who teaches me new exercises for my health.",
+        "This evening, my parents cook dinner and ask me if I want pizza.",
+        "When it rains, I take an umbrella with me to stay dry outside later.",
+        "On my way home, I meet a nice neighbor who waves and says hello to me.",
+        "After dinner, my family often watches a movie together that makes us all laugh."
+      ]
+    },
+    {
+      "word": "she",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "She goes to the store every Saturday to buy fresh fruits and vegetables.",
+        "In the morning, she wakes up early, drinks coffee, and reads her book quietly at home.",
+        "She loves to walk in the park near her house every evening.",
+        "After school, she helps her little brother with his homework and makes dinner for the family.",
+        "She enjoys painting pictures and often shares her art with friends and family.",
+        "On sunny days, she likes to ride her bike around the neighborhood and explore.",
+        "She usually listens to music while cooking dinner to make it more fun.",
+        "At the library, she finds interesting books and studies for her classes with focus.",
+        "She often visits her grandmother to share stories and have tea together in the garden.",
+        "During the weekend, she attends a yoga class to relax and improve her health."
+      ]
+    },
+    {
+      "word": "them",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "I see them at the park every day after I finish work.",
+        "They are playing football in the field, and I want to join them.",
+        "She gave them some apples from her garden last week during lunch.",
+        "When I walk my dog, I often see them walking together on the street.",
+        "My friends invite them to the party, and many people are very happy.",
+        "Today, I saw them reading books at the library when I entered.",
+        "The teacher told them to finish the homework before coming to class.",
+        "My brother and sister like to watch movies, and I enjoy being with them.",
+        "I will tell them the news as soon as I finish my work.",
+        "After dinner, we plan to play games together, and everyone is excited to join them."
+      ]
+    },
+    {
+      "word": "they",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "They go to the park every Saturday with their friends and family members.",
+        "In the morning, they eat breakfast together and talk about their day ahead.",
+        "They enjoy reading books during their free time in the cozy living room.",
+        "They help each other with their homework in the evening after school ends.",
+        "Every Sunday, they visit their grandparents and share stories about their lives.",
+        "They like to play games on the weekend, which makes them feel happy.",
+        "They watch movies together in the evening, making popcorn for everyone to share.",
+        "After dinner, they often clean the kitchen and discuss what to cook next.",
+        "They often walk their dog in the neighborhood and enjoy the fresh air.",
+        "Every month, they buy fresh vegetables at the market and learn new recipes."
+      ]
+    },
+    {
+      "word": "us",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "Can you help us find the way to the nearest bus stop?",
+        "The teacher asked us to read the book and answer the questions together.",
+        "We need to buy food for our picnic at the park this weekend.",
+        "My friends invited us to their house for a movie night on Friday.",
+        "Let us play soccer in the park after we finish our homework today.",
+        "The mother tells us to clean our rooms before we can play outside.",
+        "I saw a cat follow us while we walked to the school this morning.",
+        "Can you please remind us to bring our books to class every day?",
+        "The children always enjoy singing songs when the teacher is with us.",
+        "We decided to visit the museum together because it is interesting for us."
+      ]
+    },
+    {
+      "word": "we",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "We go to the park every Sunday to enjoy the fresh air together.",
+        "In the morning, we eat breakfast, drink coffee, and talk about our plans.",
+        "We walk our dog in the evening when the weather is nice outside.",
+        "After work, we meet friends at the café for a quick snack and chat.",
+        "We like to watch movies together on weekends because it is very fun.",
+        "On rainy days, we stay home and play board games or watch TV shows.",
+        "We shop for groceries every Saturday at the market near our house.",
+        "During the summer, we often visit the beach and swim in the sea.",
+        "We study English every day to improve our language skills and communication.",
+        "In the evening, we cook dinner together and listen to music we enjoy."
+      ]
+    },
+    {
+      "word": "you",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Personal",
+      "sentences": [
+        "You are my friend, and we like to play together after school.",
+        "When you go to the store, can you buy some milk and bread?",
+        "You always help me with my homework, and I appreciate your support.",
+        "If you want to eat lunch, we can go to the café nearby.",
+        "You can find many books in the library that are very interesting.",
+        "Do you like to watch movies on weekends with your family or friends?",
+        "You wear a blue shirt today, and it looks very nice on you.",
+        "If you see my dog, please take him back to our house quickly.",
+        "You need to practice speaking English every day to become more confident.",
+        "Can you tell me what time you want to meet for dinner tonight?"
+      ]
+    },
+    {
+      "word": "this",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Demonstrative",
+      "sentences": [
+        "This is my favorite book that I read every night before sleeping.",
+        "This morning, I woke up early, made breakfast, and then went for a walk.",
+        "This shop has nice clothes, and I want to buy a new shirt.",
+        "This is the best coffee I have ever tasted, and I love it!",
+        "This week, I will meet my friends at the park to play soccer.",
+        "This computer is very slow, so I need to fix it soon.",
+        "This is the table where we eat dinner together every evening as a family.",
+        "This film is interesting and funny, making everyone laugh and enjoy the show.",
+        "This weekend, I plan to visit my grandparents and help them with chores.",
+        "This city has many parks, and I like to walk and relax outdoors."
+      ]
+    },
+    {
+      "word": "yourself",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Reflexive",
+      "sentences": [
+        "It is important to take care of yourself every day with love.",
+        "In the morning, look in the mirror and say to yourself, \"I am ready.\"",
+        "You can help yourself by drinking water and eating healthy food.",
+        "When you feel sad, remember to talk to yourself and think positively.",
+        "It feels good to take some time for yourself after a long day.",
+        "Sometimes, you need to treat yourself to something nice like a book.",
+        "If you want to enjoy life, you must believe in yourself always.",
+        "Each day, find a few minutes to relax and care for yourself.",
+        "Try to express yourself clearly when you talk to your friends and family.",
+        "At home, make a cozy place where you can be yourself and relax."
+      ]
+    },
+    {
+      "word": "when",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I like to drink coffee when I wake up in the morning.",
+        "When the rain falls, I stay inside and watch a movie with my family.",
+        "She feels happy when she listens to music while doing her homework.",
+        "When I finish work each day, I relax by reading a good book.",
+        "He goes for a walk when the sun sets behind the tall trees.",
+        "When my friends visit, we play games and talk about our day together.",
+        "I eat breakfast when I get ready to start my busy day ahead.",
+        "When it snows outside, the children play in the white, soft snow all day.",
+        "We go to the park when the weather is nice and sunny outside.",
+        "When I brush my teeth at night, I always remember to floss properly afterward."
+      ]
+    },
+    {
+      "word": "who",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Interrogative",
+      "sentences": [
+        "I see a man who walks fast every morning near my house.",
+        "Who is the friendly woman that helps the children in the park every day?",
+        "There is a student who always asks questions in our English class today.",
+        "I met a teacher who loves to teach us new words and phrases.",
+        "Can you tell me who makes the best coffee in our small town?",
+        "There is a cat who likes to sit by the window and watch.",
+        "The girl who sings beautifully is my best friend from school last year.",
+        "I wonder who forgot to close the door before leaving the office today.",
+        "My brother knows a person who cooks delicious food at the local restaurant.",
+        "Who is that person standing under the tree while waiting for the bus?"
+      ]
+    },
+    {
+      "word": "all",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "All people in the park are happy to enjoy the sunny day.",
+        "All of my friends and I will go to the market together today.",
+        "She liked all the books on the shelf and wanted to read them.",
+        "In the morning, all the students arrived at school before the bell rang.",
+        "All the children played games outside while the adults made lunch inside.",
+        "I called all my family members to tell them about the good news.",
+        "The restaurant serves all kinds of food, including pizza, salad, and soup.",
+        "All the flowers in the garden are blooming beautifully under the warm sun.",
+        "We invited all our neighbors for a small party at our house tonight.",
+        "All the cats in the shelter need loving homes and caring families forever."
+      ]
+    },
+    {
+      "word": "any",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Do you have any apples in your bag for our picnic today?",
+        "I do not have any money, so I cannot buy a new phone.",
+        "Can I borrow any book from the library for my English class?",
+        "She doesn't want to eat any cake because she is on a diet.",
+        "Are there any good movies to watch this weekend with my friends?",
+        "Tom does not find any interesting games to play at the park today.",
+        "Do we have any milk left in the fridge for breakfast tomorrow?",
+        "They want any help they can get to finish their project on time.",
+        "Is there any chance that you will join us for dinner tonight?",
+        "My sister does not like any vegetables, so we cook her special meals."
+      ]
+    },
+    {
+      "word": "anyone",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Does anyone want to play a game after dinner at my house?",
+        "Anyone can come to the park on Saturday to enjoy the sunny weather.",
+        "If anyone sees my book, please tell me right away, thank you!",
+        "I hope anyone who needs help will feel free to ask me.",
+        "Is there anyone here who likes to cook easy and tasty meals?",
+        "Anyone can join the club if they want to learn how to dance.",
+        "When anyone visits my city, I like to show them the best places.",
+        "Please remember that anyone can use the computer in the library today.",
+        "I wonder if anyone knows where I put my keys this morning.",
+        "Anyone who enjoys reading is welcome to join our book club this Friday."
+      ]
+    },
+    {
+      "word": "anything",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I do not have anything to eat for breakfast this morning.",
+        "Can you tell me if there is anything special we need for dinner tonight?",
+        "She does not want anything to drink, but I will have water.",
+        "Is there anything you need from the store before I go shopping later?",
+        "He does not see anything interesting on TV, so he reads a book.",
+        "If you find anything important on the floor, please let me know right away.",
+        "I don’t need anything today; I just want to relax at home.",
+        "Can you bring anything you like to the picnic for everyone to share?",
+        "There isn’t anything in my bag except my wallet and a phone.",
+        "Would you like anything from the cafe before we head to the meeting?"
+      ]
+    },
+    {
+      "word": "enough",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "She has enough books to read for the whole summer vacation.",
+        "If we want to go to the movies, we must save enough money this week.",
+        "There aren’t enough chairs for everyone in the classroom today.",
+        "The cake is very sweet, but I think it is not enough for all.",
+        "He plays the guitar well, but he does not have enough time to practice.",
+        "We walked enough to feel tired, but we enjoyed the fresh air outside.",
+        "My sister has enough toys to share with all her friends on Friday.",
+        "If you want to cook dinner tonight, you need to buy enough vegetables first.",
+        "The store has enough milk to last until the weekend for our family.",
+        "She studies hard every day and knows she has done enough for her exam."
+      ]
+    },
+    {
+      "word": "everybody",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Everybody loves to eat pizza on Friday night after a long week.",
+        "Everybody in the class was excited to start the new English lesson today.",
+        "Everybody smiles when they see a cute puppy playing in the park.",
+        "Everybody knows that water is important for health, so drink it every day.",
+        "Everybody has a favorite book that they like to read every night.",
+        "Everybody took part in the community clean-up day last Saturday to help nature.",
+        "Everybody should remember to wash their hands before eating and after playing.",
+        "Everybody in the family gathers together for dinner, sharing stories and laughs every evening.",
+        "Everybody wants to do their best in school so they can learn many things.",
+        "Everybody enjoys watching movies on weekends, and they always choose different genres together."
+      ]
+    },
+    {
+      "word": "everyone",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Everyone enjoys a sunny day at the park with friends and family.",
+        "Everyone in the classroom is quiet because the teacher is explaining the lesson clearly and carefully.",
+        "Everyone likes to eat pizza on Friday night with their friends or family.",
+        "Everyone takes turns when playing games to make sure everyone has fun together.",
+        "Everyone goes to the store to buy food for the big family dinner tonight.",
+        "Everyone helps clean up after the party so the house looks nice and tidy again.",
+        "Everyone can learn something new if they listen carefully and ask questions in class.",
+        "Everyone in my neighborhood is friendly and says hello when they walk by outside.",
+        "Everyone loves to share funny stories during lunch break at school or work.",
+        "Everyone feels happy when they receive a compliment or positive feedback from others around them."
+      ]
+    },
+    {
+      "word": "everything",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Everything in the kitchen is clean and ready for dinner tonight with friends.",
+        "She wants everything to be perfect for her birthday party this weekend at home, with balloons, cake, and music for everyone to enjoy together.",
+        "I like everything about my job because I get to help people every day.",
+        "He bought everything for the picnic, including sandwiches, juice, and a big blanket for the grass at the park where we will sit.",
+        "Everything feels right when I spend time with my family on the weekend.",
+        "They said everything will be fine if we just work together on the project and communicate well with each other during the team meetings.",
+        "I want everything in the store, but I can only buy one book.",
+        "After a long day, she wants everything to be quiet at home, so she can relax for a little while with a good movie.",
+        "Everything was ready for the trip, including bags, tickets, and snacks for the long ride.",
+        "The teacher asked if everything was clear before the students started the big test on Friday, wanting everyone to feel confident about their understanding."
+      ]
+    },
+    {
+      "word": "half",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I have half a sandwich left from lunch today. It is tasty.",
+        "He wants to share half of his pizza with his friends tonight happily.",
+        "She eats half of her apple every day for a healthy snack.",
+        "We can split the cake, so you eat half and I eat half.",
+        "They finished half of their homework before dinner, and then they played.",
+        "My friend bought half a dozen eggs and made a big omelet.",
+        "Half of the movie was very funny, and I enjoyed it very much.",
+        "The teacher said that half of the class will go on the trip.",
+        "I gave half of my candy to my brother, and he smiled.",
+        "After lunch, she drank half of her juice and felt very refreshed."
+      ]
+    },
+    {
+      "word": "little",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "The little cat slept on the warm sunny window sill all day long.",
+        "I have a little dog that loves to play with his small ball outside.",
+        "She bought a little cake to celebrate her friend’s birthday at home today.",
+        "There is a little park near my house where children play happily every afternoon.",
+        "He showed me his little toy car that he got for his birthday.",
+        "The little girl picked flowers in the garden and put them in her hair.",
+        "My mother found a little note from me and smiled with joy at breakfast.",
+        "The little baby giggled as she played with colorful blocks on the floor.",
+        "I saw a little bird singing beautifully on the branch of a tree.",
+        "They enjoyed a little picnic at the nearby beach with sandwiches and juice."
+      ]
+    },
+    {
+      "word": "nobody",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Nobody is at home right now, so I can watch TV alone.",
+        "It was a rainy day, and nobody wanted to go outside to play.",
+        "Nobody has seen my keys, and I need them to drive my car.",
+        "In the park, nobody was feeding the ducks or sitting on benches today.",
+        "Nobody knows where my book is, and I cannot find it anywhere.",
+        "At school, nobody listened to the teacher because they were all talking loudly.",
+        "When I called my friend, nobody answered the phone, so I felt sad.",
+        "Nobody is taking the bus today because it is very cold outside today.",
+        "Nobody brought lunch, so we all decided to eat at the café together.",
+        "In the quiet library, nobody was making noise; everyone was reading peacefully."
+      ]
+    },
+    {
+      "word": "nothing",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I have nothing to do today and it feels like a long day.",
+        "She looked in her bag, but found nothing inside except for an old book.",
+        "There is nothing better than a warm cup of coffee on a cold morning.",
+        "When I asked him about the game, he said there was nothing special.",
+        "In the garden, I saw nothing but flowers blooming in the bright sun.",
+        "After the storm, there was nothing left but fallen branches and wet leaves.",
+        "I found nothing to wear for the party and had to borrow a dress.",
+        "He opened the fridge and saw nothing but an empty shelf waiting for food.",
+        "On the table, there was nothing except a single plate and a fork.",
+        "They wanted to play a game, but there was nothing to play with at home."
+      ]
+    },
+    {
+      "word": "own",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I have my own book in my bag for reading every day.",
+        "She likes to drink her own coffee in the morning at home, where it is quiet and comfortable.",
+        "They want to play their own game in the park with friends.",
+        "He enjoys cooking his own meals because it is fun and healthy for him and his family.",
+        "I bought my own phone to talk with friends and family anytime I want.",
+        "The children play with their own toys in the garden during the warm afternoon sunshine, laughing and having fun together.",
+        "We each have our own desk in class to study and do our homework.",
+        "She wore her own dress to the party, and everyone said it looked beautiful and unique, just like her.",
+        "He writes in his own journal every night to express his thoughts and feelings after a busy day.",
+        "They take their own bags to the store to help the environment and save money as well, which is important for everyone."
+      ]
+    },
+    {
+      "word": "same",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I see the same dog in the park every day with joy.",
+        "She likes to wear the same red shoes as her best friend every time.",
+        "We often buy the same bread from the store on Saturdays together.",
+        "They always eat the same breakfast, which is eggs and toast in the morning.",
+        "My brother plays the same video game every evening after he finishes his homework.",
+        "The teacher gave the same homework to all the students in the class today.",
+        "I read the same book twice because I liked the story very much.",
+        "My friends wear the same jackets to stay warm when it is cold outside.",
+        "We take the same bus to school, and it comes every morning at",
+        "10. She found the same picture on the wall, and it made her smile again."
+      ]
+    },
+    {
+      "word": "some",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "I have some apples in my bag for lunch today at school.",
+        "Can you please help me find some shoes that are comfortable and not too expensive?",
+        "She wants some water after her long run in the warm sun outside.",
+        "We need some chairs for the party so that everyone can sit down together.",
+        "He bought some books from the store to read during his free time.",
+        "There are some cookies in the kitchen, and they smell really nice today.",
+        "They saw some interesting movies last weekend, and they want to watch more.",
+        "I need to buy some bread and milk before I go home from work.",
+        "Mom made some delicious pasta for dinner, and everyone enjoyed it very much.",
+        "We should invite some friends over to play games and have fun together."
+      ]
+    },
+    {
+      "word": "somebody",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Somebody left their bag on the bus this morning before I got off.",
+        "I saw somebody in the park who looked very sad and alone today.",
+        "Somebody called me yesterday, but I could not hear their voice well.",
+        "Somebody at the grocery store asked me for help finding some bread and milk.",
+        "I need somebody to help me carry these heavy boxes to my car.",
+        "Somebody in my class always helps me understand the new lessons quite well.",
+        "Somebody knocked on the door last night, but I did not answer it.",
+        "I think somebody is playing music too loud outside, and it disturbs me.",
+        "Somebody told me there is a nice cafe near my house that I love.",
+        "If somebody wants to join us for dinner, please let me know quickly."
+      ]
+    },
+    {
+      "word": "someone",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "Someone is waiting outside the store to buy some fresh fruits today.",
+        "At the park, someone is feeding the ducks while children play on the swings.",
+        "Someone in my class always helps me when I do not understand.",
+        "I saw someone jogging in the morning, enjoying the cool breeze and sun.",
+        "Someone will call you later if you leave your number on this paper.",
+        "In the kitchen, someone is baking cookies, and the smell makes me hungry.",
+        "Someone took the last book from the shelf before I could get it.",
+        "When I walk home, I always see someone walking their dog down the street.",
+        "Someone dropped their wallet on the bus, and I handed it back to them.",
+        "Everyday, someone in the neighborhood helps their elderly neighbor carry heavy groceries home."
+      ]
+    },
+    {
+      "word": "something",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "Pronouns - Indefinite",
+      "sentences": [
+        "I want something sweet after dinner to enjoy with my family tonight.",
+        "My friend asked me if I wanted something to eat at the café.",
+        "There is something special about the way the sun sets every evening.",
+        "She likes to take something warm with her when the weather gets cold.",
+        "He said something funny during the movie that made everyone laugh very hard.",
+        "I found something interesting in the book while I was reading at home.",
+        "Can you tell me something good to watch on television this weekend?",
+        "They are looking for something to do that will make them happy today.",
+        "If you see something that you like, you should definitely buy it now.",
+        "I always bring something to share with my friends when we have lunch together."
+      ]
+    },
+    {
+      "word": "lot",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "I have a lot of books in my room and they are colorful.",
+        "There is a lot of food on the table for our big dinner party this evening.",
+        "She drinks a lot of water every day because it is very healthy.",
+        "My friends and I played a lot of games at the park yesterday afternoon.",
+        "He has a lot of homework to do before he can play outside.",
+        "There are a lot of people waiting for the bus at the station right now.",
+        "We saw a lot of animals at the zoo and took many pictures.",
+        "She found a lot of beautiful shells on the beach during her vacation trip.",
+        "My brother spends a lot of time playing video games instead of studying.",
+        "There are a lot of lovely flowers blooming in the garden this spring season."
+      ]
+    },
+    {
+      "word": "every",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "Every morning, I drink coffee while I read my favorite book quietly.",
+        "Every student in the class listened carefully to the teacher’s important instructions yesterday.",
+        "I see every dog in the park playing with its owner every day.",
+        "Every Saturday, we go to the market to buy fresh fruit and vegetables together.",
+        "Every time I walk home, I enjoy looking at the beautiful flowers.",
+        "Every family should have dinner together at least once a week for bonding.",
+        "I visit my grandmother every week to help her with her garden flowers.",
+        "Every time it rains, I stay inside and watch movies with my friends happily.",
+        "Every child loves to play outside during the sunny days of summer.",
+        "Every evening, I take a walk in the neighborhood to relax after work."
+      ]
+    },
+    {
+      "word": "his",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "He took his book and sat down on the park bench today.",
+        "Yesterday, his friend gave him a small gift for his birthday party next week.",
+        "She saw his hat lying on the table near the front door.",
+        "At the cafe, he ordered his favorite coffee and a piece of cake.",
+        "His dog wagged its tail happily when he came home from work.",
+        "In the morning, he likes to drink his tea and read the news.",
+        "She watched him as he played his guitar on the quiet street.",
+        "His sister always helps him with his homework after school every day.",
+        "They found his shoes near the door when they returned from shopping.",
+        "Before bed, he reads his favorite story to relax and sleep well."
+      ]
+    },
+    {
+      "word": "its",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "The dog plays with its ball in the sunny park every afternoon.",
+        "My sister loves her cat very much because it is very cute and playful.",
+        "The teacher gave its students an interesting homework assignment for the weekend.",
+        "The little boy finds its toy car under the table after playing yesterday.",
+        "The bird builds its nest high in the tree to keep the eggs safe.",
+        "The farmer cares for its animals every day, ensuring they have enough food and water.",
+        "The clock on the wall shows its hands moving slowly during the long class.",
+        "The chef uses fresh ingredients because its meals taste better and are healthier for everyone.",
+        "The car needs to fix its flat tire before we can go on the trip.",
+        "The family takes care of its garden, and every plant grows strong and healthy."
+      ]
+    },
+    {
+      "word": "my",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "My cat likes to sit on my lap when I read books.",
+        "I have a big backpack, and my backpack carries all of my school supplies.",
+        "My brother drinks orange juice every morning with his breakfast before school.",
+        "Do you see my shoes near the door? I can't find them anywhere today.",
+        "My friend and I go to the park every Saturday to play football.",
+        "I always forget my keys at home, so I need to be careful now.",
+        "My mother cooks dinner for my family every evening, and we love her food.",
+        "I need to finish my homework before watching TV, or I will be late.",
+        "My teacher gives us many interesting books to read during the school year.",
+        "I bought my favorite cookies from the store because they make me happy."
+      ]
+    },
+    {
+      "word": "no",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "I have no cookies in my jar, so I feel a bit sad.",
+        "There is no milk in the fridge, and I need it for my cereal.",
+        "She has no time today to go to the store with me.",
+        "My friend told me there is no bus after seven in the evening.",
+        "I want to play, but there is no ball in the park now.",
+        "The teacher said there is no homework for us this weekend, which is great!",
+        "We have no plans for the weekend, but we can find something fun.",
+        "He called me and said there is no meeting today at the office, which is nice.",
+        "I see no light in the room, so I need to turn on the lamp.",
+        "They asked me if I have no ideas for the party, and I said yes."
+      ]
+    },
+    {
+      "word": "our",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "Our dog loves to play with the ball in the sunny park.",
+        "Every morning, our family sits together at the table for breakfast, enjoying good food and sharing stories about the day ahead.",
+        "I often walk our cat in the garden to let her explore outside.",
+        "During school, our teacher gives us fun projects that help us learn new things and understand the subjects better than ever before.",
+        "Our friends come over on weekends to watch movies and eat popcorn together.",
+        "When it rains, our children like to jump in puddles and play with colorful umbrellas in the backyard.",
+        "Our garden has many flowers that bloom beautifully in spring, attracting butterflies and bees.",
+        "For dinner, our mom cooks healthy meals, and we help set the table with plates, cups, and utensils.",
+        "Our neighbors enjoy walking their dogs in the evening when the weather is nice and cool.",
+        "On Friday nights, our family plays board games and shares laughter in the living room until bedtime comes."
+      ]
+    },
+    {
+      "word": "their",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "Their cat likes to play with a ball of string every day.",
+        "Maria and John always bring their lunch to work in colorful boxes.",
+        "Their house is small, but it has a lovely garden with flowers.",
+        "In the park, children ride their bikes and play games every afternoon.",
+        "Their teacher gives them homework every Friday, and they try to finish.",
+        "At the market, customers choose their fruits and vegetables carefully for cooking.",
+        "Their friends often meet at the cafe to drink coffee and chat.",
+        "The kids put on their jackets before going outside to play in winter.",
+        "Their favorite movie is funny, and they watch it together every weekend.",
+        "When it rains, they like to stay inside and read their books quietly."
+      ]
+    },
+    {
+      "word": "your",
+      "part_of_speech": "det",
+      "level": "A1",
+      "category": "Determiners",
+      "sentences": [
+        "Can you show me your favorite book that you read last year?",
+        "Your room looks very clean today, and I like the new color.",
+        "I hope your friend arrives soon so we can start the game.",
+        "Please put your keys on the table so we don't lose them again.",
+        "Did you finish your homework before you went to the movie theater?",
+        "I found your jacket in the kitchen; maybe you left it there yesterday.",
+        "Your dog is very friendly and loves to play with my cat.",
+        "Can you tell me your favorite food and where you usually buy it?",
+        "Don't forget to bring your ID when you go to the concert tonight.",
+        "I saw your sister in the park, and she was with her friends."
+      ]
+    },
+    {
+      "word": "and",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I like to read books and listen to music in the evening.",
+        "The cat sits on the chair, and the dog sleeps on the floor quietly.",
+        "She drinks tea and eats bread for breakfast every morning after waking up.",
+        "They go to the park and play soccer, while their children enjoy the playground.",
+        "He likes to swim in the pool and ride his bike around the city.",
+        "The sun shines bright, and the birds sing in the trees during spring days.",
+        "I study English and practice speaking with my friends to improve every week.",
+        "My sister bakes cookies and my brother makes sandwiches for the family dinner.",
+        "We go shopping on Saturdays and visit the cafe to drink coffee afterward.",
+        "The teacher writes on the board and the students listen carefully to learn better."
+      ]
+    },
+    {
+      "word": "because",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I eat breakfast in the morning because it helps me start my day.",
+        "We go to the park every Saturday because the children enjoy playing outside and we like to bring a picnic to share with our friends.",
+        "She studies English at night because she wants to improve her job opportunities in the future.",
+        "They watch movies at home because it is cheaper than going to the cinema and they can make popcorn too.",
+        "He likes to walk to work because it is good for his health and he enjoys the fresh air every morning.",
+        "I read books every evening because it helps me relax after a long day of work and I learn new words too.",
+        "We cook dinner together because it is fun and we enjoy trying new recipes from different countries around the world.",
+        "She listens to music while she cleans because it makes the work easier and fun, helping her finish quickly and enjoy the day.",
+        "They play soccer on weekends because it is a fun way to exercise and spend time with family and friends outdoors.",
+        "I write in my journal every day because it helps me understand my thoughts and plan for the future in a clear way."
+      ]
+    },
+    {
+      "word": "but",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I wanted to go to the park, but it started to rain.",
+        "She loves to read books, but she does not have much time for it.",
+        "We planned a picnic for Sunday, but the weather was very bad that day.",
+        "He studied hard for the test, but he still felt nervous before it began.",
+        "Maria wanted to buy a new dress, but she did not have enough money.",
+        "They played soccer in the field, but they had to stop for lunch soon.",
+        "I like to drink coffee in the morning, but tea is my favorite drink.",
+        "My brother plays video games all night, but I prefer to read my book.",
+        "The teacher gave us a lot of homework, but we completed it together.",
+        "Jane cooks dinner for her family, but her sister cleans the kitchen after."
+      ]
+    },
+    {
+      "word": "if",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "If it rains tomorrow, I will take my umbrella to work.",
+        "If you want to learn English well, you must practice every day at home.",
+        "If she studies hard, she will pass the exam next week with confidence.",
+        "If the shop is closed, we can go to the store on Main Street instead.",
+        "If he finishes his homework, he can play video games for one hour.",
+        "If they invite us to their party, we will bring delicious snacks and drinks.",
+        "If you wake up early, you can enjoy a peaceful morning before breakfast.",
+        "If the coffee is too hot, wait a few minutes before you drink it.",
+        "If my friend calls me, I will tell her about my new job.",
+        "If we go for a walk in the park, we can watch the birds and feel relaxed."
+      ]
+    },
+    {
+      "word": "or",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "Do you want tea or coffee with your breakfast this morning, Tom?",
+        "Jane can choose a book to read in the library, or she can study at home with her laptop and notes on the desk.",
+        "I must decide whether to walk to work or take the bus today.",
+        "Sam has to buy bread, or he will not have lunch at home later.",
+        "Would you prefer to watch a movie or play a game tonight with us?",
+        "The teacher asked if we wanted fruit, or if we wanted cookies after class, but we could only choose one.",
+        "I like to cook pasta or make a salad for dinner every week.",
+        "We can visit the museum tomorrow, or we can go to the park after lunch, which is also nice for a walk.",
+        "Do they want to play soccer or basketball during gym class today?",
+        "You can listen to music or enjoy a podcast while relaxing at home."
+      ]
+    },
+    {
+      "word": "so",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I have a big test tomorrow, so I will study all night.",
+        "She went to the store to buy bread, so she can make sandwiches for lunch.",
+        "It is very cold today, so I will wear my warm coat outside.",
+        "The movie starts at 7 PM, so we should leave the house by 6:30 PM.",
+        "He loves to play soccer, so he practices every day with his friends.",
+        "The sun is shining brightly today, so we decided to have a picnic in the park.",
+        "I want to learn English, so I take classes twice a week after work.",
+        "They bought a new car last week, so they can drive to their jobs easily.",
+        "She is cooking dinner for her family, so she needs to buy fresh vegetables first.",
+        "The kids enjoy playing outside, so they run around in the garden every evening."
+      ]
+    },
+    {
+      "word": "than",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I think my dog is friendlier than my cat at home today.",
+        "Sarah enjoys reading books more than watching movies because she likes stories better.",
+        "This apple is sweeter than the orange I had for breakfast earlier.",
+        "My brother is taller than my sister, but she runs faster than him.",
+        "The weather is nicer today than it was yesterday; let’s go for a walk.",
+        "Tom likes playing soccer more than basketball, and he practices every day after school.",
+        "Ice cream is more delicious than cake on a hot summer day outside.",
+        "I prefer tea for breakfast rather than coffee, as it wakes me up gently.",
+        "Running in the park is much better than sitting inside all afternoon, isn’t it?",
+        "This math homework is easier than the one we had last week in class."
+      ]
+    },
+    {
+      "word": "that",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I know that you like to play soccer with your friends after school.",
+        "The teacher said that we will have a test on Friday about math and science.",
+        "She thinks that coffee tastes better when it is hot and fresh every morning.",
+        "My brother believes that reading books is a great way to learn new things.",
+        "They said that the movie starts at seven o'clock, so we should hurry.",
+        "I remember that yesterday was a very sunny day, perfect for a picnic outside.",
+        "We all agree that singing karaoke is a lot of fun with friends together.",
+        "The dog barks loudly because it knows that someone is at the door now.",
+        "She hopes that the weather will be nice for our trip to the beach.",
+        "He finds that studying vocabulary every day helps him speak English more clearly."
+      ]
+    },
+    {
+      "word": "where",
+      "part_of_speech": "conj",
+      "level": "A1",
+      "category": "Conjunctions",
+      "sentences": [
+        "I want to go to the park where we can play games.",
+        "She asked me where I put my keys, and I could not remember.",
+        "My brother knows a cafe where we can get good coffee together.",
+        "Can you tell me where the nearest bus stop is located in this city?",
+        "We should find a place where we can sit and rest for a bit.",
+        "The teacher asked where the homework was, but I forgot to bring it.",
+        "I like to read books where the main character goes on exciting adventures.",
+        "It is important to know where to buy fresh fruit and vegetables nearby.",
+        "There is a park where children can play safely with their friends and family.",
+        "Please show me where you keep your favorite stories and pictures in your room."
+      ]
+    },
+    {
+      "word": "above",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The cat is sleeping above the warm radiator in the small kitchen.",
+        "There is a beautiful painting above the couch in the living room.",
+        "My brother hangs his clothes above the bed in his small room.",
+        "The sun is shining brightly above the trees in the sunny park today.",
+        "The clock on the wall is above the door in the classroom.",
+        "I see many birds flying above the park when I walk home.",
+        "There are colorful balloons floating above the table at the birthday party.",
+        "The bookshelf sits above the desk, holding many books and old papers.",
+        "A kite flew high above the kids playing in the grassy field.",
+        "The stars twinkle brightly above us on a clear night with no clouds."
+      ]
+    },
+    {
+      "word": "across",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I can see a bridge across the river from my house today.",
+        "The cat jumped across the road when the car was coming fast.",
+        "We walked across the park and found many beautiful flowers blooming there.",
+        "She passed the ball across the field to her friend for fun.",
+        "They ran across the street to catch the bus before it left.",
+        "The teacher wrote the math problems across the board for us to solve.",
+        "He threw his backpack across the room and landed it near the chair.",
+        "A small dog ran across the yard while the children laughed and played.",
+        "My brother lives across the city, and we visit him every weekend.",
+        "She placed the books across the table to make space for lunch."
+      ]
+    },
+    {
+      "word": "around",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I walked around the park with my friend after school yesterday.",
+        "The children played games around the big tree in the sunny garden today.",
+        "She found her keys around the kitchen counter when she looked carefully.",
+        "There are many shops around my house, so I can buy food easily.",
+        "He likes to jog around the lake every morning before going to work.",
+        "We saw many beautiful flowers around the playground during our afternoon walk together.",
+        "The cat likes to sleep around the sunny window when it is warm.",
+        "They are preparing a picnic around the lake where the ducks swim happily.",
+        "My dog likes to run around the yard and play with the kids.",
+        "At the party, we moved around the room to talk to different people."
+      ]
+    },
+    {
+      "word": "at",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I have a book at my home that I read every night.",
+        "The teacher will meet us at the school to discuss our project later today.",
+        "She likes to drink coffee at the café near her office every morning.",
+        "We often play soccer at the park with our friends during the weekend.",
+        "My brother eats lunch at his desk because he works from home every day.",
+        "There is a nice restaurant at the corner where we can have dinner tonight.",
+        "I always take my dog for a walk at the beach in the evening.",
+        "The movie starts at seven o'clock, so we need to leave by six.",
+        "He puts his keys at the table every time he comes home from work.",
+        "My friends enjoy studying English at the library, as it is quiet and peaceful."
+      ]
+    },
+    {
+      "word": "behind",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The dog is sleeping behind the chair in the living room right now.",
+        "She found her glasses behind the book on the shelf in the library.",
+        "I saw a cat hiding behind the bushes in the sunny garden today.",
+        "They parked their car behind the supermarket, close to the entrance for shopping.",
+        "There is a beautiful picture hanging behind the sofa in the quiet room.",
+        "He keeps his old toys behind the door in the storage closet at home.",
+        "The children laughed and played behind the tall trees at the park yesterday.",
+        "My friend found a box behind her bed filled with many interesting toys.",
+        "The pizza delivery man waited patiently behind the gate for someone to come.",
+        "You can find some fun games behind the big curtain in the classroom."
+      ]
+    },
+    {
+      "word": "below",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The sun is below the clouds in the blue sky today.",
+        "The dog is lying below the table, hoping for some food scraps.",
+        "She found her keys below the couch after searching for many minutes.",
+        "We saw the light below the hill while walking home in the evening.",
+        "He put his glasses below the book on the table near the lamp.",
+        "The children are playing below the tree, where it is cool and nice.",
+        "My phone fell below the seat of the car during our road trip.",
+        "There is a small park below the bridge where we often like to play.",
+        "The cat sleeps below the bed, safe from the loud noises outside.",
+        "The notes for the class are written below the board on the wall."
+      ]
+    },
+    {
+      "word": "between",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "There is a small park between my house and the school I attend.",
+        "I like to sit between my friends at lunch because it is fun to talk.",
+        "We saw a rainbow between the clouds after the rain stopped yesterday evening.",
+        "The dog ran quickly between the trees, chasing after a butterfly flying around.",
+        "She put her keys between the books on the table so she would not lose them.",
+        "On weekends, I walk between my neighbor's house and the grocery store with my family.",
+        "There is a beautiful garden between the library and the main road in our town.",
+        "He likes to play soccer between classes with his friends when the weather is nice.",
+        "The cat found a cozy spot between the blankets on the couch while sleeping.",
+        "I often study between my classes in the quiet room where it is peaceful."
+      ]
+    },
+    {
+      "word": "from",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I always take the bus from my home to the school nearby.",
+        "She bought fresh fruits from the market because they are healthy and tasty.",
+        "The restaurant is very good; I get my lunch from there every day.",
+        "He likes to read books from the library during his free time at home.",
+        "They arrived from the airport very late, and we were happy to see them.",
+        "My friend sent me a letter from Canada, and I was very excited.",
+        "I finished my homework from yesterday, so now I can relax and play.",
+        "We usually buy groceries from the store down the street every Saturday morning.",
+        "The teacher gave us a project from last month that we need to complete.",
+        "She gets her coffee from the cafe across the street before going to work."
+      ]
+    },
+    {
+      "word": "in",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I put my keys in the drawer next to the kitchen table.",
+        "The cat is sleeping in the sun while the dog plays outside on the grass.",
+        "She found her book in the bag under the chair in the room.",
+        "My friend and I will meet in the park to enjoy the warm weather and have fun together.",
+        "The milk is in the fridge, and the eggs are on the shelf.",
+        "We like to sit in the garden, listen to birds, and watch the flowers grow all around us.",
+        "He left his shoes in the hallway before coming into the living room.",
+        "The teacher has new books in her classroom that we can read and study during our lessons together.",
+        "I saw a butterfly in the garden yesterday, and it was very beautiful.",
+        "They enjoy eating lunch in the café where the food is fresh and tasty every day."
+      ]
+    },
+    {
+      "word": "into",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "She put the keys into her bag before leaving the house today.",
+        "He walked into the store to buy some milk and fresh bread.",
+        "They mixed the eggs into the bowl to make a cake together.",
+        "I saw the cat jump into the box and fall asleep quickly.",
+        "The children ran into the park to play with their new toys excitedly.",
+        "We will turn left and go into the street where our friend lives.",
+        "The dog jumped into the water to fetch a stick for its owner.",
+        "After dinner, he cleaned the dishes and put them into the cupboard.",
+        "She carefully put the flowers into the vase to decorate the room.",
+        "The teacher asked the students to write their names into the group list."
+      ]
+    },
+    {
+      "word": "near",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The cat is sitting near the window, watching the birds outside.",
+        "I walked near the park this morning and saw many children playing happily.",
+        "My friend lives near the school, so we walk together every day.",
+        "There is a nice cafe near my house where I often grab coffee.",
+        "The bus stop is near my office, making it easy to commute daily.",
+        "We went to a store near my home to buy some fresh fruit.",
+        "The dog likes to play near the tree in the backyard every day.",
+        "My sister has a friend who lives near her, and they play together often.",
+        "The library is near the town square, and it is very quiet inside.",
+        "I always sit near the front of the class to hear the teacher better."
+      ]
+    },
+    {
+      "word": "on",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The cat is sitting on the chair in the sunny room now.",
+        "She placed her favorite book on the table near the window today.",
+        "I saw my friend on the bus this morning before going to work.",
+        "We enjoy listening to music on the radio while cooking dinner every night.",
+        "The dog likes to lie on the grass when the weather is nice.",
+        "He found a pen on the floor, and now he can write notes.",
+        "My sister put her shoes on the shelf after coming home from school.",
+        "They are having a picnic on the beach, and everyone is having fun.",
+        "I keep my keys on the kitchen counter, so I do not lose them.",
+        "We watch movies on weekends with popcorn, and it is always relaxing."
+      ]
+    },
+    {
+      "word": "opposite",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The bank is opposite the park where we often play with friends.",
+        "My house is opposite the supermarket, so I can see it every day.",
+        "The bus stop is opposite the library, making it easy to find.",
+        "There is a nice café opposite my office where we enjoy lunch together.",
+        "The school is opposite the playground, so children can play after classes.",
+        "I saw a new store open opposite the old cinema last week, too.",
+        "The restaurant is opposite the train station, which makes it very convenient for travelers.",
+        "A small garden is opposite our home, where we often sit to relax.",
+        "The gym is opposite my apartment, which encourages me to exercise often.",
+        "Her office is opposite my desk, so we can talk easily during work."
+      ]
+    },
+    {
+      "word": "over",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The cat jumps over the fence to play with the dog outside.",
+        "I put my backpack over the chair while I clean my room and study.",
+        "She walked over the bridge and took pictures of the river below.",
+        "We like to sit over the table during breakfast and talk about our day.",
+        "He threw the ball over the fence, and it landed in the neighbor's yard.",
+        "They hung the painting over the sofa because it makes the room look nice.",
+        "The children ran over the grass and played tag in the sunny park.",
+        "My brother placed his coffee cup over the table while he read his book.",
+        "I saw a bird flying over the trees, singing a beautiful song today.",
+        "The teacher wrote the answer over the board so all the students could see."
+      ]
+    },
+    {
+      "word": "through",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "I walked through the park and saw many children playing happily.",
+        "She took a deep breath as she walked through the big market.",
+        "The cat ran quickly through the door when it heard the noise.",
+        "We can see the river flowing through the city when we drive.",
+        "They walked through the store looking for fresh fruit and vegetables today.",
+        "He found his keys through checking each drawer in the kitchen carefully.",
+        "The dog ran through the yard, chasing a butterfly in the sun.",
+        "I read the book through the night because the story was exciting and fun.",
+        "She looked through the window and noticed the rain falling steadily outside.",
+        "They planned to walk through the old town, exploring all the shops together."
+      ]
+    },
+    {
+      "word": "under",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Place",
+      "sentences": [
+        "The cat is sleeping under the table in the quiet living room.",
+        "Sarah keeps her shoes under the bed so they do not get dirty.",
+        "The kids enjoy playing under the big tree in the sunny park.",
+        "He found a coin under the couch while looking for his phone.",
+        "The dog likes to hide under the blanket when it is cold outside.",
+        "We saw a little bird building a nest under the old roof yesterday.",
+        "My brother put his backpack under the chair in the classroom to rest.",
+        "The flowers in the garden grow well under the bright sunlight every day.",
+        "She found her lost earring under the dresser after searching for hours.",
+        "The teacher keeps the extra books under the desk for students to borrow."
+      ]
+    },
+    {
+      "word": "after",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Time",
+      "sentences": [
+        "I like to drink tea after I finish my homework every evening.",
+        "After the rain stopped, we went outside to play in the sunshine.",
+        "She takes a shower after she comes home from work each day.",
+        "After dinner, we often watch a movie or play a board game together.",
+        "I feel happy after I talk to my friend on the phone.",
+        "After school, the children run to the park to play with friends.",
+        "We always clean the kitchen after we eat our meals together as a family.",
+        "After finishing my book, I tell my friend about the story we read.",
+        "He likes to go for a walk after he has eaten breakfast.",
+        "After the long meeting, everyone felt tired but happy to go home finally."
+      ]
+    },
+    {
+      "word": "before",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Time",
+      "sentences": [
+        "I eat breakfast before I go to work in the morning.",
+        "Before I take a shower, I always make sure to set the water temperature right and prepare my towel.",
+        "She likes to read a book before she goes to sleep every night.",
+        "Before the meeting starts, we should make sure that all our documents are ready and our laptops are charged.",
+        "We play games before dinner to have fun and relax together as a family.",
+        "Before I leave my house, I always check for my keys and my wallet.",
+        "He washes his hands before he eats lunch or dinner, as it is very important.",
+        "Before I go shopping, I write a list so I do not forget anything important that I need to buy.",
+        "They usually walk their dog before it gets too hot outside in the afternoon.",
+        "Before the movie starts, we buy popcorn, drinks, and sometimes candy to enjoy during the film."
+      ]
+    },
+    {
+      "word": "by",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Time",
+      "sentences": [
+        "I go to work by bus every morning at seven o'clock sharp.",
+        "My friend lives by the park, and we often play soccer together after school.",
+        "She reads a book by the window while enjoying a cup of tea.",
+        "The dog runs by the house and chases a squirrel in the yard.",
+        "We often eat lunch by the river and watch the boats go by.",
+        "He likes to walk by the beach and collect shells on sunny days.",
+        "The children ride their bikes by the school after finishing their classes.",
+        "My brother takes the train by city center, and he enjoys the view.",
+        "I write my homework by the kitchen table where it is very quiet.",
+        "She buys fresh fruits by the market every Saturday to prepare healthy meals."
+      ]
+    },
+    {
+      "word": "during",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Time",
+      "sentences": [
+        "During the day, I like to drink tea and read my book.",
+        "During the summer, my friends and I often go to the beach together for fun.",
+        "I always listen to music during my morning walk in the park.",
+        "During the weekend, we played games and watched movies with our family at home.",
+        "During lunch, I often talk with my coworker about our favorite TV shows.",
+        "During winter, my brother and I enjoy building snowmen and making hot chocolate at home.",
+        "She studies English during the evening after finishing her work at the office.",
+        "During the birthday party, everyone sang songs, ate cake, and played many fun games.",
+        "I often call my mother during the week to hear how she is doing.",
+        "During the holiday season, we decorate our home with lights, trees, and colorful ornaments."
+      ]
+    },
+    {
+      "word": "past",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Time",
+      "sentences": [
+        "I walk past the park every day on my way to work.",
+        "The cat sits quietly past the window, watching the birds fly by outside.",
+        "She lives past the tall building near the school by the river.",
+        "My friend lives just past the store where we usually buy fruit and snacks.",
+        "He runs fast past the trees in the morning before going to school.",
+        "The bus stops past the café, where I sometimes meet my friends for coffee.",
+        "They saw a movie past the mall last Saturday night after dinner ended.",
+        "The dog runs happily past the children playing in the yard every afternoon.",
+        "I usually go past the library before I head home from my classes.",
+        "We walked past the fountain in the park and talked about our day."
+      ]
+    },
+    {
+      "word": "about",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I am happy to talk about my day at the park today.",
+        "She often asks questions about the weather to plan her weekend activities with friends.",
+        "Can you tell me more about your favorite book and why you like it?",
+        "He made a presentation about his travels, and everyone enjoyed his funny stories at work.",
+        "We should learn about healthy food choices to help us feel better each day.",
+        "My brother loves to read comics about superheroes and often shares them with me.",
+        "I want to ask my teacher questions about the homework we had last week.",
+        "They discussed interesting facts about different cultures during the international day at school today.",
+        "Let's have a conversation about our favorite movies and what we enjoyed the most.",
+        "She wrote a blog post about her cooking skills and shared it on social media."
+      ]
+    },
+    {
+      "word": "as",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I go to the store as it opens in the morning each day.",
+        "My friend likes to eat lunch as soon as we finish classes every day.",
+        "She sings in the shower as her favorite songs play loudly from her phone.",
+        "We walk to the park as the sun sets, enjoying the cool evening breeze together.",
+        "He reads his book as he waits for the bus to arrive on time.",
+        "They sit together on the sofa as they watch their favorite movie every weekend.",
+        "I drink coffee as I start my day, feeling more awake and happy inside.",
+        "The dog runs outside as soon as it hears the sound of the door.",
+        "She writes in her journal as she reflects on her day before sleeping each night.",
+        "We play board games as a family on Sundays, having a great time together."
+      ]
+    },
+    {
+      "word": "down",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "The cat jumped down from the table and ran to the door.",
+        "She sat down on the chair and opened her book to read.",
+        "Please put your bag down before you sit down by me.",
+        "The kids fell down while playing, but they quickly got back up.",
+        "He looked down and saw a small dog walking near his feet.",
+        "After school, we went down the street to buy some ice cream together.",
+        "My brother likes to lie down on the grass and watch the clouds.",
+        "They decided to walk down to the park because it was a sunny day.",
+        "I found my keys down between the couch cushions after looking everywhere.",
+        "When it started to rain, we went down the hill to find shelter."
+      ]
+    },
+    {
+      "word": "for",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I need a pen for my homework and a paper for notes.",
+        "She goes to the store for some milk and bread every Saturday morning.",
+        "Can you help me find a book for my English class next week?",
+        "He always prepares lunch for his family before they go to work and school.",
+        "The teacher gives a lot of time for students to finish their tests.",
+        "We make breakfast for the kids early, so they can eat before school.",
+        "This is the place for our meeting, and everyone should arrive on time.",
+        "I bought a gift for my friend’s birthday, and I hope she likes it.",
+        "They go to the park for a walk and enjoy the fresh air.",
+        "It is important to read for fun, as it helps improve vocabulary and knowledge."
+      ]
+    },
+    {
+      "word": "like (similar)",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I like to read books like my friend does every evening after work.",
+        "She enjoys the weather today, and she feels happy like a child playing outside.",
+        "My brother likes to play soccer like his friends do on weekends.",
+        "We like to eat pizza together on Friday nights, like a fun family tradition.",
+        "He likes to listen to music like I do while studying for exams.",
+        "The cat sleeps on the couch like my dog does when they are tired.",
+        "I like to visit the park like many people do during the sunny days.",
+        "They enjoy cooking together in the kitchen, like a couple preparing a special meal.",
+        "My sister likes drawing pictures like I like writing stories every day after school.",
+        "We enjoy watching movies together at home like friends do for fun on weekends."
+      ]
+    },
+    {
+      "word": "of",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I have a book of stories for children that I read every night.",
+        "The teacher asked us to write a paragraph of five sentences about winter.",
+        "She drinks a cup of tea every morning to start her day fresh.",
+        "The store offers a variety of fruits and vegetables for healthy eating choices.",
+        "My friend and I went for a walk of one hour in the park.",
+        "They are happy to see a new movie with a lot of action this weekend.",
+        "I need a piece of paper to write down my shopping list for today.",
+        "We enjoy a family dinner of rice, vegetables, and chicken every Sunday night.",
+        "His dog loves a game of fetch in the backyard after a long day.",
+        "I bought a pair of shoes that are comfortable and nice for daily wear."
+      ]
+    },
+    {
+      "word": "off",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "She wakes up and gets off the bed at seven in the morning.",
+        "He takes off his shoes before entering the house, so his feet stay clean and dry.",
+        "They turn off the lights when they leave the room to save energy.",
+        "After a long day, I like to take time off for myself to relax and enjoy.",
+        "He puts off his homework until the evening because he wants to play first.",
+        "When it rains, she takes her umbrella off the shelf and goes outside.",
+        "My mom gives me a ride off to school every day in the morning.",
+        "They turn off the television at night and then read a book before bed.",
+        "After dinner, it's important to wash off the dishes and clean the table.",
+        "If you take off your jacket, you might feel cooler in the warm room."
+      ]
+    },
+    {
+      "word": "up",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I wake up early every day to make breakfast for my family.",
+        "She likes to put her books up on the shelf in her room.",
+        "They always clean up the house before their friends come over to visit.",
+        "The children ran up the hill to play games when the sun came out.",
+        "After work, I go up to my room and read my favorite book.",
+        "My friend put her jacket up on the chair before sitting on the couch.",
+        "We need to pick up the toys and make the living room neat.",
+        "The dog likes to jump up and down when he sees his owner arrive.",
+        "Please remember to look up at the sky during the evening for stars.",
+        "When the rain stops, I will walk up to the park to relax."
+      ]
+    },
+    {
+      "word": "with",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I go to the store with my friend every Saturday to buy food.",
+        "She likes to drink coffee with milk and sugar in the morning every day.",
+        "The cat is sitting with the dog on the warm sun spot outside.",
+        "We walk with our family in the park and enjoy the fresh air together.",
+        "He plays soccer with his children in the yard after they finish homework.",
+        "I love cooking dinner with my partner while listening to our favorite music together.",
+        "They like to read books with colorful pictures because it makes learning fun.",
+        "My sister often studies English with her friend during the weekends at home.",
+        "The teacher speaks with the students about their homework and the upcoming tests.",
+        "I am happy to share my lunch with you today because you forgot yours."
+      ]
+    },
+    {
+      "word": "without",
+      "part_of_speech": "prep",
+      "level": "A1",
+      "category": "Prepositions - Other",
+      "sentences": [
+        "I cannot eat my breakfast without a cup of hot coffee every morning.",
+        "She loves to walk in the park, but she cannot enjoy it without her friends by her side during the warm days of springtime.",
+        "He feels tired without enough sleep, especially after a long day at work.",
+        "The baby will cry if you leave him alone without any toys to play with during the afternoon.",
+        "I always take my umbrella without fail when dark clouds fill the sky.",
+        "We should not watch movies without snacks because popcorn makes everything more fun on a rainy evening at home.",
+        "The teacher gives us homework without telling us the reasons for each task we must do each week.",
+        "I cannot live without music, as it makes my daily routine feel more enjoyable and lively while I cook or clean my house.",
+        "She cannot find her book without looking under the table where she last placed it.",
+        "He enjoys painting, but he cannot do it without having the right colors and brushes ready for his beautiful artwork."
+      ]
+    },
+    {
+      "word": "to have",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - BE & Have",
+      "sentences": [
+        "I have a small dog that loves to play in the park.",
+        "Yesterday, I had a tasty sandwich for lunch with my friend at school.",
+        "She has many books that she likes to read every evening.",
+        "They have been learning English for six months, and they are improving rapidly.",
+        "We have a nice garden with flowers and vegetables this summer.",
+        "I had breakfast early today before going to work with my coworkers.",
+        "My parents have a big house where we all live together happily.",
+        "Last week, I had fun at the beach with my family and friends.",
+        "He has a bike that he rides to the store every Saturday.",
+        "We have been planning a trip to the mountains next month for fun."
+      ]
+    },
+    {
+      "word": "cannot",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Modal",
+      "sentences": [
+        "I cannot find my keys; they are not in my bag today.",
+        "She cannot go to the party because she has to finish her homework first.",
+        "My dog cannot eat chocolate; it is not good for his health.",
+        "They cannot play outside today because it is raining heavily, and it is cold.",
+        "I cannot remember where I put my glasses; they are lost somewhere in my house.",
+        "He cannot go to the gym today, as he has a cold and feels tired.",
+        "We cannot watch that movie because it is too scary for young children to see.",
+        "She cannot help me cook dinner tonight since she has a meeting at work.",
+        "I cannot speak French well; I only know a few simple words and phrases.",
+        "They cannot finish the project fast because they need more time to gather information."
+      ]
+    },
+    {
+      "word": "will",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Modal",
+      "sentences": [
+        "I will go to the store to buy some milk and bread today.",
+        "They will eat pizza for dinner, and then they will watch a movie together after.",
+        "She will read a book in the park when the weather is nice outside.",
+        "He will call his friend later because they want to plan a trip soon.",
+        "We will meet at the café for coffee and talk about our plans tomorrow.",
+        "The children will play soccer in the yard while their parents watch and smile happily.",
+        "I will finish my homework before dinner so I can relax in the evening.",
+        "They will visit the museum on Saturday and learn about history and art as a group.",
+        "She will bake cookies to share with her neighbors during the holiday season soon.",
+        "We will go for a long walk in the park and enjoy nature together."
+      ]
+    },
+    {
+      "word": "to agree",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I agree with my friend about going to the movies this weekend.",
+        "They were debating the best place to eat, and I agreed with them easily.",
+        "She agrees to meet us at the café after her class ends.",
+        "When we choose a game, I always want to agree with my friends.",
+        "My parents agree that exercise is important for a healthy lifestyle at home.",
+        "After discussing the plan, we all agreed on going hiking next Saturday together.",
+        "I often agree with my sister about which show to watch on TV.",
+        "He studied hard, and when the teacher praised him, he agreed to continue learning.",
+        "They agree to share their toys and play together in the park happily.",
+        "Last week, my teacher agreed to help us with our English homework after school."
+      ]
+    },
+    {
+      "word": "to ask",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I ask my friend to help me with my homework every evening.",
+        "Yesterday, I asked my teacher about the test, and she gave me advice.",
+        "Can you ask the waiter for the menu, please? I am hungry now.",
+        "She is asking her mother if she can go to the park later.",
+        "I always ask questions when I do not understand something in class.",
+        "Last week, I asked my brother to play a game with me after school.",
+        "He asks his parents for permission before he goes out with friends.",
+        "When I was lost, I asked a stranger for directions to the bus station.",
+        "They ask their neighbors for help when they need to fix something at home.",
+        "I like to ask in class because it helps me learn new things easily."
+      ]
+    },
+    {
+      "word": "to become",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to become a teacher because I love helping children learn.",
+        "When I study every day, I become better at speaking English with friends.",
+        "She hopes to become a doctor and help people in her town.",
+        "After practicing yoga daily, I could feel my body become stronger and more flexible.",
+        "They want to become good cooks and make dinner for their family.",
+        "Learning new words every week can help me become more confident in speaking English.",
+        "He dreams to become an artist and share his paintings with everyone.",
+        "When I visit new places, I often become more excited to explore the world.",
+        "My sister wants to become a journalist and write stories about the news.",
+        "Playing games in English helps me become better at understanding and speaking the language."
+      ]
+    },
+    {
+      "word": "to begin",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I always begin my day with a cup of coffee in the morning.",
+        "She began studying English last year, and now she speaks very well.",
+        "My friend and I begin our dance class at six o'clock every Tuesday.",
+        "When he begins to play the piano, everyone in the room listens closely.",
+        "They begin their homework right after school so they can relax later.",
+        "I began reading a new book yesterday, and I find it very interesting.",
+        "We usually begin our meetings with a short prayer and some greetings.",
+        "He began running every morning early to stay healthy and to feel good.",
+        "At the park, children begin to play as soon as they arrive there.",
+        "She has begun to cook dinner by following the recipe in the book."
+      ]
+    },
+    {
+      "word": "to believe",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I believe in my friend, because she is always honest and kind.",
+        "They were believing in their dreams and working hard to achieve them every day.",
+        "She believes that learning English will help her find a better job.",
+        "He doesn’t believe in luck; he thinks that hard work brings success in life.",
+        "We believe it is important to help each other and be good friends.",
+        "After studying for weeks, I believed I was ready for the English test.",
+        "My parents believe that education is key to a successful future for me.",
+        "They are believing in themselves and trying their best in every challenge they face.",
+        "I believe today will be a good day, full of great opportunities ahead.",
+        "She believed in her abilities and joined the competition to show her skills."
+      ]
+    },
+    {
+      "word": "to break",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I like to take a break after reading my favorite book every day.",
+        "Yesterday, I broke my favorite mug while washing it in the sink.",
+        "During lunch, we all decided to take a short break and relax together.",
+        "She is breaking a big cookie into two pieces to share with me.",
+        "On weekends, I often break my routine and enjoy doing different activities.",
+        "The children were playing outside when one of them broke a window.",
+        "I will take a break from studying to watch my favorite TV show today.",
+        "Last night, he broke his promise to help me with my homework again.",
+        "They usually break the bread together before starting their family dinner at home.",
+        "While I was walking, I accidentally broke my old phone and felt sad."
+      ]
+    },
+    {
+      "word": "to bring",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I will bring my lunch to work because I want to save money.",
+        "Yesterday, Anna brought her friend to the party, and they both had fun.",
+        "Can you bring a book to share during our class tomorrow, please?",
+        "Last week, I brought my camera to the picnic, and we took pictures.",
+        "She always brings nice cookies when she visits my home in the evening.",
+        "They are bringing a big cake for the birthday celebration this Saturday afternoon.",
+        "I want to bring my favorite toy to the park and play with it.",
+        "Yesterday, my brother brought his soccer ball, and we played outside for hours.",
+        "Will you bring your umbrella if you think it will rain later today?",
+        "She brought her dog to the vet because it was not feeling well."
+      ]
+    },
+    {
+      "word": "to build",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to build a small sandcastle with my friends at the beach.",
+        "While we were building a fort, it started to rain very hard outside.",
+        "They will build a new playground for the children in our community.",
+        "Building a model airplane is fun, but it requires a lot of patience and time.",
+        "She is building a garden with flowers and vegetables in her backyard now.",
+        "Last summer, we built a treehouse together and painted it bright blue.",
+        "I decided to build a bookshelf to organize all my books neatly and easily.",
+        "My brother enjoys building puzzles because it helps to improve his focus and thinking skills.",
+        "We plan to build a picnic area near the lake for our family time.",
+        "After building the LEGO house, my son felt proud and wanted to show everyone."
+      ]
+    },
+    {
+      "word": "to buy",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to buy a new book for my English class today.",
+        "She is thinking of buying some fresh fruits from the market this afternoon.",
+        "My brother wants to buy a video game for his birthday this year.",
+        "They are buying new clothes because the summer season is coming very soon.",
+        "I will buy some bread and cheese for our picnic in the park.",
+        "He bought a nice bicycle last week, and he loves riding it every day.",
+        "We need to buy milk and eggs before we start cooking dinner tonight.",
+        "She enjoys buying new plants for her garden every spring when the flowers bloom.",
+        "Can I borrow some money to buy a gift for my friend's birthday?",
+        "They are looking forward to buying a new car together next month for traveling."
+      ]
+    },
+    {
+      "word": "to carry",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I carry my bag to work every day to keep my things safe.",
+        "My brother carried heavy boxes into the house, but he was very tired afterward.",
+        "She carries water to the plants in the garden so they can grow.",
+        "When we go shopping, I always carry the groceries because they are heavy.",
+        "They carried their books to the library to study for the important test.",
+        "The little girl carries her doll with her wherever she goes to play.",
+        "I sometimes carry my lunch to work to save money and eat better.",
+        "He has carried his camera everywhere to take pictures of his adventures and travels.",
+        "My mother carries a big purse filled with important items and keys every day.",
+        "Last weekend, we carried a picnic basket to the park and had fun eating."
+      ]
+    },
+    {
+      "word": "to change",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to change my shirt before we go to the party tonight.",
+        "He is changing his mind about which book to read for the class project later.",
+        "We can change our plans if it rains tomorrow during the picnic.",
+        "She changed her hairstyle last week, and now everyone says it looks great and fresh!",
+        "They always change the menu at the café every month for new dishes.",
+        "I am changing my schedule to add more time for study during the week.",
+        "The weather will change soon, so we should prepare for the colder days ahead.",
+        "Yesterday, we decided to change our route to the store to avoid traffic jams.",
+        "I hope to change my routine this year and start exercising every morning.",
+        "My friend changed her job last year because she wanted something new and exciting!"
+      ]
+    },
+    {
+      "word": "to cook",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I cook dinner for my family every night because they enjoy my food.",
+        "She is cooking a big meal today, and everyone at home is excited for it.",
+        "After school, he will cook pasta for his best friend.",
+        "Yesterday, we cooked a delicious cake together and shared it with our neighbors.",
+        "They cook breakfast every Sunday, and it always feels like a special family time.",
+        "While I was cooking, the delicious smell filled the whole kitchen with joy.",
+        "My mother loves to cook new recipes from different countries during the weekend.",
+        "Last week, he cooked a nice soup that made everyone feel warm and happy.",
+        "I cook on Mondays and Fridays, so my family can have fresh meals.",
+        "She was cooking outside when the children played in the yard, enjoying their day."
+      ]
+    },
+    {
+      "word": "to create",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to create a nice picture for my friend’s birthday card today.",
+        "She is creating a new recipe that uses different fruits and vegetables from the market.",
+        "They create fun games to play during their family gatherings every weekend.",
+        "Last week, I created a small garden in my backyard with beautiful flowers and herbs.",
+        "He wants to create a blog where he shares his travel experiences and tips.",
+        "We are creating a music playlist that includes our favorite songs from childhood and recent hits.",
+        "The teacher asked us to create a short story using five new vocabulary words.",
+        "Yesterday, I created a colorful poster for our school event using markers and stickers.",
+        "She creates beautiful jewelry from beads and charms, which she sells at local markets.",
+        "My brother is creating a new video game character with special skills and fun outfits."
+      ]
+    },
+    {
+      "word": "to cut",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "She cut the paper into small pieces to make a craft project.",
+        "I was cutting vegetables in the kitchen when my friend called me.",
+        "The teacher cut the cake into slices for the students to enjoy.",
+        "He cuts his hair every month to keep it looking neat and clean.",
+        "After cutting the string, she tied the two boxes together carefully.",
+        "We were cutting fruit for the salad when the electricity went out.",
+        "They cut the grass in the park to make it look beautiful again.",
+        "I cut my finger while preparing food, but it is not very deep.",
+        "She cuts her nails short so they do not break easily at work.",
+        "Last week, we were cutting branches from the tree to make more space."
+      ]
+    },
+    {
+      "word": "to decide",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I decide what to eat for lunch each day with my friends.",
+        "She is deciding to take a new class because she wants to learn something different this year.",
+        "They decide to walk to the park instead of driving today.",
+        "Last night, we decided to watch a movie at home with popcorn and drinks.",
+        "He decides to go to bed early because he feels tired tonight.",
+        "After thinking a lot, she decided to buy the red dress for the party.",
+        "I decide to read a book every month to improve my English skills.",
+        "My brother decided to join the soccer team because he loves to play with friends.",
+        "We decide which games to play during our family meetings every Sunday morning.",
+        "Yesterday, they decided to visit the museum because they wanted to see the new art exhibit."
+      ]
+    },
+    {
+      "word": "to die",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I do not want the plants to die because I love them.",
+        "She was sad when her favorite fish died in the big bowl yesterday.",
+        "The flowers start to die if we forget to water them often.",
+        "My friend thinks that every animal will die if we pollute the water.",
+        "He is worried that the old tree in the park will die soon.",
+        "When the lights went out, we thought the party would die very quickly.",
+        "I hope that my computer does not die when I am working on it.",
+        "They were happy to see the new plants growing and not dying at all.",
+        "It is hard to watch the leaves die in the cold winter air.",
+        "The puppy played outside all day and did not seem to tire or die."
+      ]
+    },
+    {
+      "word": "to draw",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I love to draw pictures of animals when I have free time.",
+        "Yesterday, I drew a beautiful tree with red apples and green leaves.",
+        "My friend asked me to draw a house that we can design together.",
+        "Drawing helps me relax, and I can do it anywhere, like in parks.",
+        "Last week, I drew my family sitting together at the dinner table.",
+        "My teacher said that I can draw anything I want for the project.",
+        "I like to draw cartoons because they make me laugh and feel happy.",
+        "When I was a child, I often drew my favorite superheroes in class.",
+        "Every weekend, I take my sketchbook to draw a new scene outside.",
+        "Last night, I drew a starry sky with bright stars and a moon."
+      ]
+    },
+    {
+      "word": "to eat",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I eat breakfast every morning before I go to work or school.",
+        "Yesterday, I ate a big sandwich with lettuce, tomatoes, and turkey inside it.",
+        "She likes to eat apples and bananas for a healthy snack every day.",
+        "My family and I eat dinner together in the living room every night.",
+        "They are planning to eat pizza and salad for lunch tomorrow at noon.",
+        "Last week, I ate pasta with my friends at a nice Italian restaurant.",
+        "He enjoys eating cereal with milk for breakfast because it is quick.",
+        "We are eating at a new restaurant this weekend with some close friends.",
+        "She usually eats a salad with chicken and dressing for lunch at work.",
+        "I ate dinner with my parents last night, and we had fish tacos."
+      ]
+    },
+    {
+      "word": "to explain",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "Can you explain how to use this new phone to me, please?",
+        "Yesterday, my teacher explained the homework to all of us in class.",
+        "I want to explain my idea for the project to my friends today.",
+        "While we were walking in the park, she explained the different trees around us.",
+        "He did not explain why he was late for the meeting last Friday.",
+        "When I asked him about the game, he explained the rules very clearly.",
+        "I will explain the recipe step by step so everyone can follow along.",
+        "Last week, my grandmother explained how to cook the family’s favorite dish to me.",
+        "Can you explain how this computer program works in simple words, please?",
+        "During the meeting, I explained my plan to improve the business and its sales."
+      ]
+    },
+    {
+      "word": "to fall",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I fall down when I run too fast in the park today.",
+        "My friend is falling off his bike while trying to ride without hands.",
+        "We often fall asleep on the sofa after watching movies at night.",
+        "Yesterday, my cat fell from the tree, but he was not hurt at all.",
+        "She falls every time she trips on the uneven sidewalk near her home.",
+        "Our dog is falling into the water while playing with a stick outside.",
+        "Sometimes, I fall behind in my studies when I watch too much TV.",
+        "The children laughed when they saw the dog fall into the mud puddle.",
+        "When it rains, I always fall into small puddles and get wet shoes.",
+        "Last week, I was falling in love with learning new words every day."
+      ]
+    },
+    {
+      "word": "to feel",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I feel happy when I listen to my favorite music in the park.",
+        "Yesterday, I felt very tired after walking for a long time in the sun.",
+        "When it rains, I feel cozy and enjoy reading my favorite book.",
+        "My dog loves to play outside, and I feel joyful watching him run.",
+        "I feel excited about going to the beach with my friends this weekend.",
+        "Last week, I felt surprised when my friend gave me a nice gift.",
+        "Cooking new recipes makes me feel proud of my skills in the kitchen.",
+        "Sometimes I feel bored at home, so I try to find fun activities.",
+        "Watching the sunset makes many people feel peaceful and happy inside.",
+        "This morning, I felt cold and decided to wear a warm jacket outside."
+      ]
+    },
+    {
+      "word": "to find",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I find my keys on the table every morning before I leave.",
+        "She enjoys finding interesting books at the library and reading them every week.",
+        "We find it easy to communicate with friends when we use simple words.",
+        "They found a cute dog in the park and decided to adopt it.",
+        "He thinks he can find a great restaurant near his new home.",
+        "Finding the best route to work takes time, but it is very helpful.",
+        "I always find time to listen to music after my long day at work.",
+        "She is finding many new words every day in her English class lessons.",
+        "We often find peace in nature during our weekend hikes in the mountains.",
+        "They found a nice café downtown, where they can enjoy coffee and pastries."
+      ]
+    },
+    {
+      "word": "to follow",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I follow my friend to school every day after breakfast and coffee.",
+        "She is following the instructions carefully to complete her homework on time.",
+        "They follow the teacher’s rules to keep the classroom quiet and clean.",
+        "Last week, he followed his sister to the park to play games together.",
+        "We often follow the map when exploring new places in our city.",
+        "I was following the recipe exactly to make a delicious cake for dinner.",
+        "My dog loves to follow me when I go for a walk outside.",
+        "They were following the bus route to reach the museum for a tour.",
+        "She prefers to follow a simple exercise routine to stay healthy and fit.",
+        "I followed my favorite artist on social media to see their new work."
+      ]
+    },
+    {
+      "word": "to get",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to get a new book from the store today after work.",
+        "Every morning, I get up early, eat breakfast, and go to work happily.",
+        "She will get a nice gift for her friend's birthday this weekend.",
+        "Last week, I got lost in the city but found my way home.",
+        "They need to get their homework done before they can play outside.",
+        "Yesterday, I was getting ready for a party when it started to rain.",
+        "We should get some coffee before the meeting begins in the afternoon.",
+        "He got very excited when he received a letter from his friend.",
+        "I want to get my phone charged before I leave the house today.",
+        "Last night, we were getting dinner together when our favorite song played."
+      ]
+    },
+    {
+      "word": "to give",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I give my friend a book because she loves reading good stories.",
+        "Yesterday, I gave my brother a toy car, and he was very happy.",
+        "Can you give me some information about the nearby restaurants for dinner?",
+        "My teacher gives us homework every week to help us learn better English.",
+        "I like to give my parents small gifts on their birthdays every year.",
+        "She is giving a presentation at work today; everyone is excited to listen.",
+        "They give food to the animals at the zoo every Saturday afternoon.",
+        "Last week, my sister gave me a beautiful necklace that I really like.",
+        "We often give our time to help others in our community on weekends.",
+        "I gave my dog a bath yesterday, and he looked very clean and happy."
+      ]
+    },
+    {
+      "word": "to go",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I go to the store every Saturday to buy food and drinks.",
+        "After breakfast, my friends and I go walking in the park every morning.",
+        "She goes to work by bus because it is easy and fast.",
+        "When I was younger, I often went to the beach with my family.",
+        "They go swimming in the pool every weekend during the hot summer days.",
+        "Last week, we went to the museum and saw many interesting things there.",
+        "He goes to the library to read books and study for his classes.",
+        "I remember when we went camping last summer; it was really fun and exciting.",
+        "We go to the market every Sunday to buy fresh fruits and vegetables.",
+        "Yesterday, my sister went to the concert and she said it was amazing."
+      ]
+    },
+    {
+      "word": "to happen",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I wonder what will happen if it rains tomorrow during our picnic.",
+        "Yesterday, I saw a dog that happened to be lost and alone.",
+        "Can you tell me what happens when I push this red button?",
+        "They were having a great time at the party, and then it happened.",
+        "What will happen to my plants if I forget to water them?",
+        "My friend was happy because something good happened at her job last week.",
+        "I want to know what happened at the meeting that I missed today.",
+        "She is studying hard because she hopes something special will happen this year.",
+        "It happens that I always eat breakfast before going to work each day.",
+        "Last night, we watched a movie, and something surprising happened at the end."
+      ]
+    },
+    {
+      "word": "to hear",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I hear the birds singing every morning when I drink my coffee.",
+        "Yesterday, I heard my friend call my name as I walked home from school.",
+        "She can hear the music loud and clear from the next room.",
+        "Last week, we heard a strange noise outside while we were watching TV.",
+        "Can you hear the sound of the rain falling on the roof?",
+        "I was hearing my teacher speak about the new project during class today.",
+        "He hears his dog barking whenever someone walks by the house outside.",
+        "While walking in the park, I heard children laughing and playing together happily.",
+        "They hear the train coming from a distance before it reaches the station.",
+        "Yesterday, I was hearing my neighbors talk loudly during the night while studying."
+      ]
+    },
+    {
+      "word": "to help",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I help my sister with her homework every day after school.",
+        "Yesterday, I helped my friend find his missing keys at the park near home.",
+        "My mother helps me cook dinner when I am too tired to cook.",
+        "Walking in the garden helps me feel calm and relaxed after a long day.",
+        "I help my neighbor carry groceries when she struggles with them sometimes.",
+        "Last week, I helped a child tie his shoelaces on the playground.",
+        "My teacher helps us learn English by giving fun and easy lessons each day.",
+        "Helping others makes me feel good and brings joy into my life every time.",
+        "She helps me practice English by talking slowly and using simple words.",
+        "In my community, many people help deliver food to those who need it."
+      ]
+    },
+    {
+      "word": "to hope",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I hope to see my friends at the park later today.",
+        "She was hoping to finish her homework before dinner so she could relax.",
+        "They hope to go on a trip during the summer vacation next year.",
+        "We are hoping for good weather tomorrow because we want to have a picnic.",
+        "I hope my brother gets the job he applied for at the bakery.",
+        "He was hoping to find his lost cat before it got too dark outside.",
+        "We hope to learn many new words this month in our English class.",
+        "She is hoping to buy new shoes for her dance class next week.",
+        "I hope to bake a delicious cake for my friend’s birthday this weekend.",
+        "They were hoping to meet their favorite author at the signing event yesterday."
+      ]
+    },
+    {
+      "word": "to include",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to include my friends in the game we are playing today.",
+        "My teacher asked us to include our favorite books in the presentation next week.",
+        "Can you include some vegetables in your dinner for better health?",
+        "Last week, I included my favorite movie in the list I made.",
+        "They always include dessert when they cook for special family occasions.",
+        "When I plan a party, I like to include a cake and drinks for everyone.",
+        "She decided to include music in her daily routine to relax and enjoy.",
+        "The tour guide said they will include a stop at the famous museum in the city.",
+        "I often include coffee in my breakfast for a good start to the day.",
+        "Yesterday, we included our pets in the family photo, making it even more special."
+      ]
+    },
+    {
+      "word": "to keep",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I keep my room clean every day to feel happy and calm.",
+        "She likes to keep her favorite books on the shelf in her room.",
+        "They keep the door closed so the baby can sleep peacefully at night.",
+        "He kept asking questions during the lesson, and the teacher answered all of them.",
+        "We keep the house tidy because we have friends coming over this weekend.",
+        "The children are keeping their toys organized in the box after playing with them.",
+        "I keep my phone charged so I can stay in touch with my family.",
+        "Last week, she kept telling me how much she loves to paint pictures.",
+        "They keep their bikes in the garage to protect them from the rain.",
+        "I kept practicing my speech every evening to feel ready for the big day."
+      ]
+    },
+    {
+      "word": "to know",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I know the way to the shop that is near my house.",
+        "She is knowing many new words because she practices English every day without stopping.",
+        "They know how to play games that are fun and have bright colors.",
+        "My brother knew the answer to the question on the math test today.",
+        "We know the best pizza place in town, and it's very popular too.",
+        "You are knowing more about the city by visiting different places each weekend.",
+        "I know that reading books can help improve my English language skills quickly.",
+        "Last week, he knew it was important to study for the upcoming exam.",
+        "She knows many songs that are easy to sing along with every day.",
+        "We are knowing that practicing speaking helps us become better English speakers soon."
+      ]
+    },
+    {
+      "word": "to learn",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I learn new words every day to improve my English skills quickly.",
+        "Walking in the park, I see many people learning different languages together happily.",
+        "She learns how to cook simple meals every weekend with her mother’s help.",
+        "Yesterday, they were learning about different animals in their biology class with excitement.",
+        "We learn better when we practice speaking English with friends and family regularly.",
+        "At the library, I enjoy learning about history from the books I find there.",
+        "He learned to play the guitar last summer, and now he loves music.",
+        "I am learning to write letters in English, which helps me make friends.",
+        "They learn about healthy foods in school, and they share this knowledge happily.",
+        "Last week, she learned how to ride a bicycle and felt very proud."
+      ]
+    },
+    {
+      "word": "to leave",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I always leave my house at eight o'clock in the morning.",
+        "She was leaving her job because she wanted to find something better for herself.",
+        "They leave school at three in the afternoon to go home.",
+        "After dinner, we like to leave the kitchen clean and tidy every night.",
+        "He leaves the house quickly because he does not want to be late.",
+        "When it started to rain, we decided to leave the park early to stay dry.",
+        "We need to leave for the bus at least ten minutes before it arrives.",
+        "They are leaving for their summer vacation next Wednesday, excited for a great time.",
+        "My friend will leave the city next week to visit her family again.",
+        "The dog always leaves toys around the house, making it a fun place to play."
+      ]
+    },
+    {
+      "word": "to let",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "Let’s go to the park and enjoy the sunny weather together today.",
+        "I let my friend borrow my book because he has not read it yet.",
+        "Please let me know if you want to join our game later.",
+        "Yesterday, I let my dog play outside while I cooked dinner in the kitchen.",
+        "Let’s order pizza for dinner tonight because everyone loves eating pizza at home.",
+        "She let her children play with the new toys in the living room yesterday.",
+        "I always let my brother choose the movie we watch on Friday nights.",
+        "Last week, my mother let me help her bake cookies for our family gathering.",
+        "Let’s take a break from studying and watch a funny video together now.",
+        "My friends let me borrow their bike when mine was broken last summer."
+      ]
+    },
+    {
+      "word": "to lose",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I always feel sad when I lose my favorite toy at home.",
+        "She was cooking dinner when she lost her phone under the table.",
+        "If you lose your keys, we cannot start the car and go.",
+        "They always lose their game when they do not play together as friends.",
+        "Yesterday, I lost my wallet while I was shopping in the mall.",
+        "When it rains, I often lose my umbrella because I forget it outside.",
+        "If you lose your way, just ask someone for help to find it.",
+        "He often loses his cool when things do not go his way.",
+        "I did not mean to lose my favorite shirt in the laundry basket.",
+        "She feels happy when she wins, but sad when she loses a game."
+      ]
+    },
+    {
+      "word": "to make",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I make breakfast every morning before I go to work or school.",
+        "She is making a cake today for her friend’s birthday party this weekend.",
+        "We make plans every Friday to go out and have fun together.",
+        "He made a beautiful drawing yesterday that I want to show you.",
+        "They make their beds nicely every day when they wake up in the morning.",
+        "I am making a list of groceries that I need for the week ahead.",
+        "My sister makes dinner for our family on Sundays when everyone is home.",
+        "Last week, we made some new friends at the park during our picnic.",
+        "I always make time to read a book before I go to sleep.",
+        "He is making a model airplane in his free time after finishing his homework."
+      ]
+    },
+    {
+      "word": "to mean",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I mean to go to the store later for some bread and milk.",
+        "She was thinking about what to mean when her friend asked her a question.",
+        "They mean to finish their homework before going out to play together.",
+        "He means his words well, but sometimes he speaks too quickly to be clear.",
+        "We are trying to understand what you mean by that comment you made.",
+        "The teacher means to help every student learn better and understand the lessons.",
+        "I meant to call my mother yesterday, but I forgot and just relaxed.",
+        "She is always careful to mean her feelings honestly when talking to friends.",
+        "They mean to have fun at the picnic this Saturday with all their friends.",
+        "I was meaning to ask you if you wanted to join us tonight."
+      ]
+    },
+    {
+      "word": "to meet",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to meet my friend at the park after school today.",
+        "Last week, I met my new neighbor, and we talked for a long time.",
+        "Sarah likes to meet new people when she travels to different cities.",
+        "When I meet my family for dinner, we always have a great time together.",
+        "Do you want to meet for coffee and chat about our weekend plans?",
+        "Yesterday, I met my teacher in the library, and we discussed our lessons.",
+        "We usually meet at the gym every Monday to exercise and stay healthy.",
+        "At the party, I will meet many interesting people from different backgrounds and cultures.",
+        "I like to meet my friends at the café where they serve good food.",
+        "This Saturday, I am going to meet my grandma, who baked cookies for me."
+      ]
+    },
+    {
+      "word": "to move",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I move my chair closer to the table to eat my lunch.",
+        "She was moving her books to a new shelf in the library today.",
+        "They move quickly when they see the bus coming down the street.",
+        "He is moving slowly because he has a small dog on a leash.",
+        "The children move around the park and play games with their friends.",
+        "Yesterday, I moved my bed to a different spot in my room.",
+        "My sister and I move together when we dance to our favorite song.",
+        "Last week, we were moving boxes to organize our garage for the summer.",
+        "When it rains, the cars move away from the flooded streets quickly.",
+        "I enjoy moving my body to exercise, even if it is just walking."
+      ]
+    },
+    {
+      "word": "to need",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I need to buy some bread and milk from the local store.",
+        "She was reading a book because she needed to pass the time while waiting.",
+        "They need help with their homework every Tuesday after school ends for the day.",
+        "He needs to find his keys before he can leave for the meeting today.",
+        "We need to clean the house this weekend, so it looks nice for guests.",
+        "I was cooking dinner when I felt I needed to call my friend.",
+        "My sister needs new shoes for her gym class, so we went shopping.",
+        "After exercising, I realized I need to drink more water to stay healthy.",
+        "They need to practice speaking English every day to become more confident quickly.",
+        "She was walking her dog when she suddenly needed to take a break."
+      ]
+    },
+    {
+      "word": "to open",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I open the door to find my friends waiting outside for me.",
+        "They are sitting in the living room, and we open the window together.",
+        "She likes to open her laptop in the morning to check emails.",
+        "After school, I open my books to study for the big test next week.",
+        "We open the fridge to see if there is any food to eat.",
+        "The teacher opens the lesson with a fun game to help us learn.",
+        "Please open your notebooks and write down the new vocabulary words today.",
+        "I usually open my phone in the evening to talk with my family.",
+        "When it rains, we open umbrellas to stay dry and enjoy the day.",
+        "They open the park gate early every morning for everyone to enjoy it."
+      ]
+    },
+    {
+      "word": "to pay",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I pay my bill at the restaurant after I finish eating dinner.",
+        "She is paying for her coffee at the small cafe down the street.",
+        "They usually pay for their groceries on Saturdays at the big store.",
+        "He paid his friend back for the movie tickets they bought last month.",
+        "My sister likes to pay with cash instead of using her credit card.",
+        "I am paying attention to the teacher whenever she discusses the new topic.",
+        "We always pay for our lunch before we leave the office every day.",
+        "Last week, they paid for the tickets to see their favorite band perform.",
+        "She pays for her books at the library whenever she borrows something new.",
+        "He is paying for his bike repair, so it will work perfectly again."
+      ]
+    },
+    {
+      "word": "to play",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I like to play soccer with my friends every Saturday morning at the park.",
+        "Yesterday, I played a fun card game with my family at home after dinner.",
+        "My sister loves to play the piano for everyone during family gatherings and events.",
+        "We are playing a board game together this weekend, and everyone is excited.",
+        "Every evening, I play video games at home after finishing my homework and chores.",
+        "Last week, my friend and I played basketball at the school gym for two hours.",
+        "He likes to play chess with his grandfather, who is very good at it.",
+        "I was playing with my dog in the backyard when it started to rain.",
+        "Can you help me play this new song on my guitar for the first time?",
+        "After school, the children often play outside until it is time to go home."
+      ]
+    },
+    {
+      "word": "to put",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I put my keys on the table before I left for work.",
+        "She is putting her books in the bag because she will go home.",
+        "They put their shoes near the door when they entered the house.",
+        "We are putting the groceries in the kitchen after coming back from the store.",
+        "He put his phone on silent during the important meeting yesterday afternoon.",
+        "I am putting the laundry in the washing machine to clean the clothes.",
+        "My brother put the puzzle pieces together last night at the dining table.",
+        "She is putting her phone charger in her backpack for later use today.",
+        "The teacher put a sticker on my paper for doing a good job.",
+        "We are putting the chairs back in place after the party ended last night."
+      ]
+    },
+    {
+      "word": "to read",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I read a book every evening before going to bed with my cat.",
+        "She was reading her favorite story to the children in the park today.",
+        "My friend likes to read newspapers in the morning while drinking coffee.",
+        "Last week, we read a simple book together, and it was fun.",
+        "He reads a magazine about nature and animals every afternoon after lunch.",
+        "Yesterday, I was reading a really interesting article about travel and different places.",
+        "They want to read more stories in English to improve their language skills.",
+        "While I was reading quietly, my neighbor knocked on the door at noon.",
+        "We read a short story together and discussed it happily after class.",
+        "After the meeting, she enjoyed reading through her notes and writing down ideas."
+      ]
+    },
+    {
+      "word": "to remember",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I remember my first day at this new school very clearly and happily.",
+        "She is remembering to bring her lunch every day to work this week.",
+        "We remember playing in the park when we were children together every summer.",
+        "They remembered to buy milk and bread before coming back home last night.",
+        "He always remembers to water his plants in the morning before heading out.",
+        "I remember visiting my grandmother in the countryside during the holidays every year.",
+        "The dog remembers where it buried its bone in the backyard last week.",
+        "My friends and I remember having fun together during our summer vacation last year.",
+        "You will remember this moment fondly when you look back in the future.",
+        "She remembered to send a birthday card to her friend who lives far away."
+      ]
+    },
+    {
+      "word": "to return",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I will return the book to the library after school today.",
+        "After dinner, I return to my room to study English words and phrases.",
+        "She returned home late from the party last night with her friends.",
+        "When I finish my work, I like to return the tools to their place.",
+        "They are returning from their vacation in the mountains on Sunday evening.",
+        "If you forget your umbrella, I can return it to you tomorrow afternoon.",
+        "He returns the empty bottles to the store to get some money back.",
+        "I am thinking about returning to my favorite beach next summer with my family.",
+        "We returned to the movie theater because we wanted to watch the film again.",
+        "Maria will return the bicycle to her neighbor after she finishes riding it."
+      ]
+    },
+    {
+      "word": "to run",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I run in the park every morning before I go to work.",
+        "She enjoys running because it makes her feel happy and full of energy.",
+        "They run together on weekends to stay fit and enjoy the fresh air.",
+        "Last Tuesday, I ran five kilometers, and it felt great to finish strong.",
+        "My dog loves to run after the ball in our backyard every evening.",
+        "Running helps me clear my mind, think better, and relax after a long day.",
+        "He often runs during his lunch break to keep his body healthy and active.",
+        "Yesterday, we ran in a fun race with our friends at the local park.",
+        "I usually run to my friend's house so we can watch movies together.",
+        "Running outside in the sun makes me feel alive and gives me more energy."
+      ]
+    },
+    {
+      "word": "to see",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I see a big dog walking in the park every sunny morning.",
+        "She is sitting in her room, reading a book, and I see her smile.",
+        "My friend sees a beautiful bird sitting on the tree every day.",
+        "Yesterday, we saw a movie together and enjoyed the story and music so much.",
+        "I see my mother cooking dinner in the kitchen while I do my homework.",
+        "They are walking to the store now; I see them carrying some bags with food.",
+        "He sees his sister drawing pictures in the garden near the flowers every afternoon.",
+        "Last week, we saw the stars shining bright in the sky during our walk.",
+        "I see a little boy playing with his toys on the floor happily today.",
+        "The teacher sees her students studying hard for the exam and feels proud of them."
+      ]
+    },
+    {
+      "word": "to sell",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to sell my old bicycle because it is too small now.",
+        "Last week, they sold their house quickly because the market is very good.",
+        "She will sell her handmade jewelry at the local market this Saturday.",
+        "He enjoys selling books at the fair and meets many interesting people there.",
+        "They are trying to sell fresh fruit from their garden to the neighbors.",
+        "Yesterday, I sold all my old clothes and got some extra money for lunch.",
+        "We plan to sell our car because we now use public transport daily.",
+        "My father sells tools in his shop, and many customers come to buy them.",
+        "She is selling her artwork online, and people from different countries are buying it.",
+        "Last month, we sold three puppies and found kind homes for all of them."
+      ]
+    },
+    {
+      "word": "to send",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I will send the letter to my friend tomorrow morning at eight o'clock.",
+        "She is sending a message to her mom about the party next week.",
+        "Can you send me the picture you took during our picnic last Sunday?",
+        "They sent an invitation to all their friends for the wedding in December.",
+        "I always send a card to my sister on her birthday every year.",
+        "While studying English, I often send emails to my teacher for help.",
+        "We sent the package yesterday, and it will arrive at your house soon.",
+        "He is sending his application for a job that he really wants now.",
+        "Please send the report to me before the meeting starts in the evening.",
+        "I sent a funny video to my friend, and she laughed so much."
+      ]
+    },
+    {
+      "word": "to show",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I show my friends my new book every time we meet.",
+        "The teacher is showing the students how to read a map correctly today.",
+        "They show their favorite photos to everyone at the family gathering.",
+        "Maria was showing her painting at the art fair last weekend with joy.",
+        "He always shows kindness and helps his neighbors when they need support.",
+        "Yesterday, I showed my sister how to cook her favorite pasta dish happily.",
+        "She likes to show her toys to her friends during playtime at school.",
+        "The children were showing great excitement when they found the hidden treasure outside.",
+        "We often show our parents our drawings to get their opinions and advice.",
+        "Last summer, I showed my friends the best parks to visit in our city."
+      ]
+    },
+    {
+      "word": "to sit",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I like to sit in the park and watch the ducks swim.",
+        "Yesterday, my friend and I sat on the bench near the tree.",
+        "Can you sit on the chair while I cook dinner for us?",
+        "They were sitting at the table, chatting and enjoying their warm coffee.",
+        "I always sit quietly when I read my favorite book at home.",
+        "Last week, we sat outside and enjoyed the sunshine and fresh air.",
+        "My dog likes to sit beside me when I watch television in the evening.",
+        "The children were sitting in a circle, playing a fun game together outside.",
+        "It’s nice to sit and talk with friends over a cup of tea.",
+        "This morning, I sat at the kitchen table, eating toast and listening to music."
+      ]
+    },
+    {
+      "word": "to speak",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I speak English every day in my language class with my teacher.",
+        "She was speaking to her friend at the park when it started to rain.",
+        "We speak different languages, but we understand each other very well.",
+        "They were speaking loudly in the restaurant, which made it hard to hear.",
+        "I want to speak with my family on the phone this weekend.",
+        "Last week, he was speaking about his travels to many interesting places overseas.",
+        "Maria speaks slowly, so everyone can understand her in our lessons.",
+        "My brother was speaking Spanish at the store, and the cashier smiled back.",
+        "He speaks to his dog every morning when they go for a walk.",
+        "Yesterday, I was speaking to my friend while cooking in the kitchen together."
+      ]
+    },
+    {
+      "word": "to spend",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I spend my weekends reading books and relaxing at home with family.",
+        "Last Saturday, I spent time in the park playing with my dog and friends.",
+        "She likes to spend her evenings cooking dinner for her family and friends.",
+        "We spent money on groceries because we needed food for the whole week.",
+        "They spend a lot of time watching movies and eating popcorn during weekends.",
+        "Yesterday, I spent my lunch break talking to my coworker about our families.",
+        "He often spends his free time drawing pictures and painting for fun.",
+        "Last month, we spent two hours cleaning the house before our friends came over.",
+        "I spend my mornings drinking coffee while reading the news on my phone.",
+        "She spent the afternoon shopping for clothes and shoes at the new mall."
+      ]
+    },
+    {
+      "word": "to stand",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I like to stand on the bus when it is very full.",
+        "She is standing at the door because she wants to come in.",
+        "We stand in line every morning to buy coffee before work.",
+        "They were standing outside the store waiting for their friends to arrive.",
+        "He does not like to stand for a long time without taking breaks.",
+        "The children are standing in a circle, happily playing a fun game together.",
+        "When I stand on the beach, I feel the sand between my toes.",
+        "My brother was standing in the kitchen, cooking dinner when I got home.",
+        "I always stand at the front of the class to see the teacher.",
+        "She was standing in the park, enjoying the sunshine and watching the birds."
+      ]
+    },
+    {
+      "word": "to stay",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to stay at home and read my favorite book today.",
+        "Please stay here while I go to the store to buy bread and milk.",
+        "She loves to stay in bed on Sundays and relax with tea.",
+        "When it rains, we like to stay inside and watch movies together.",
+        "They are going to stay with their friends for the weekend in the city.",
+        "It is important to stay safe when walking alone at night in the dark.",
+        "My brother stayed up late last night and woke up feeling tired today.",
+        "I always try to stay positive during difficult times and support my friends.",
+        "We can stay at the park and have a picnic on a sunny day.",
+        "Last summer, I stayed with my grandparents and helped them in the garden."
+      ]
+    },
+    {
+      "word": "to stop",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "Please stop talking while I am trying to listen to the teacher.",
+        "She stopped at the store yesterday to buy some bread and milk.",
+        "I will stop running when I feel tired after the long race.",
+        "The children stopped playing when they heard their mother calling for dinner.",
+        "Can you stop making noise so I can concentrate on my homework?",
+        "They stopped watching the movie because it became too boring after a while.",
+        "He always stops for a moment to think before answering the question.",
+        "My friend stopped by my house last week to help me with cleaning.",
+        "The bus will stop at the next station to let people get off.",
+        "I stopped studying French last year, but I want to start again soon."
+      ]
+    },
+    {
+      "word": "to take",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I take my dog for a walk every morning before work begins.",
+        "Sarah took her lunch to the park and enjoyed it under the trees.",
+        "We take pictures when we visit new places to remember our trips.",
+        "John was taking a nap when the phone rang loudly in the room.",
+        "They take a bus to school because it is safer than walking alone.",
+        "Yesterday, I took my bicycle to the store and bought some food.",
+        "I take notes during the class to help me remember the lessons better.",
+        "Last week, they were taking a yoga class to become more flexible and fit.",
+        "She takes her coffee black with no sugar because she likes the taste.",
+        "He took his time to finish the puzzle, enjoying each piece he placed."
+      ]
+    },
+    {
+      "word": "to teach",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to teach my friend how to play the guitar today.",
+        "Yesterday, my teacher taught us how to use simple sentences and words.",
+        "Can you teach me how to make a delicious cake for dinner?",
+        "Last week, I was teaching my sister how to ride her bike safely.",
+        "It is fun to teach children songs and games in the park.",
+        "My grandmother taught me family stories that I will always remember fondly.",
+        "Please teach me some new words to use in my English class.",
+        "We are teaching our children about nature and how to protect it together.",
+        "I hope to teach English to people from my community in the future.",
+        "Last summer, my friends were teaching me how to swim in the sea."
+      ]
+    },
+    {
+      "word": "to tell",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "Please tell me your name so I can remember it today.",
+        "Yesterday, I told my friend about the movie we watched last week together.",
+        "Can you tell me where the nearest bus stop is located right now?",
+        "My brother often tells funny stories that make everyone laugh and feel happy.",
+        "I want to tell you about my favorite book because it is amazing.",
+        "Last night, I told my mother that I wanted to learn cooking skills.",
+        "Please tell the teacher if you do not understand the lesson today.",
+        "I remember when my friend told me about her trip to the mountains.",
+        "Can you tell me how to get to the library from here?",
+        "My sister told me that she is going to travel to Paris soon."
+      ]
+    },
+    {
+      "word": "to think",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I think about my family every day when I wake up in the morning.",
+        "While I was walking home yesterday, I thought about my plans for the weekend.",
+        "She thinks it is important to study English to get a good job.",
+        "When I am cooking, I often think about new recipes to try for dinner.",
+        "They think that playing games can help them learn English in a fun way.",
+        "Last night, I thought about my friends and how much I miss them right now.",
+        "He thinks studying vocabulary is very important for understanding and speaking English well.",
+        "While I was reading a book, I thought about how much I enjoy reading stories.",
+        "We think that practicing speaking is a great way to improve our English skills.",
+        "She thought about visiting her grandmother last weekend because she loves to see her."
+      ]
+    },
+    {
+      "word": "to try",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I try to read one book every month to improve my English skills.",
+        "She is trying to cook dinner for her family and make them happy today.",
+        "They try to exercise every morning so they can feel more active.",
+        "Last week, I tried to learn new words, but it was very hard.",
+        "He tries to call his friend every Saturday to chat and have fun.",
+        "We tried painting the fence yesterday, but the color did not look good.",
+        "My sister is trying to finish her homework before dinner time today.",
+        "I tried playing the guitar once, but my fingers hurt after a while.",
+        "They often try new recipes from different countries to enjoy unique meals.",
+        "Last month, she tried to run in a local race but got tired quickly."
+      ]
+    },
+    {
+      "word": "to understand",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I understand how to use this new phone for my daily tasks.",
+        "She is learning Spanish because she wants to understand her friends better during conversations.",
+        "He did not understand the instructions that came with the new game.",
+        "We understand that practice is important for improving our English speaking skills each day.",
+        "They can understand simple questions, but they struggle with more complex answers.",
+        "My teacher explained the lesson slowly, so we all could understand it easily.",
+        "I really want to understand what the movie is about before watching it.",
+        "After studying hard for the test, I finally understand the math problems very clearly.",
+        "She understands her cat's needs very well because she watches it closely every day.",
+        "If we practice English together, we will all understand the language much better soon."
+      ]
+    },
+    {
+      "word": "to use",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I use my phone to talk to my friends every day after school.",
+        "Yesterday, I used my computer for two hours to complete my homework.",
+        "They use a map to find the way to the new restaurant.",
+        "Sarah is using her notebook to write down her important ideas for class.",
+        "We use our car to go shopping at the big mall on weekends.",
+        "Last week, I used my time wisely to practice English every evening at home.",
+        "He uses a pen to draw pictures in his art class every Tuesday.",
+        "My parents used to take me to the park when I was younger.",
+        "You use a spoon to eat soup and a fork for pasta.",
+        "They used all their energy to play soccer in the hot sun yesterday."
+      ]
+    },
+    {
+      "word": "to wait",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I will wait for my friend at the park after school today.",
+        "While I was waiting at the bus stop, I noticed it was sunny outside.",
+        "They wait in line to buy tickets for the concert every summer.",
+        "She is waiting for her coffee at the café and looks very happy.",
+        "We can wait for our food at the restaurant together and chat.",
+        "Last Saturday, I waited for my sister, but she forgot to come.",
+        "He does not want to wait long for the movie to start today.",
+        "They were waiting for the train when the sudden rain started to fall.",
+        "Can you wait until I finish my homework before we go out?",
+        "While she was waiting for the mail, she read a book quietly."
+      ]
+    },
+    {
+      "word": "to walk",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I walk to the store every day to buy some fresh bread.",
+        "Walking in the park after dinner is a nice way to relax and think.",
+        "She walks her dog in the morning before going to work.",
+        "Yesterday, they walked around the city and saw many interesting places together.",
+        "We walk slowly so we can enjoy the beauty of nature outside.",
+        "Last week, he walked five miles to visit his friend's new house in town.",
+        "I always walk home from school with my friend because it is fun.",
+        "Walking helps me feel better when I am sad or tired after work.",
+        "They usually walk by the river on weekends to enjoy the fresh air.",
+        "Last Saturday, she walked to the beach and spent the day relaxing there."
+      ]
+    },
+    {
+      "word": "to want",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to eat breakfast before I go to work today.",
+        "She wanted to go shopping, but it was raining very heavily outside.",
+        "They want to play soccer in the park after school this week.",
+        "My brother wanted to learn how to ride a bike last summer.",
+        "We want to watch a movie tonight with popcorn and drinks together.",
+        "He wanted to fix his bicycle, but he did not have tools.",
+        "I want to visit my grandmother this weekend and bring her cookies.",
+        "Sarah wanted to join the dance class, but she felt too shy yesterday.",
+        "You want to study English every day to speak well and understand.",
+        "The children wanted to go to the zoo, but it was closed today."
+      ]
+    },
+    {
+      "word": "to watch",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I watch TV every evening after finishing my homework and eating dinner.",
+        "My family and I enjoy watching movies together on weekends, sharing popcorn and laughter.",
+        "She likes to watch birds in the park during her morning walks.",
+        "Yesterday, we watched a very funny comedy film and had a great time.",
+        "He often watches the news on his phone when he is on the bus.",
+        "They are watching the children play in the backyard while their parents relax.",
+        "I watch my favorite show with my sister every Friday night without fail.",
+        "Last week, we watched a documentary about animals that live in the ocean.",
+        "She usually watches her neighbors garden every morning while drinking her coffee.",
+        "They were watching the sunset together on the beach, feeling happy and peaceful."
+      ]
+    },
+    {
+      "word": "to win",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I want to win the game with my friends this Saturday afternoon.",
+        "Winning is important to me, but having fun while playing is even better.",
+        "She hopes to win first place in the school art competition soon.",
+        "They are trying their best to win the match against the strong team today.",
+        "He won a small prize at the fair last weekend for his skills.",
+        "Winning makes me happy, but I also like to cheer for others too.",
+        "We can win together if we work as a team during the project.",
+        "I was winning the race until I tripped over a rock by chance.",
+        "My sister really wants to win the singing contest at her school.",
+        "Winning a game is exciting, but losing can teach us valuable lessons, too."
+      ]
+    },
+    {
+      "word": "to write",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Essential",
+      "sentences": [
+        "I like to write letters to my friends on weekends after breakfast.",
+        "She is writing a story about her favorite animal, a small brown dog.",
+        "My teacher tells us to write down new words every day in class.",
+        "Yesterday, I wrote a nice email to my cousin who lives abroad.",
+        "He wants to write a poem about the beauty of nature and trees.",
+        "While waiting for the bus, I always like to write in my notebook.",
+        "Last week, we wrote a short essay about our hobbies in school.",
+        "They are writing a poster about their favorite books for the school fair.",
+        "She loves to write in her journal every night before going to bed.",
+        "I wrote a thank-you card for my friend’s birthday party last Saturday."
+      ]
+    },
+    {
+      "word": "to add",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I always add sugar to my coffee in the morning for taste.",
+        "She was adding new words to her vocabulary list every day this week.",
+        "My sister likes to add cheese to her pasta for extra flavor.",
+        "While cooking, he added some vegetables to the soup for healthy food.",
+        "I need to add more fruits to my daily diet for better health.",
+        "They were adding decorations to the house for the birthday party this evening.",
+        "Each night, I add a little water to my plant pot for moisture.",
+        "He was adding the final touches to his report before the deadline today.",
+        "She wants to add a new song to her playlist for the trip.",
+        "We were adding our favorite toppings to the pizza when the oven beeped."
+      ]
+    },
+    {
+      "word": "to answer",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to arrive",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to born",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to call",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I call my friend every day to see how she is doing.",
+        "Yesterday, I called my mother to tell her about my new job and plans.",
+        "Can you call the restaurant to make a reservation for dinner tonight?",
+        "I was calling my brother when I found a new game on my phone.",
+        "Every morning, I call my neighbor to chat about the weather and news.",
+        "Last week, I called the school to ask about my child’s homework assignment.",
+        "Do you want to call your friend and invite her to the party?",
+        "She was calling her sister to ask for help with her language studies correctly.",
+        "I often call my grandparents on Sundays to talk about family and life.",
+        "They called the doctor yesterday because they were feeling sick and needed help."
+      ]
+    },
+    {
+      "word": "to check",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to choose",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to clean",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to climb",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to come",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to compare",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to complete",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to correct",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to cost",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to dance",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to describe",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to design",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to discuss",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to dress",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to drink",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to drive",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to email",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to end",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to enjoy",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to exercise",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to fill",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to finish",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to fly",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to forget",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to form",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to grow",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to guess",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to hate",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to house",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to imagine",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to improve",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to interest",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to introduce",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to join",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to laugh",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to listen",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to look",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to love",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to miss",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to name",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to order",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to paint",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to park",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to phone",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to plan",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to post",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to practice",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to prefer",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to prepare",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to rain",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": []
+    },
+    {
+      "word": "to relax",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "After work, I relax on my sofa with a cup of tea.",
+        "While I was walking in the park, I saw people relaxing under trees.",
+        "She likes to relax by reading a book in her cozy chair.",
+        "My friends and I were relaxing by the lake last Saturday, enjoying the sun.",
+        "On Sundays, I relax by listening to music and doing nothing at home.",
+        "We enjoyed relaxing at the beach, feeling the warm sand between our toes.",
+        "In the evenings, I often relax by watching my favorite movies with family.",
+        "They were relaxing in the garden, listening to the birds and watching flowers.",
+        "I find it hard to relax when there is too much noise around me.",
+        "Last week, we were relaxing at a small cafe, drinking coffee and chatting."
+      ]
+    },
+    {
+      "word": "to repeat",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I ask my teacher to repeat the question because I do not understand.",
+        "While studying, Sarah likes to repeat new words several times to remember them better.",
+        "The children wanted to repeat the song they learned in music class yesterday.",
+        "After I listened to the audio, I decided to repeat it twice for practice.",
+        "He helps me by asking me to repeat my sentences in English often.",
+        "When learning a new language, it is helpful to repeat phrases daily for better speaking skills.",
+        "My friend told me to repeat the instructions carefully to avoid making mistakes.",
+        "I enjoy watching movies and often repeat my favorite scenes to understand them well.",
+        "Each morning, I repeat positive sentences to myself to start the day happily.",
+        "While studying for the exam, I keep repeating notes to remember all the important facts better."
+      ]
+    },
+    {
+      "word": "to ride",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I ride my bike to the store every Saturday morning with a smile.",
+        "Last weekend, we took a long ride through the park with our friends.",
+        "She loves to ride horses on the weekends in the green fields nearby.",
+        "The children are riding their scooters on the sidewalk and laughing happily together.",
+        "He rides the bus to work every day and meets many nice people.",
+        "Yesterday, I enjoyed a peaceful ride by the lake while listening to music.",
+        "We like to ride our bikes at the beach during the hot summer days.",
+        "Maria is riding her skateboard at the mall and having fun with her friends.",
+        "They often ride together to school, helping each other with their homework on the way.",
+        "I rode my bicycle last night and saw many beautiful lights in the city."
+      ]
+    },
+    {
+      "word": "to say",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I say hello to my neighbor every morning when I leave for work.",
+        "The teacher says that practice is important for learning a new language.",
+        "My friend always says what he thinks, even if it's not nice.",
+        "They say it is better to read books than to watch television all day.",
+        "When I see my family, I say how much I missed them that week.",
+        "The cat says meow every time it wants food or attention from me.",
+        "I say thank you to my co-workers when they help me at the office.",
+        "She says she loves to listen to music when she cleans her room.",
+        "The child says he does not want to go to bed just yet.",
+        "My grandmother often says stories about her childhood that make us all laugh."
+      ]
+    },
+    {
+      "word": "to share",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I want to share my lunch with my friend at school today.",
+        "She enjoys sharing her stories with her family during dinner every evening.",
+        "They will share their books with the group for the project next week.",
+        "We shared our favorite songs with each other while working on the homework.",
+        "He likes to share his toys with his friends when they come over.",
+        "I am sharing my notes with my classmates to help them study for exams.",
+        "The children shared their snacks happily during the picnic at the park yesterday.",
+        "My sister loves sharing her art with everyone who comes to our home.",
+        "She shared her umbrella with a stranger when it started to rain heavily.",
+        "We are sharing our ideas for the project so everyone can help out."
+      ]
+    },
+    {
+      "word": "to shop",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I like to shop for new clothes every weekend at the mall.",
+        "She enjoys shopping for fresh fruits and vegetables at the local market today.",
+        "We went to shop for groceries because we needed food for the week.",
+        "My brother loves to shop online, especially for video games and gadgets.",
+        "They plan to shop for gifts for their friends' birthdays next month.",
+        "I was happy when I found time to shop in the city yesterday.",
+        "She took her kids to shop for toys and games at the store.",
+        "He enjoyed shopping at the flea market last Saturday to find new things.",
+        "We will shop for school supplies soon because summer vacation is almost over.",
+        "They were excited to shop at the new store that opened nearby last week."
+      ]
+    },
+    {
+      "word": "to sing",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I like to sing songs in the morning while I eat breakfast.",
+        "She was singing loudly in the park, and people stopped to listen to her.",
+        "My brother loves to sing during the shower every morning without fail.",
+        "They enjoyed singing together at the party, making everyone happy and cheerful.",
+        "We sing songs in English class to practice our pronunciation and vocabulary skills.",
+        "Yesterday, he sang a beautiful song at the school talent show and won.",
+        "I often sing in the car when I drive to work each day.",
+        "The children were singing their favorite nursery rhymes during the fun event yesterday.",
+        "After dinner, I sing quietly to help my baby brother fall asleep fast.",
+        "Last week, they sang together at a concert, and everyone clapped for them."
+      ]
+    },
+    {
+      "word": "to sleep",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I always sleep for eight hours at night to feel good in the morning.",
+        "She is sleeping on the sofa because her bed is too small for her.",
+        "After a long day, I like to sleep early to feel rested.",
+        "They were sleeping soundly while the rain fell softly outside their window.",
+        "My baby brother sleeps in his crib with his favorite teddy bear every night.",
+        "He is sleeping deeply now, but he will wake up in an hour.",
+        "I sleep with my dog every night, and he likes to cuddle.",
+        "Yesterday, she slept for ten hours because she was very tired from work.",
+        "At the weekend, I often sleep late because I enjoy my free time.",
+        "The cat is sleeping on the chair, enjoying the warm sunlight coming in."
+      ]
+    },
+    {
+      "word": "to snow",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I like to watch the snow fall gently from the sky today.",
+        "Yesterday, my friends and I built a big snowman in the park.",
+        "Snow makes the world look clean and bright in the morning light.",
+        "While I was walking home, I noticed the snow covering the ground beautifully.",
+        "Children love to play in the snow during the winter break each year.",
+        "Last week, we went sledding in the snow and had a lot of fun.",
+        "The snowflakes danced in the air, falling softly onto the warm ground.",
+        "I took many pictures of the snow-covered trees while walking in the park.",
+        "Snow can create a magical scene during the cold months of winter.",
+        "When the snow is deep, we enjoy skiing and hot chocolate after playing."
+      ]
+    },
+    {
+      "word": "to sound",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I sound my horn to wake my friend in the morning.",
+        "She is sounding the alarm because she saw a fire outside her house.",
+        "They sound happy when they listen to music in the park together.",
+        "The teacher sounded excited when she told us about the school trip planned.",
+        "We sound funny when we try to sing the song really fast.",
+        "He sounded surprised when he heard good news about his job interview.",
+        "My cat sounds loud when it wants to go outside at night.",
+        "While walking home, she sounded worried about her lost keys and asked for help.",
+        "I sound better when I practice speaking English every day with friends.",
+        "The little child sounded joyful as he played with his toys in the garden."
+      ]
+    },
+    {
+      "word": "to spell",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I will spell my name correctly on the paper for the teacher.",
+        "Yesterday, I was spelling difficult words out loud to help my friend learn.",
+        "Can you spell your favorite color for me so I can write it?",
+        "While studying, I enjoyed spelling new words because it helped my memory grow.",
+        "She always asks me to spell the names of her pets for fun.",
+        "Last week, we practiced spelling together to prepare for the big test in class.",
+        "He likes to spell different fruits while shopping at the market with his mom.",
+        "We are spelling the names of our countries on a big map in class.",
+        "I want to learn how to spell important words to improve my English.",
+        "They enjoyed spelling simple sentences together, and it made learning so much easier."
+      ]
+    },
+    {
+      "word": "to start",
+      "part_of_speech": "v",
+      "level": "A1",
+      "category": "Verbs - Actions",
+      "sentences": [
+        "I will spell my name correctly on the paper for the teacher.",
+        "Yesterday, I was spelling difficult words out loud to help my friend learn.",
+        "Can you spell your favorite color for me so I can write it?",
+        "While studying, I enjoyed spelling new words because it helped my memory grow.",
+        "She always asks me to spell the names of her pets for fun.",
+        "Last week, we practiced spelling together to prepare for the big test in class.",
+        "He likes to spell different fruits while shopping at the market with his mom.",
+        "We are spelling the names of our countries on a big map in class.",
+        "I want to learn how to spell important words to improve my English.",
+        "They enjoyed spelling simple sentences together, and it made learning so much easier."
+      ]
+    }
+  ]
+}
