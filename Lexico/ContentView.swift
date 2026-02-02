@@ -10,7 +10,10 @@ import SwiftData
 
 struct CardView: View {
     let nativeLanguage: String = "ru"
+    let sentence: (text: String, translation: String)
 
+    private let progressTracker: CardsProgressTracker
+    
     var data: Card
     @State var isFlipped: Bool = false
     
@@ -22,19 +25,23 @@ struct CardView: View {
     }
     
     @ViewBuilder
+    var header: some View {
+        HStack {
+            Spacer()
+            Text(data.category)
+                .fontDesign(.serif)
+            Spacer()
+            Text("🗣️")
+                .font(.system(size: 40))
+                .onTapGesture {
+                }
+        }
+    }
+    
+    @ViewBuilder
     var defaultState: some View {
         VStack {
-            HStack {
-                Spacer()
-                Text(data.category)
-                    .fontDesign(.serif)
-                Spacer()
-                Text("🗣️")
-                    .font(.system(size: 40))
-                    .onTapGesture {
-                    }
-            }
-            .padding()
+            header
             Spacer()
             Text(data.word)
                 .fontDesign(.serif)
@@ -60,18 +67,8 @@ struct CardView: View {
     
     @ViewBuilder
     var flippedState: some View {
-        let sentence = data.getRandomSentence(translation: nativeLanguage)
         VStack {
-            HStack {
-                Spacer()
-                Text(data.category)
-                Spacer()
-                Text("🗣️")
-                    .font(.system(size: 40))
-                    .onTapGesture {
-                    }
-            }
-            .padding()
+            header
             Spacer()
             Text(data.getTranslation(nativeLanguage))
                 .fontDesign(.serif)
@@ -102,18 +99,21 @@ struct CardView: View {
             
             HStack(spacing: 32) {
                 Button {
+                    progressTracker.reviewCard(cardID: data.id, grade: .easy)
                     complete()
                 } label: {
                     Text("Easy")
                 }
 
                 Button {
+                    progressTracker.reviewCard(cardID: data.id, grade: .good)
                     complete()
                 } label: {
                     Text("Good")
                 }
                 
                 Button {
+                    progressTracker.reviewCard(cardID: data.id, grade: .hard)
                     complete()
                 } label: {
                     Text("Hard")
@@ -122,19 +122,21 @@ struct CardView: View {
             .padding(.vertical)
         }
         .multilineTextAlignment(.center)
-        .padding()
     }
     
     var body: some View {
         ZStack {
             Color.white
-            Group {
+            ZStack {
                 if isFlipped {
                     flippedState
                 } else {
                     defaultState
                 }
             }
+            .padding()
+            .transition(.opacity)
+            .animation(.bouncy, value: isFlipped)
             .contentShape(.rect)
         }
         .onTapGesture {
@@ -142,27 +144,46 @@ struct CardView: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 24))
     }
+    
+    init(data: Card, progressTracker: CardsProgressTracker, onComplete: @escaping () -> Void) {
+        self.data = data
+        self.onComplete = onComplete
+        self.sentence = data.getRandomSentence(translation: nativeLanguage)
+        self.progressTracker = progressTracker
+    }
 }
 
 struct ContentView: View {
-    let cards: [Card]
-    @State var activeCard: Card
+    private let cardsProvider: CardsProvider
+    private let progressTracker: CardsProgressTracker
+    
+    @State var activeCard: Card?
     
     var body: some View {
-        CardView(data: activeCard) {
-            activeCard = cards.randomElement()!
+        if let activeCard {
+            CardView(data: activeCard, progressTracker: progressTracker) {
+                self.activeCard = cardsProvider.getNextCard(for: "en")
+            }
+            .padding()
+            .background(Color.gray)
+        } else {
+            Text("no cards :(")
         }
-        .padding()
-        .background(Color.gray)
     }
     
-    init(cards: [Card]) {
-        self.cards = cards
-        self.activeCard = cards.randomElement()!
+    init(cardsProvider: CardsProvider, progressTracker: CardsProgressTracker) {
+        self.cardsProvider = cardsProvider
+        self.progressTracker = progressTracker
+        self._activeCard = State(initialValue: cardsProvider.getNextCard(for: "en"))
     }
 }
 
 #Preview {
-    let cardsProvider = CardsProvider()
-    ContentView(cards: cardsProvider.getAllCards(for: "en"))
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: CardProgress.self, configurations: config)
+    let progressTracker = CardsProgressTracker(modelContext: container.mainContext)
+    let cardsProvider = CardsProvider(progressManager: progressTracker)
+
+    ContentView(cardsProvider: cardsProvider, progressTracker: progressTracker)
+        .modelContainer(container)
 }

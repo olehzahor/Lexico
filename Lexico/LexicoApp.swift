@@ -10,25 +10,31 @@ import SwiftData
 
 @main
 struct LexicoApp: App {
-    let cardsProvider = CardsProvider()
+    private var cardsProgressTracker: CardsProgressTracker
+    private var cardsProvider: CardsProvider
+    
+    var sharedModelContainer: ModelContainer = {
+        let schema = Schema([
+            CardProgress.self,
+        ])
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
-//    var sharedModelContainer: ModelContainer = {
-//        let schema = Schema([
-//            Item.self,
-//        ])
-//        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-//
-//        do {
-//            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-//        } catch {
-//            fatalError("Could not create ModelContainer: \(error)")
-//        }
-//    }()
+        do {
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+        } catch {
+            fatalError("Could not create ModelContainer: \(error)")
+        }
+    }()
 
     var body: some Scene {
         WindowGroup {
-            ContentView(cards: cardsProvider.getAllCards(for: "en"))
+            ContentView(cardsProvider: cardsProvider, progressTracker: cardsProgressTracker)
         }
-//        .modelContainer(sharedModelContainer)
+        .modelContainer(sharedModelContainer)
+    }
+    
+    init() {
+        self.cardsProgressTracker = CardsProgressTracker(modelContext: sharedModelContainer.mainContext)
+        self.cardsProvider = CardsProvider(progressManager: cardsProgressTracker)
     }
 }
