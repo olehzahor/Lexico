@@ -9,10 +9,10 @@ import Foundation
 import SwiftData
 
 enum CardState: String, Codable {
-    case new, learning, review
+    case new = "New", learning = "Learning", review = "Review"
 }
 
-enum ReviewGrade: Double, Codable {
+enum ReviewGrade: Double, Codable, CaseIterable {
     case easy, good, hard
 }
 

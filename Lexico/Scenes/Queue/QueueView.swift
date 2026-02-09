@@ -8,47 +8,73 @@
 import SwiftUI
 import SwiftData
 
+private struct ReviewQueueRow: View {
+    let item: ReviewQueueItem
+
+    var body: some View {
+        TimelineView(.periodic(from: .now, by: 1)) { context in
+            let now = context.date
+            let isReady = LexicoDateTimeFormatter.isReady(dueAt: item.dueAt, now: now)
+
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(item.card.word)
+                        .font(.headline)
+                    Text("\(item.card.level) · \(item.card.category)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                VStack(alignment: .trailing, spacing: 4) {
+                    if isReady {
+                        Text(LexicoDateTimeFormatter.readyText)
+                            .font(.subheadline)
+                            .monospacedDigit()
+                    } else if let dueAt = item.dueAt {
+                        Text(dueAt, style: .relative)
+                            .font(.subheadline)
+                            .monospacedDigit()
+                    }
+
+                    if let dueAt = item.dueAt {
+                        Text(LexicoDateTimeFormatter.dayTimeLabel(for: dueAt, now: now))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .monospacedDigit()
+                    }
+                }
+            }
+        }
+    }
+}
+
 struct QueueView: View {
     private let cardsProvider: CardsProvider
 
-    @Query(sort: \CardProgress.dueAt, order: .forward)
-    private var allProgress: [CardProgress]
-
-    private var cardsByID: [Int: Card] {
-        Dictionary(uniqueKeysWithValues: cardsProvider.getAllCards(for: "en").map { ($0.id, $0) })
+    private var queue: [ReviewQueueItem] {
+        cardsProvider.getReviewQueue(for: "en")
     }
-
-    private var upcoming: [(card: Card, dueAt: Date)] {
-        let now = Date.now
-        return allProgress.compactMap { p in
-            guard p.ignored == false else { return nil }
-            guard p.state != .new else { return nil }
-            guard let dueAt = p.dueAt else { return nil }
-            guard dueAt > now else { return nil }
-            guard let card = cardsByID[p.cardID] else { return nil }
-            return (card: card, dueAt: dueAt)
-        }
-        .sorted { $0.dueAt < $1.dueAt }
-    }
-
+    
     var body: some View {
         NavigationStack {
             List {
-                if upcoming.isEmpty {
+                if queue.isEmpty {
                     ContentUnavailableView(
                         "Нет карточек в ожидании",
                         systemImage: "clock",
                         description: Text("Карточки появятся здесь после прохождения ревью.")
                     )
                 } else {
-                    Section("Скоро будут доступны") {
-                        ForEach(upcoming, id: \.card.id) { item in
-                            ReviewQueueRow(card: item.card, dueAt: item.dueAt)
+                    Section {
+                        ForEach(queue, id: \.card.id) { item in
+                            ReviewQueueRow(item: item)
                         }
                     }
                 }
             }
-            .navigationTitle("Ревью")
+            .navigationTitle("Review Queue")
         }
     }
 
@@ -57,32 +83,17 @@ struct QueueView: View {
     }
 }
 
-private struct ReviewQueueRow: View {
-    let card: Card
-    let dueAt: Date
+#Preview {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: CardProgress.self, configurations: config)
+    let progressTracker = CardsProgressTracker(modelContext: container.mainContext)
+    let cardsProvider = CardsProvider(progressManager: progressTracker)
 
-    var body: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(card.word)
-                    .font(.headline)
-                Text(card.category)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
-
-            Spacer()
-
-            VStack(alignment: .trailing, spacing: 4) {
-                Text(dueAt, style: .relative)
-                    .font(.subheadline)
-                    .monospacedDigit()
-                Text(dueAt, style: .time)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .monospacedDigit()
-            }
-        }
+    let cards = cardsProvider.getAllCards(for: "en").prefix(5)
+    for card in cards {
+        progressTracker.reviewCard(cardID: card.id, grade: ReviewGrade.allCases.randomElement()!, at: .now)
     }
+    
+    return QueueView(cardsProvider: cardsProvider)
+        .modelContainer(container)
 }
-

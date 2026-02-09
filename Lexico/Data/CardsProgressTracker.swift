@@ -16,9 +16,7 @@ class CardsProgressTracker {
         self.modelContext = modelContext
     }
 
-    // MARK: - Private helpers
-
-    private func getProgress(for cardID: Int) -> CardProgress {
+    func getProgress(for cardID: Int) -> CardProgress {
         let predicate = #Predicate<CardProgress> { $0.cardID == cardID }
         let descriptor = FetchDescriptor(predicate: predicate)
 
@@ -30,8 +28,6 @@ class CardsProgressTracker {
         modelContext.insert(newProgress)
         return newProgress
     }
-
-    // MARK: - Public API
 
     func reviewCard(cardID: Int, grade: ReviewGrade, at date: Date = .now) {
         let progress = getProgress(for: cardID)

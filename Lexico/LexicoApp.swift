@@ -28,7 +28,7 @@ struct LexicoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(cardsProvider: cardsProvider, progressTracker: cardsProgressTracker)
+            RootView(cardsProvider: cardsProvider, progressTracker: cardsProgressTracker)
         }
         .modelContainer(sharedModelContainer)
     }

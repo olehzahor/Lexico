@@ -9,7 +9,7 @@ import Foundation
 
 final class CardsProvider {
     private static let jsonDecoder = JSONDecoder()
-    private let progressManager: CardsProgressTracker
+    private let progressTracker: CardsProgressTracker
     
     private var cardsCache: [String: [Card]] = [:]
 
@@ -34,10 +34,32 @@ final class CardsProvider {
             return []
         }
     }
+    
+    func getReviewQueue(for lang: String) -> [ReviewQueueItem] {
+        let allCards = getAllCards(for: lang)
+        let allProgress = progressTracker.getAllProgress()
+
+        let progressMap = Dictionary(uniqueKeysWithValues: allProgress.map { ($0.cardID, $0) })
+
+        // Queue is sorted for UI usage: ready first (nil/past dueAt), then by dueAt ascending.
+        // Stable tie-breaker: card id.
+        return allCards
+            .compactMap { card -> ReviewQueueItem? in
+                guard let progress = progressMap[card.id] else { return nil }
+                guard progress.ignored == false else { return nil }
+                return .init(card: card, progress: progress)
+            }
+            .sorted { a, b in
+                let aKey = a.dueAt ?? .distantPast
+                let bKey = b.dueAt ?? .distantPast
+                if aKey != bKey { return aKey < bKey }
+                return a.card.id < b.card.id
+            }
+    }
 
     func getCardsForReview(for lang: String, at date: Date = .now) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressManager.getAllProgress()
+        let allProgress = progressTracker.getAllProgress()
 
         let progressMap = Dictionary(uniqueKeysWithValues: allProgress.map { ($0.cardID, $0) })
 
@@ -60,7 +82,7 @@ final class CardsProvider {
 
     func getCardsWithProgress(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressManager.getAllProgress()
+        let allProgress = progressTracker.getAllProgress()
 
         let progressCardIDs = Set(allProgress.map { $0.cardID })
         return allCards.filter { progressCardIDs.contains($0.id) }
@@ -82,7 +104,7 @@ final class CardsProvider {
     }
     
     init(progressManager: CardsProgressTracker) {
-        self.progressManager = progressManager
+        self.progressTracker = progressManager
     }
 }
 
