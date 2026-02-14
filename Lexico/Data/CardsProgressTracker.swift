@@ -46,6 +46,22 @@ class CardsProgressTracker {
         return (try? modelContext.fetch(descriptor)) ?? []
     }
 
+    func getIgnoredCards() -> [CardProgress] {
+        let predicate = #Predicate<CardProgress> { $0.ignored == true }
+        let descriptor = FetchDescriptor(predicate: predicate)
+        return (try? modelContext.fetch(descriptor)) ?? []
+    }
+
+    func getAllCardsForReview() -> [CardProgress] {
+        let descriptor = FetchDescriptor(predicate: CardProgress.allCardsForReviewFilter())
+        return (try? modelContext.fetch(descriptor)) ?? []
+    }
+
+    func getCardsDueForReview(at date: Date) -> [CardProgress] {
+        let descriptor = FetchDescriptor(predicate: CardProgress.cardsDueForReviewFilter(at: date))
+        return (try? modelContext.fetch(descriptor)) ?? []
+    }
+
     func getProgressIfExists(for cardID: Int) -> CardProgress? {
         let predicate = #Predicate<CardProgress> { $0.cardID == cardID }
         let descriptor = FetchDescriptor(predicate: predicate)

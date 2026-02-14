@@ -18,7 +18,7 @@ struct RootView: View {
                     Label("Дека", systemImage: "square.stack.3d.up")
                 }
 
-            QueueView(cardsProvider: cardsProvider)
+            QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
                 .tabItem {
                     Label("Ревью", systemImage: "clock")
                 }
@@ -30,4 +30,3 @@ struct RootView: View {
         self.progressTracker = progressTracker
     }
 }
-

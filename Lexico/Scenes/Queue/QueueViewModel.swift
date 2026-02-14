@@ -17,14 +17,17 @@ final class QueueViewModel {
     var emptyState: QueueEmptyState
 
     private let cardsProvider: CardsProvider
+    private let progressTracker: CardsProgressTracker
     private let language: String
 
     init(
         cardsProvider: CardsProvider,
+        progressTracker: CardsProgressTracker,
         language: String = "en",
         activeFilter: QueueFilter = .reviewQueue
     ) {
         self.cardsProvider = cardsProvider
+        self.progressTracker = progressTracker
         self.language = language
         self.activeFilter = activeFilter
         self.emptyState = .review
@@ -44,6 +47,11 @@ final class QueueViewModel {
             self.items = cardsProvider.getIgnoredCards(for: language).map { QueueRowView.Data(card: $0, status: "Ignored") }
             self.emptyState = .ignored
         }
+    }
+
+    func setIgnored(_ ignored: Bool, for item: QueueRowView.Data) {
+        progressTracker.ignoreCard(cardID: item.cardID, ignored: ignored)
+        reload()
     }
 
     var isEmpty: Bool { items.isEmpty }

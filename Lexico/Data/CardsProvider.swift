@@ -37,16 +37,13 @@ final class CardsProvider {
     
     func getReviewQueue(for lang: String) -> [ReviewQueueItem] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressTracker.getAllProgress()
+        let allCardsForReview = progressTracker.getAllCardsForReview()
 
-        let progressMap = Dictionary(uniqueKeysWithValues: allProgress.map { ($0.cardID, $0) })
+        let progressMap = Dictionary(uniqueKeysWithValues: allCardsForReview.map { ($0.cardID, $0) })
 
-        // Queue is sorted for UI usage: ready first (nil/past dueAt), then by dueAt ascending.
-        // Stable tie-breaker: card id.
         return allCards
             .compactMap { card -> ReviewQueueItem? in
                 guard let progress = progressMap[card.id] else { return nil }
-                guard progress.ignored == false else { return nil }
                 return .init(card: card, progress: progress)
             }
             .sorted { a, b in
@@ -56,55 +53,36 @@ final class CardsProvider {
                 return a.card.id < b.card.id
             }
     }
-
-    func getCardsForReview(for lang: String, at date: Date = .now) -> [Card] {
+    
+    func getAllCardsForReview(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressTracker.getAllProgress()
-
-        let progressMap = Dictionary(uniqueKeysWithValues: allProgress.map { ($0.cardID, $0) })
-
-        return allCards.filter { card in
-            guard let progress = progressMap[card.id] else {
-                return false
-            }
-
-            if progress.ignored {
-                return false
-            }
-
-            guard let dueAt = progress.dueAt else {
-                return true
-            }
-
-            return dueAt <= date
-        }
+        let allReviewProgress = progressTracker.getAllCardsForReview()
+        let allReviewIDs = Set(allReviewProgress.map(\.cardID))
+        return allCards.filter { allReviewIDs.contains($0.id) }
     }
 
-    func getCardsWithProgress(for lang: String) -> [Card] {
+    func getCardsReadyForReview(for lang: String, at date: Date = .now) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressTracker.getAllProgress()
-
-        let progressCardIDs = Set(allProgress.map { $0.cardID })
-        return allCards.filter { progressCardIDs.contains($0.id) }
-    }
-
-    func getUnseenCards(for lang: String) -> [Card] {
-        let allCards = getAllCards(for: lang)
-        let cardsWithProgress = getCardsWithProgress(for: lang)
-        let progressCardIDs = Set(cardsWithProgress.map { $0.id })
-        return allCards.filter { !progressCardIDs.contains($0.id) }
+        let dueProgress = progressTracker.getCardsDueForReview(at: date)
+        let dueCardIDs = Set(dueProgress.map(\.cardID))
+        return allCards.filter { dueCardIDs.contains($0.id) }
     }
 
     func getIgnoredCards(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allProgress = progressTracker.getAllProgress()
-
-        let ignoredIDs = Set(allProgress.filter(\.ignored).map(\.cardID))
+        let ignoredIDs = Set(progressTracker.getIgnoredCards().map(\.cardID))
         return allCards.filter { ignoredIDs.contains($0.id) }
     }
 
+    func getUnseenCards(for lang: String) -> [Card] {
+        let allCards = getAllCards(for: lang)
+        let ignoredIDs = Set(getIgnoredCards(for: lang).map(\.id))
+        let allReviewIDs = Set(getAllCardsForReview(for: lang).map(\.id))
+        return allCards.filter { ignoredIDs.contains($0.id) == false && allReviewIDs.contains($0.id) == false }
+    }
+
     func getNextCard(for lang: String) -> Card? {
-        if let reviewCard = getCardsForReview(for: lang).first {
+        if let reviewCard = getCardsReadyForReview(for: lang).first {
             return reviewCard
         }
 

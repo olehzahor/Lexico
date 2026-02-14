@@ -259,7 +259,7 @@ struct DeckView: View {
                 }
             }
             .sheet(isPresented: $isQueuePresented) {
-                QueueView(cardsProvider: cardsProvider)
+                QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
             }
         }
     }

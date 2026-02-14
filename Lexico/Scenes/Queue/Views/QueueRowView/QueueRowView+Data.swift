@@ -10,6 +10,7 @@ import Foundation
 extension QueueRowView {
     struct Data {
         let id: String
+        let cardID: Int
         let word: String
         let meta: String
         let status: String?
@@ -17,6 +18,7 @@ extension QueueRowView {
 
         init(card: Card, status: String?) {
             self.id = "card-\(card.id)"
+            self.cardID = card.id
             self.word = card.word
             self.meta = "\(card.level) · \(card.category)"
             self.status = status
@@ -25,6 +27,7 @@ extension QueueRowView {
 
         init(reviewItem: ReviewQueueItem) {
             self.id = "review-\(reviewItem.card.id)"
+            self.cardID = reviewItem.card.id
             self.word = reviewItem.card.word
             self.meta = "\(reviewItem.card.level) · \(reviewItem.card.category)"
             self.status = nil

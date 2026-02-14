@@ -24,9 +24,8 @@ struct QueueView: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    .listRowBackground(Color.clear)
                 }
-
                 Section {
                     if viewModel.isEmpty {
                         ContentUnavailableView(
@@ -37,19 +36,35 @@ struct QueueView: View {
                     } else {
                         ForEach(viewModel.items) { item in
                             QueueRowView(data: item)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                    if viewModel.activeFilter == .ignored {
+                                        Button {
+                                            viewModel.setIgnored(false, for: item)
+                                        } label: {
+                                            Label("Unignore", systemImage: "arrow.uturn.backward")
+                                        }
+                                        .tint(.blue)
+                                    } else {
+                                        Button(role: .destructive) {
+                                            viewModel.setIgnored(true, for: item)
+                                        } label: {
+                                            Label("Ignore", systemImage: "eye.slash")
+                                        }
+                                    }
+                                }
                         }
                     }
                 }
             }
-            .navigationTitle("Review Queue")
+            .navigationTitle("Cards")
         }
         .onAppear {
             viewModel.reload()
         }
     }
 
-    init(cardsProvider: CardsProvider) {
-        _viewModel = State(initialValue: QueueViewModel(cardsProvider: cardsProvider))
+    init(cardsProvider: CardsProvider, progressTracker: CardsProgressTracker) {
+        _viewModel = State(initialValue: QueueViewModel(cardsProvider: cardsProvider, progressTracker: progressTracker))
     }
 }
 
@@ -64,6 +79,6 @@ struct QueueView: View {
         progressTracker.reviewCard(cardID: card.id, grade: ReviewGrade.allCases.randomElement()!, at: .now)
     }
     
-    return QueueView(cardsProvider: cardsProvider)
+    return QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
         .modelContainer(container)
 }

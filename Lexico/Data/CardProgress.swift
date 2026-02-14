@@ -8,8 +8,8 @@
 import Foundation
 import SwiftData
 
-enum CardState: String, Codable {
-    case new = "New", learning = "Learning", review = "Review"
+enum CardState: Int, Codable {
+    case new, learning, review
 }
 
 enum ReviewGrade: Double, Codable, CaseIterable {
@@ -20,7 +20,13 @@ enum ReviewGrade: Double, Codable, CaseIterable {
 final class CardProgress {
     var cardID: Int
     
-    var state: CardState
+    private var stateRaw: Int
+    
+    var state: CardState {
+        get { CardState(rawValue: stateRaw) ?? .new }
+        set { stateRaw = newValue.rawValue }
+    }
+    
     var easeFactor: Double
     var intervalDays: Int
     var reps: Int
@@ -32,7 +38,7 @@ final class CardProgress {
     
     init(cardID: Int) {
         self.cardID = cardID
-        self.state = .new
+        self.stateRaw = CardState.new.rawValue
         
         self.easeFactor = 2.3
         self.intervalDays = 0
@@ -43,6 +49,7 @@ final class CardProgress {
     }
 }
 
+// MARK: - Updaters
 extension CardProgress {
     private var minEase: Double { 1.3 }
     private var maxEase: Double { 2.7 }
@@ -121,5 +128,28 @@ extension CardProgress {
 
     func setIgnored(_ ignored: Bool) {
         self.ignored = ignored
+    }
+}
+
+// MARK: - Predicates
+extension CardProgress {
+    static func allCardsForReviewFilter() -> Predicate<CardProgress> {
+        let learningState = CardState.learning.rawValue
+        let reviewState = CardState.review.rawValue
+        return #Predicate<CardProgress> { progress in
+            progress.ignored == false &&
+            (progress.stateRaw == learningState || progress.stateRaw == reviewState)
+        }
+    }
+    
+    static func cardsDueForReviewFilter(at date: Date) -> Predicate<CardProgress> {
+        let learningState = CardState.learning.rawValue
+        let reviewState = CardState.review.rawValue
+        return #Predicate<CardProgress> { progress in
+            progress.ignored == false &&
+            (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
+            progress.dueAt != nil &&
+            progress.dueAt! <= date
+        }
     }
 }
