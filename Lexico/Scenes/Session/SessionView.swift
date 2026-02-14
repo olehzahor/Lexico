@@ -1,5 +1,5 @@
 //
-//  DeckView.swift
+//  SessionView.swift
 //  Lexico
 //
 //  Created by user on 2/9/26.
@@ -175,12 +175,11 @@ struct CardView: View {
 
 
 
-struct DeckView: View {
+struct SessionView: View {
     private let cardsProvider: CardsProvider
     private let progressTracker: CardsProgressTracker
     
     @State var activeCard: Card?
-    @State private var isQueuePresented: Bool = false
 
     @Query private var allProgress: [CardProgress]
     private let dailyGoal: Int = 20
@@ -249,17 +248,6 @@ struct DeckView: View {
                     }
                     .accessibilityElement(children: .combine)
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isQueuePresented = true
-                    } label: {
-                        Image(systemName: "clock")
-                    }
-                    .accessibilityLabel("Review queue")
-                }
-            }
-            .sheet(isPresented: $isQueuePresented) {
-                QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
             }
         }
     }
@@ -277,6 +265,6 @@ struct DeckView: View {
     let progressTracker = CardsProgressTracker(modelContext: container.mainContext)
     let cardsProvider = CardsProvider(progressManager: progressTracker)
 
-    DeckView(cardsProvider: cardsProvider, progressTracker: progressTracker)
+    SessionView(cardsProvider: cardsProvider, progressTracker: progressTracker)
         .modelContainer(container)
 }

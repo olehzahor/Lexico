@@ -1,5 +1,5 @@
 //
-//  QueueRowView.swift
+//  CardsRowView.swift
 //  Lexico
 //
 //  Created by Codex on 2/14/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QueueRowView: View {
+struct CardsRowView: View {
     let data: Data
 
     var body: some View {

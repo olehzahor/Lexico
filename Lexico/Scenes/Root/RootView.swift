@@ -13,14 +13,14 @@ struct RootView: View {
 
     var body: some View {
         TabView {
-            DeckView(cardsProvider: cardsProvider, progressTracker: progressTracker)
+            SessionView(cardsProvider: cardsProvider, progressTracker: progressTracker)
                 .tabItem {
-                    Label("Дека", systemImage: "square.stack.3d.up")
+                    Label("Session", systemImage: "house")
                 }
 
-            QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
+            CardsView(cardsProvider: cardsProvider, progressTracker: progressTracker)
                 .tabItem {
-                    Label("Ревью", systemImage: "clock")
+                    Label("Cards", systemImage: "square.stack.3d.up")
                 }
         }
     }

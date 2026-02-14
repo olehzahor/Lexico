@@ -1,5 +1,5 @@
 //
-//  QueueRowView+Data.swift
+//  CardsRowView+Data.swift
 //  Lexico
 //
 //  Created by Codex on 2/14/26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension QueueRowView {
+extension CardsRowView {
     struct Data {
         let id: String
         let cardID: Int
@@ -36,4 +36,4 @@ extension QueueRowView {
     }
 }
 
-extension QueueRowView.Data: Identifiable {}
+extension CardsRowView.Data: Identifiable {}

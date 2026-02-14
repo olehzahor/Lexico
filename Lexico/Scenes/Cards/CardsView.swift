@@ -1,5 +1,5 @@
 //
-//  ReviewQueueView.swift
+//  CardsView.swift
 //  Lexico
 //
 //  Created by Codex on 2/9/26.
@@ -8,18 +8,18 @@
 import SwiftUI
 import SwiftData
 
-struct QueueView: View {
-    @State private var viewModel: QueueViewModel
+struct CardsView: View {
+    @State private var viewModel: CardsViewModel
     
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     Picker(
-                        "Queue filter",
+                        "Cards filter",
                         selection: $viewModel.activeFilter
                     ) {
-                        ForEach(QueueViewModel.QueueFilter.allCases) { f in
+                        ForEach(CardsViewModel.CardsFilter.allCases) { f in
                             Text(f.title).tag(f)
                         }
                     }
@@ -35,7 +35,7 @@ struct QueueView: View {
                         )
                     } else {
                         ForEach(viewModel.items) { item in
-                            QueueRowView(data: item)
+                            CardsRowView(data: item)
                                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                     if viewModel.activeFilter == .ignored {
                                         Button {
@@ -64,7 +64,7 @@ struct QueueView: View {
     }
 
     init(cardsProvider: CardsProvider, progressTracker: CardsProgressTracker) {
-        _viewModel = State(initialValue: QueueViewModel(cardsProvider: cardsProvider, progressTracker: progressTracker))
+        _viewModel = State(initialValue: CardsViewModel(cardsProvider: cardsProvider, progressTracker: progressTracker))
     }
 }
 
@@ -79,6 +79,6 @@ struct QueueView: View {
         progressTracker.reviewCard(cardID: card.id, grade: ReviewGrade.allCases.randomElement()!, at: .now)
     }
     
-    return QueueView(cardsProvider: cardsProvider, progressTracker: progressTracker)
+    return CardsView(cardsProvider: cardsProvider, progressTracker: progressTracker)
         .modelContainer(container)
 }

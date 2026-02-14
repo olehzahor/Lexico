@@ -1,5 +1,5 @@
 //
-//  QueueViewModel+QueueFilter.swift
+//  CardsViewModel+CardsFilter.swift
 //  Lexico
 //
 //  Created by Codex on 2/14/26.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension QueueViewModel {
-    enum QueueFilter: String, CaseIterable, Identifiable {
-        case reviewQueue
+extension CardsViewModel {
+    enum CardsFilter: String, CaseIterable, Identifiable {
+        case review
         case unseen
         case ignored
 
@@ -17,7 +17,7 @@ extension QueueViewModel {
 
         var title: String {
             switch self {
-            case .reviewQueue: "Review"
+            case .review: "Review"
             case .unseen: "Unseen"
             case .ignored: "Ignored"
             }

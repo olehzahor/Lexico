@@ -1,5 +1,5 @@
 //
-//  QueueViewModel.swift
+//  CardsViewModel.swift
 //  Lexico
 //
 //  Created by Codex on 2/14/26.
@@ -9,12 +9,12 @@ import Foundation
 import Observation
 
 @Observable
-final class QueueViewModel {
-    var activeFilter: QueueFilter {
+final class CardsViewModel {
+    var activeFilter: CardsFilter {
         didSet { reload() }
     }
-    var items: [QueueRowView.Data] = []
-    var emptyState: QueueEmptyState
+    var items: [CardsRowView.Data] = []
+    var emptyState: CardsEmptyState
 
     private let cardsProvider: CardsProvider
     private let progressTracker: CardsProgressTracker
@@ -24,7 +24,7 @@ final class QueueViewModel {
         cardsProvider: CardsProvider,
         progressTracker: CardsProgressTracker,
         language: String = "en",
-        activeFilter: QueueFilter = .reviewQueue
+        activeFilter: CardsFilter = .review
     ) {
         self.cardsProvider = cardsProvider
         self.progressTracker = progressTracker
@@ -37,19 +37,19 @@ final class QueueViewModel {
 
     func reload() {
         switch activeFilter {
-        case .reviewQueue:
-            self.items = cardsProvider.getReviewQueue(for: language).map { QueueRowView.Data(reviewItem: $0) }
+        case .review:
+            self.items = cardsProvider.getReviewQueue(for: language).map { CardsRowView.Data(reviewItem: $0) }
             self.emptyState = .review
         case .unseen:
-            self.items = cardsProvider.getUnseenCards(for: language).map { QueueRowView.Data(card: $0, status: "Unseen") }
+            self.items = cardsProvider.getUnseenCards(for: language).map { CardsRowView.Data(card: $0, status: "Unseen") }
             self.emptyState = .unseen
         case .ignored:
-            self.items = cardsProvider.getIgnoredCards(for: language).map { QueueRowView.Data(card: $0, status: "Ignored") }
+            self.items = cardsProvider.getIgnoredCards(for: language).map { CardsRowView.Data(card: $0, status: "Ignored") }
             self.emptyState = .ignored
         }
     }
 
-    func setIgnored(_ ignored: Bool, for item: QueueRowView.Data) {
+    func setIgnored(_ ignored: Bool, for item: CardsRowView.Data) {
         progressTracker.ignoreCard(cardID: item.cardID, ignored: ignored)
         reload()
     }
