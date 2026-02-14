@@ -8,78 +8,48 @@
 import SwiftUI
 import SwiftData
 
-private struct ReviewQueueRow: View {
-    let item: ReviewQueueItem
-
-    var body: some View {
-        TimelineView(.periodic(from: .now, by: 1)) { context in
-            let now = context.date
-            let isReady = LexicoDateTimeFormatter.isReady(dueAt: item.dueAt, now: now)
-
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(item.card.word)
-                        .font(.headline)
-                    Text("\(item.card.level) · \(item.card.category)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-
-                Spacer()
-
-                VStack(alignment: .trailing, spacing: 4) {
-                    if isReady {
-                        Text(LexicoDateTimeFormatter.readyText)
-                            .font(.subheadline)
-                            .monospacedDigit()
-                    } else if let dueAt = item.dueAt {
-                        Text(dueAt, style: .relative)
-                            .font(.subheadline)
-                            .monospacedDigit()
-                    }
-
-                    if let dueAt = item.dueAt {
-                        Text(LexicoDateTimeFormatter.dayTimeLabel(for: dueAt, now: now))
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .monospacedDigit()
-                    }
-                }
-            }
-        }
-    }
-}
-
 struct QueueView: View {
-    private let cardsProvider: CardsProvider
-
-    private var queue: [ReviewQueueItem] {
-        cardsProvider.getReviewQueue(for: "en")
-    }
+    @State private var viewModel: QueueViewModel
     
     var body: some View {
         NavigationStack {
             List {
-                if queue.isEmpty {
-                    ContentUnavailableView(
-                        "Нет карточек в ожидании",
-                        systemImage: "clock",
-                        description: Text("Карточки появятся здесь после прохождения ревью.")
-                    )
-                } else {
-                    Section {
-                        ForEach(queue, id: \.card.id) { item in
-                            ReviewQueueRow(item: item)
+                Section {
+                    Picker(
+                        "Queue filter",
+                        selection: $viewModel.activeFilter
+                    ) {
+                        ForEach(QueueViewModel.QueueFilter.allCases) { f in
+                            Text(f.title).tag(f)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                }
+
+                Section {
+                    if viewModel.isEmpty {
+                        ContentUnavailableView(
+                            viewModel.emptyState.title,
+                            systemImage: viewModel.emptyState.systemImage,
+                            description: Text(viewModel.emptyState.description)
+                        )
+                    } else {
+                        ForEach(viewModel.items) { item in
+                            QueueRowView(data: item)
                         }
                     }
                 }
             }
             .navigationTitle("Review Queue")
         }
+        .onAppear {
+            viewModel.reload()
+        }
     }
 
     init(cardsProvider: CardsProvider) {
-        self.cardsProvider = cardsProvider
+        _viewModel = State(initialValue: QueueViewModel(cardsProvider: cardsProvider))
     }
 }
 

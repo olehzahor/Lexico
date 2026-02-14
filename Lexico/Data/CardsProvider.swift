@@ -88,11 +88,19 @@ final class CardsProvider {
         return allCards.filter { progressCardIDs.contains($0.id) }
     }
 
-    func getNewCards(for lang: String) -> [Card] {
+    func getUnseenCards(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
         let cardsWithProgress = getCardsWithProgress(for: lang)
         let progressCardIDs = Set(cardsWithProgress.map { $0.id })
         return allCards.filter { !progressCardIDs.contains($0.id) }
+    }
+
+    func getIgnoredCards(for lang: String) -> [Card] {
+        let allCards = getAllCards(for: lang)
+        let allProgress = progressTracker.getAllProgress()
+
+        let ignoredIDs = Set(allProgress.filter(\.ignored).map(\.cardID))
+        return allCards.filter { ignoredIDs.contains($0.id) }
     }
 
     func getNextCard(for lang: String) -> Card? {
@@ -100,7 +108,7 @@ final class CardsProvider {
             return reviewCard
         }
 
-        return getNewCards(for: lang).first
+        return getUnseenCards(for: lang).first
     }
     
     init(progressManager: CardsProgressTracker) {

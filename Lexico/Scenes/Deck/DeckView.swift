@@ -180,16 +180,87 @@ struct DeckView: View {
     private let progressTracker: CardsProgressTracker
     
     @State var activeCard: Card?
+    @State private var isQueuePresented: Bool = false
+
+    @Query private var allProgress: [CardProgress]
+    private let dailyGoal: Int = 20
+
+    private var todayReviewsCount: Int {
+        let cal = Calendar.autoupdatingCurrent
+        return allProgress.reduce(into: 0) { acc, p in
+            guard let last = p.lastReviewed, cal.isDateInToday(last) else { return }
+            acc += 1
+        }
+    }
+
+    private var a1Completion: Double {
+        let a1Cards = cardsProvider.getAllCards(for: "en").filter { $0.level == "A1" }
+
+        var progressMap: [Int: CardProgress] = [:]
+        progressMap.reserveCapacity(allProgress.count)
+        for p in allProgress {
+            progressMap[p.cardID] = p
+        }
+
+        let eligible = a1Cards.filter { progressMap[$0.id]?.ignored != true }
+        guard eligible.isEmpty == false else { return 0 }
+
+        let completed = eligible.reduce(into: 0) { acc, card in
+            guard let p = progressMap[card.id], p.ignored == false else { return }
+            if p.state != .new { acc += 1 }
+        }
+
+        return Double(completed) / Double(eligible.count)
+    }
+
+    private var a1CompletionText: String {
+        a1Completion.formatted(.percent.precision(.fractionLength(2)))
+    }
     
     var body: some View {
-        if let activeCard {
-            CardView(data: activeCard, progressTracker: progressTracker) {
-                self.activeCard = cardsProvider.getNextCard(for: "en")
+        NavigationStack {
+            ZStack {
+                Color.appBg.ignoresSafeArea()
+
+                if let activeCard {
+                    CardView(data: activeCard, progressTracker: progressTracker) {
+                        self.activeCard = cardsProvider.getNextCard(for: "en")
+                    }
+                    .padding()
+                } else {
+                    Text("no cards :(")
+                }
             }
-            .padding()
-            .background(Color.appBg)
-        } else {
-            Text("no cards :(")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 2) {
+                        Text("Today’s goal: \(todayReviewsCount)/\(dailyGoal)")
+                            .font(.caption)
+                            .foregroundStyle(.white)
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
+                        Text("A1 completion: \(a1CompletionText)")
+                            .font(.caption2)
+                            .foregroundStyle(.gray)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
+                    }
+                    .accessibilityElement(children: .combine)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isQueuePresented = true
+                    } label: {
+                        Image(systemName: "clock")
+                    }
+                    .accessibilityLabel("Review queue")
+                }
+            }
+            .sheet(isPresented: $isQueuePresented) {
+                QueueView(cardsProvider: cardsProvider)
+            }
         }
     }
     
