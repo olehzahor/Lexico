@@ -63,7 +63,7 @@ struct CardsView: View {
         }
     }
 
-    init(cardsProvider: CardsProvider, progressTracker: CardsProgressTracker) {
+    init(cardsProvider: any CardsProviding, progressTracker: CardsProgressTracking) {
         _viewModel = State(initialValue: CardsViewModel(cardsProvider: cardsProvider, progressTracker: progressTracker))
     }
 }

@@ -7,37 +7,25 @@
 
 import Foundation
 
-final class CardsProvider {
-    private static let jsonDecoder = JSONDecoder()
-    private let progressTracker: CardsProgressTracker
-    
+final class CardsProvider: CardsProviding {
+    private let progressTracker: CardsProviderProgressReading
+    private let dataSource: any CardsDataSource
+
     private var cardsCache: [String: [Card]] = [:]
 
     func getAllCards(for lang: String) -> [Card] {
         if let cachedCards = cardsCache[lang] {
             return cachedCards
         }
-        
-        guard let url = Bundle.main.url(forResource: "cards_\(lang)", withExtension: "json") else {
-            print("⚠️ Could not find cards_\(lang).json")
-            return []
-        }
 
-        do {
-            let data = try Data(contentsOf: url)
-            let response = try Self.jsonDecoder.decode(CardsResponse.self, from: data)
-            let cards = response.words
-            cardsCache[lang] = cards
-            return cards
-        } catch {
-            print("⚠️ Error loading cards: \(error)")
-            return []
-        }
+        let cards = dataSource.fetchCards(for: lang)
+        cardsCache[lang] = cards
+        return cards
     }
-    
+
     func getReviewQueue(for lang: String) -> [ReviewQueueItem] {
         let allCards = getAllCards(for: lang)
-        let allCardsForReview = progressTracker.getAllCardsForReview()
+        let allCardsForReview = progressTracker.fetchAllCardsForReview()
 
         let progressMap = Dictionary(uniqueKeysWithValues: allCardsForReview.map { ($0.cardID, $0) })
 
@@ -53,24 +41,24 @@ final class CardsProvider {
                 return a.card.id < b.card.id
             }
     }
-    
+
     func getAllCardsForReview(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let allReviewProgress = progressTracker.getAllCardsForReview()
+        let allReviewProgress = progressTracker.fetchAllCardsForReview()
         let allReviewIDs = Set(allReviewProgress.map(\.cardID))
         return allCards.filter { allReviewIDs.contains($0.id) }
     }
 
     func getCardsReadyForReview(for lang: String, at date: Date = .now) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let dueProgress = progressTracker.getCardsDueForReview(at: date)
+        let dueProgress = progressTracker.fetchCardsDueForReview(at: date)
         let dueCardIDs = Set(dueProgress.map(\.cardID))
         return allCards.filter { dueCardIDs.contains($0.id) }
     }
 
     func getIgnoredCards(for lang: String) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let ignoredIDs = Set(progressTracker.getIgnoredCards().map(\.cardID))
+        let ignoredIDs = Set(progressTracker.fetchIgnoredCards().map(\.cardID))
         return allCards.filter { ignoredIDs.contains($0.id) }
     }
 
@@ -88,14 +76,12 @@ final class CardsProvider {
 
         return getUnseenCards(for: lang).first
     }
-    
-    init(progressManager: CardsProgressTracker) {
-        self.progressTracker = progressManager
-    }
-}
 
-private extension CardsProvider {
-    struct CardsResponse: Codable {
-        let words: [Card]
+    init(
+        progressManager: CardsProviderProgressReading,
+        dataSource: any CardsDataSource = BundleCardsDataSource()
+    ) {
+        self.progressTracker = progressManager
+        self.dataSource = dataSource
     }
 }

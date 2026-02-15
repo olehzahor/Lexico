@@ -152,4 +152,26 @@ extension CardProgress {
             progress.dueAt! <= date
         }
     }
+
+    static func reviewCardsFilter(forCardIDs cardIDs: [Int]) -> Predicate<CardProgress> {
+        let learningState = CardState.learning.rawValue
+        let reviewState = CardState.review.rawValue
+        return #Predicate<CardProgress> { progress in
+            cardIDs.contains(progress.cardID) &&
+            progress.ignored == false &&
+            (progress.stateRaw == learningState || progress.stateRaw == reviewState)
+        }
+    }
+
+    static func dueReviewCardsFilter(forCardIDs cardIDs: [Int], at date: Date) -> Predicate<CardProgress> {
+        let learningState = CardState.learning.rawValue
+        let reviewState = CardState.review.rawValue
+        return #Predicate<CardProgress> { progress in
+            cardIDs.contains(progress.cardID) &&
+            progress.ignored == false &&
+            (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
+            progress.dueAt != nil &&
+            progress.dueAt! <= date
+        }
+    }
 }

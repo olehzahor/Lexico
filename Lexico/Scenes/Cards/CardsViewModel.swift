@@ -16,13 +16,13 @@ final class CardsViewModel {
     var items: [CardsRowView.Data] = []
     var emptyState: CardsEmptyState
 
-    private let cardsProvider: CardsProvider
-    private let progressTracker: CardsProgressTracker
+    private let cardsProvider: any CardsProviding
+    private let progressTracker: CardsProgressTracking
     private let language: String
 
     init(
-        cardsProvider: CardsProvider,
-        progressTracker: CardsProgressTracker,
+        cardsProvider: any CardsProviding,
+        progressTracker: CardsProgressTracking,
         language: String = "en",
         activeFilter: CardsFilter = .review
     ) {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RootView: View {
-    private let cardsProvider: CardsProvider
+    private let cardsProvider: any CardsProviding
     private let progressTracker: CardsProgressTracker
 
     var body: some View {
@@ -25,7 +25,7 @@ struct RootView: View {
         }
     }
 
-    init(cardsProvider: CardsProvider, progressTracker: CardsProgressTracker) {
+    init(cardsProvider: any CardsProviding, progressTracker: CardsProgressTracker) {
         self.cardsProvider = cardsProvider
         self.progressTracker = progressTracker
     }
