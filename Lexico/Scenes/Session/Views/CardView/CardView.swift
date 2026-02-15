@@ -10,9 +10,12 @@ import SwiftUI
 struct CardView: View {
     var data: Data
     @State var isFlipped: Bool = false
-    
+
     var onAction: (UserAction) -> Void
-        
+
+    private let flipDuration: Double = 0.15
+    private let cardCornerRadius: CGFloat = 24
+
     private var bgColor: Color {
         data.isNew ? .newCardBg : .reviewCardBg
     }
@@ -29,7 +32,7 @@ struct CardView: View {
             complete(with: action)
         }
     }
-    
+
     @ViewBuilder
     var header: some View {
         HStack(alignment: .firstTextBaseline) {
@@ -39,9 +42,9 @@ struct CardView: View {
             Spacer()
         }
     }
-    
+
     @ViewBuilder
-    var defaultState: some View {
+    var frontContent: some View {
         VStack {
             header
             Spacer()
@@ -57,16 +60,16 @@ struct CardView: View {
                 .foregroundStyle(Color.secondary)
 
             Spacer()
-            
+
             HStack(spacing: 32) {
                 completionButton(bgColor: .red, .ignore)
             }
             .padding(.vertical)
         }
     }
-    
+
     @ViewBuilder
-    var flippedState: some View {
+    var backContent: some View {
         VStack {
             header
             Spacer()
@@ -82,9 +85,9 @@ struct CardView: View {
                 .font(.headline)
                 .fontWeight(.thin)
                 .foregroundStyle(Color.secondary)
-            
+
             Divider().padding(.vertical)
-            
+
             Text(data.exampleSentence)
                 .fontDesign(.serif)
                 .italic()
@@ -96,7 +99,7 @@ struct CardView: View {
                 .font(.default)
 
             Spacer()
-            
+
             HStack(spacing: 32) {
                 completionButton(bgColor: .green, .easy)
                 completionButton(.good)
@@ -106,28 +109,29 @@ struct CardView: View {
         }
         .multilineTextAlignment(.center)
     }
-    
-    var body: some View {
+
+    @ViewBuilder
+    private func cardFace<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
         ZStack {
             bgColor
-            ZStack {
-                if isFlipped {
-                    flippedState
-                } else {
-                    defaultState
-                }
-            }
-            .padding()
-            .transition(.opacity)
-            .animation(.bouncy, value: isFlipped)
-            .contentShape(.rect)
+            content()
+                .padding()
         }
+        .clipShape(RoundedRectangle(cornerRadius: cardCornerRadius))
+    }
+
+    var body: some View {
+        CardFlipView(
+            isFlipped: $isFlipped,
+            duration: flipDuration,
+            front: { cardFace { frontContent } },
+            back: { cardFace { backContent } }
+        )
         .onTapGesture {
             isFlipped.toggle()
         }
-        .clipShape(RoundedRectangle(cornerRadius: 24))
     }
-    
+
     init(data: Data, onAction: @escaping (UserAction) -> Void) {
         self.data = data
         self.onAction = onAction
