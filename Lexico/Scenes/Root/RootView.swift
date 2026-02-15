@@ -22,6 +22,11 @@ struct RootView: View {
                 .tabItem {
                     Label("Cards", systemImage: "square.stack.3d.up")
                 }
+            
+            Text("Hey")
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 
