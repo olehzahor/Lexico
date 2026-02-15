@@ -8,37 +8,34 @@
 import SwiftUI
 
 struct CardView: View {
-    enum UserAction {
-        case easy
-        case good
-        case hard
-        case ignore
-    }
-
-    let nativeLanguage: String = "ru"
-    let sentence: (text: String, translation: String)
-    
-    var data: Card
-    let isNew: Bool
+    var data: Data
     @State var isFlipped: Bool = false
     
     var onAction: (UserAction) -> Void
-    
+        
+    private var bgColor: Color {
+        data.isNew ? .newCardBg : .reviewCardBg
+    }
+
     private func complete(with action: UserAction) {
         isFlipped = false
         onAction(action)
     }
-    
-    private var bgColor: Color {
-        isNew ? .newCardBg : .reviewCardBg
+
+    @ViewBuilder
+    private func completionButton(bgColor: Color? = nil, _ action: UserAction) -> some View {
+        let style = bgColor.map { AppButtonView.Style.default.with(bgColor: $0) } ?? .default
+        AppButtonView(title: action.title, style: style) {
+            complete(with: action)
+        }
     }
     
     @ViewBuilder
     var header: some View {
         HStack(alignment: .firstTextBaseline) {
             Spacer()
-            BadgeView(text: data.level)
-            BadgeView(text: data.category)
+            BadgeView(text: data.levelBadge)
+            BadgeView(text: data.categoryBadge)
             Spacer()
         }
     }
@@ -49,11 +46,11 @@ struct CardView: View {
             header
             Spacer()
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(data.word)
+                Text(data.title)
                     .fontDesign(.serif)
                     .font(.largeTitle)
             }
-            Text(data.partOfSpeech)
+            Text(data.subtitle)
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
@@ -62,11 +59,7 @@ struct CardView: View {
             Spacer()
             
             HStack(spacing: 32) {
-                Button {
-                    complete(with: .ignore)
-                } label: {
-                    Text("Ignore")
-                }
+                completionButton(bgColor: .red, .ignore)
             }
             .padding(.vertical)
         }
@@ -77,14 +70,14 @@ struct CardView: View {
         VStack {
             header
             Spacer()
-            Text(data.getTranslation(nativeLanguage))
+            Text(data.translation)
                 .fontDesign(.serif)
                 .font(.largeTitle)
-            Text(data.word)
+            Text(data.title)
                 .fontDesign(.serif)
                 .foregroundStyle(Color.secondary)
                 .font(.headline)
-            Text(data.partOfSpeech)
+            Text(data.subtitle)
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
@@ -92,12 +85,12 @@ struct CardView: View {
             
             Divider().padding(.vertical)
             
-            Text(sentence.text)
+            Text(data.exampleSentence)
                 .fontDesign(.serif)
                 .italic()
                 .font(.title2)
                 .padding(.vertical)
-            Text(sentence.translation)
+            Text(data.exampleTranslation)
                 .fontDesign(.serif)
                 .foregroundStyle(Color.secondary)
                 .font(.default)
@@ -105,23 +98,9 @@ struct CardView: View {
             Spacer()
             
             HStack(spacing: 32) {
-                Button {
-                    complete(with: .easy)
-                } label: {
-                    Text("Easy")
-                }
-
-                Button {
-                    complete(with: .good)
-                } label: {
-                    Text("Good")
-                }
-                
-                Button {
-                    complete(with: .hard)
-                } label: {
-                    Text("Hard")
-                }
+                completionButton(bgColor: .green, .easy)
+                completionButton(.good)
+                completionButton(bgColor: .orange, .hard)
             }
             .padding(.vertical)
         }
@@ -149,10 +128,50 @@ struct CardView: View {
         .clipShape(RoundedRectangle(cornerRadius: 24))
     }
     
-    init(data: Card, isNew: Bool, onAction: @escaping (UserAction) -> Void) {
+    init(data: Data, onAction: @escaping (UserAction) -> Void) {
         self.data = data
-        self.isNew = isNew
         self.onAction = onAction
-        self.sentence = data.getRandomSentence(translation: nativeLanguage)
+    }
+}
+
+#Preview("New Card") {
+    ZStack {
+        Color.appBg.ignoresSafeArea()
+        CardView(
+            data: .init(
+                cardID: 1,
+                title: "benevolent",
+                subtitle: "adjective",
+                levelBadge: "B2",
+                categoryBadge: "Personality",
+                translation: "доброжелательный",
+                exampleSentence: "She remained benevolent even in difficult negotiations.",
+                exampleTranslation: "Она оставалась доброжелательной даже в сложных переговорах.",
+                isNew: true
+            ),
+            onAction: { _ in }
+        )
+        .padding()
+    }
+}
+
+#Preview("Review Card") {
+    ZStack {
+        Color.appBg.ignoresSafeArea()
+        CardView(
+            data: .init(
+                cardID: 42,
+                title: "convey",
+                subtitle: "verb",
+                levelBadge: "B1",
+                categoryBadge: "Communication",
+                translation: "передавать; выражать",
+                exampleSentence: "The report conveys the main risks clearly.",
+                exampleTranslation: "Отчёт ясно передаёт основные риски.",
+                isNew: false
+            ),
+            onAction: { _ in }
+        )
+        .padding()
     }
 }

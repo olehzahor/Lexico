@@ -73,10 +73,12 @@ Then keep client dependencies minimal to what they use.
   - `NameView.Style` (optional, when style configuration is non-trivial)
 - UI models for a view are stored in a separate file: `NameView+Data.swift` (and `NameView+Style.swift` if needed).
 - UI model may provide mapping constructors in extensions from global/domain models.
+- View-scoped support types (for example `UserAction`, `State`, `Event`, constants/config groups) should be stored in separate extension files like `NameView+UserAction.swift`, `NameView+State.swift`, etc., instead of being declared inline in `NameView.swift`.
 
 Exception:
 
 - For primitive highly abstract views (typically one or two simple fields, e.g. a generic header), dedicated `Data`/`Style` is optional.
+- For primitive views with minimal logic, a tiny inline helper type is acceptable if extraction would add noise.
 
 ## Type Member Order
 

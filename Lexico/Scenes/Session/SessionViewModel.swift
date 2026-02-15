@@ -19,12 +19,7 @@ final class SessionViewModel {
     private(set) var dailyGoal: Int
 
     private(set) var activeCard: Card?
-    
-    var isActiveCardNew: Bool {
-        guard let activeCard else { return true }
-        guard let progress = progressTracker.getProgressIfExists(for: activeCard.id) else { return true }
-        return progress.state == .new
-    }
+    private(set) var activeCardData: CardView.Data?
 
     var todayReviewsCount: Int {
         metricsService.metrics.todayReviewedCount
@@ -42,26 +37,37 @@ final class SessionViewModel {
     func refresh() {
         metricsService.refresh()
         if activeCard == nil {
-            activeCard = cardsProvider.getNextCard(for: language)
+            setActiveCard(cardsProvider.getNextCard(for: language))
         }
     }
 
-    func handleCardAction(_ action: CardView.UserAction, for card: Card) {
+    func handleCardAction(_ action: CardView.UserAction, for cardID: Int) {
         switch action {
         case .easy:
-            progressTracker.reviewCard(cardID: card.id, grade: .easy, at: .now)
+            progressTracker.reviewCard(cardID: cardID, grade: .easy, at: .now)
         case .good:
-            progressTracker.reviewCard(cardID: card.id, grade: .good, at: .now)
+            progressTracker.reviewCard(cardID: cardID, grade: .good, at: .now)
         case .hard:
-            progressTracker.reviewCard(cardID: card.id, grade: .hard, at: .now)
+            progressTracker.reviewCard(cardID: cardID, grade: .hard, at: .now)
         case .ignore:
-            progressTracker.ignoreCard(cardID: card.id, ignored: true)
+            progressTracker.ignoreCard(cardID: cardID, ignored: true)
         }
 
-        activeCard = cardsProvider.getNextCard(for: language)
+        setActiveCard(cardsProvider.getNextCard(for: language))
         metricsService.refresh()
     }
     
+    private func setActiveCard(_ card: Card?) {
+        self.activeCard = card
+        guard let card else {
+            self.activeCardData = nil
+            return
+        }
+
+        let isNew = (progressTracker.getProgressIfExists(for: card.id)?.state ?? .new) == .new
+        self.activeCardData = CardView.Data(card: card, isNew: isNew)
+    }
+
     init(
         cardsProvider: any CardsProviding,
         progressTracker: CardsProgressTracking,
@@ -74,7 +80,7 @@ final class SessionViewModel {
         self.language = language
         self.dailyGoal = dailyGoal
         self.metricsService = metricsService
-        self.activeCard = cardsProvider.getNextCard(for: language)
+        setActiveCard(cardsProvider.getNextCard(for: language))
 
         metricsService.refresh()
     }

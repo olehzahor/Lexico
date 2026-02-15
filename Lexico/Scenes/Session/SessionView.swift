@@ -16,9 +16,9 @@ struct SessionView: View {
             ZStack {
                 Color.appBg.ignoresSafeArea()
 
-                if let activeCard = viewModel.activeCard {
-                    CardView(data: activeCard, isNew: viewModel.isActiveCardNew) { action in
-                        viewModel.handleCardAction(action, for: activeCard)
+                if let activeCard = viewModel.activeCardData {
+                    CardView(data: activeCard) { action in
+                        viewModel.handleCardAction(action, for: activeCard.cardID)
                     }
                     .padding()
                 } else {
