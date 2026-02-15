@@ -16,5 +16,4 @@ Lexico is an iOS app for building vocabulary through card-based study sessions a
 
 ## Screenshot
 
-![Session Screen](docs/images/session.png)
-
+<img width="828" height="1792" alt="Simulator Screenshot - iPhone 11 - 2026-02-15 at 18 00 29" src="https://github.com/user-attachments/assets/76b64f31-6567-4604-9503-cfea87249307" />
