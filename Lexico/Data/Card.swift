@@ -9,6 +9,11 @@ import Foundation
 
 // MARK: - Sentence
 
+struct SentenceSet: Codable {
+    let id: Int
+    let sentences: [Sentence]
+}
+
 struct Sentence: Codable {
     let text: String
     let language: String
@@ -43,7 +48,7 @@ struct Card: Codable, Identifiable {
     let level: String
     let category: String
     let translations: [Translation]
-    let sentences: [[Sentence]]
+    let sentences: [SentenceSet]
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -58,11 +63,11 @@ struct Card: Codable, Identifiable {
 }
 
 extension Card {
-    func getRandomSentence(translation: String) -> (text: String, translation: String) {
+    func getRandomSentence(translation: String) -> (id: Int, text: String, translation: String) {
         if let sentence = sentences.randomElement() {
-            return (text: sentence[language] ?? "", translation: sentence[translation] ?? "")
+            return (id: sentence.id, text: sentence.sentences[language] ?? "", translation: sentence.sentences[translation] ?? "")
         } else {
-            return (text: "", translation: "")
+            return (id: 0, text: "", translation: "")
         }
     }
     
