@@ -21,14 +21,14 @@ final class SessionMetricsService {
 
     var metrics: Metrics
 
-    private let progressTracker: SessionMetricsProgressReading & CardsProgressTracking
-    private let cardsProvider: any CardsProviding
+    private let progressTracker: SessionMetricsProgressReader & CardsProgressTrackerProtocol
+    private let cardsProvider: any CardsProviderProtocol
     private let language: String
     private let defaultLevel: String
 
     init(
-        progressTracker: SessionMetricsProgressReading & CardsProgressTracking,
-        cardsProvider: any CardsProviding,
+        progressTracker: SessionMetricsProgressReader & CardsProgressTrackerProtocol,
+        cardsProvider: any CardsProviderProtocol,
         language: String = "en",
         defaultLevel: String = "A1"
     ) {

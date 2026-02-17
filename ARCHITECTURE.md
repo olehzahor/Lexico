@@ -89,6 +89,11 @@ Exception:
 - Prefer domain names over generic names.
 - Avoid ambiguous names like `Manager` unless domain-specific.
 - For list filters/states, use names reflecting semantics (`Unseen`, `Ignored`, `Review`).
+- Protocol naming:
+  - Use `...Protocol` for primary service contracts consumed across module boundaries by default (for example, `CardsProviderProtocol`).
+  - Short domain names without suffix are allowed when the contract is unambiguous and concise (for example, `AudioPlayer`).
+  - Use capability-style names without `Protocol` for narrow role interfaces and composed read/write slices (for example, `CardsProviderProgressReader`, `SessionMetricsProgressReader`).
+  - Do not use `I` prefix.
 
 ## Change Management
 

@@ -11,8 +11,8 @@ import Observation
 @MainActor
 @Observable
 final class SessionViewModel {
-    private let cardsProvider: any CardsProviding
-    let progressTracker: CardsProgressTracking
+    private let cardsProvider: any CardsProviderProtocol
+    let progressTracker: CardsProgressTrackerProtocol
     private let metricsService: SessionMetricsService
 
     private let language: String
@@ -69,8 +69,8 @@ final class SessionViewModel {
     }
 
     init(
-        cardsProvider: any CardsProviding,
-        progressTracker: CardsProgressTracking,
+        cardsProvider: any CardsProviderProtocol,
+        progressTracker: CardsProgressTrackerProtocol,
         metricsService: SessionMetricsService,
         language: String = "en",
         dailyGoal: Int = 20

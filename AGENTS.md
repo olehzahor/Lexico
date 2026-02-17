@@ -24,7 +24,9 @@ Rules:
 ## 3. Protocol-First Boundaries
 
 - Depend on protocols at module boundaries.
-- Keep protocol names capability-oriented (`CardsProviding`, `CardsProgressTracking`).
+- Use `...Protocol` for primary service contracts at boundaries by default (for example, `CardsProviderProtocol`).
+- Short domain protocol names without suffix are allowed when the name is unambiguous (for example, `AudioPlayer`).
+- Use capability-style names without `Protocol` for narrow role protocols used as composed slices (for example, `CardsProviderProgressReader`, `SessionMetricsProgressReader`).
 - Inject dependencies through initializers.
 - Avoid forcing concrete implementations into UI/ViewModel layers.
 

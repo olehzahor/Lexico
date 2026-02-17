@@ -20,7 +20,7 @@ Adopt protocol-first boundaries between clients and services.
 - Decision summary: clients depend on capabilities (protocols), services conform to protocols.
 - Boundaries affected: Scenes -> Services, Services interop.
 - New rules/conventions introduced:
-  - Use capability-oriented protocol names (e.g. `CardsProviding`, `CardsProgressTracking`).
+  - Use capability-oriented protocol names (e.g. `CardsProviderProtocol`, `CardsProgressTrackerProtocol`).
   - Inject dependencies through initializers.
   - Avoid concrete storage/provider types in View/ViewModel fields unless strictly required.
 

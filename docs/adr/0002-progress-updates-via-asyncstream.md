@@ -18,7 +18,7 @@ Progress change notifications were callback-based. This made ownership and lifec
 Use `AsyncStream<Void>` as the progress change channel exposed by tracker protocols.
 
 - Decision summary: tracker emits events into stream, consumers observe stream in tasks and refresh state.
-- Boundaries affected: `CardsProgressTracking`, `SessionMetricsService` subscription logic.
+- Boundaries affected: `CardsProgressTrackerProtocol`, `SessionMetricsService` subscription logic.
 - New rules/conventions introduced:
   - Emit progress-change events from mutation points.
   - Consumers subscribe once and refresh derived state on each event.

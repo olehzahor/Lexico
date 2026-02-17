@@ -46,7 +46,7 @@ struct SessionView: View {
     }
     
     init(
-        cardsProvider: any CardsProviding,
+        cardsProvider: any CardsProviderProtocol,
         progressTracker: CardsProgressTracker
     ) {
         let metricsService = SessionMetricsService(

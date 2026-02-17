@@ -1,5 +1,5 @@
 //
-//  CardsProviding.swift
+//  CardsProviderProtocol.swift
 //  Lexico
 //
 //  Created by Codex on 2/15/26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CardsProviding: AnyObject {
+protocol CardsProviderProtocol: AnyObject {
     func getAllCards(for lang: String) -> [Card]
     func getReviewQueue(for lang: String) -> [ReviewQueueItem]
     func getAllCardsForReview(for lang: String) -> [Card]

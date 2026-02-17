@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class CardsProvider: CardsProviding {
-    private let progressTracker: CardsProviderProgressReading
+final class CardsProvider: CardsProviderProtocol {
+    private let progressTracker: CardsProviderProgressReader
     private let dataSource: any CardsDataSource
 
     private var cardsCache: [String: [Card]] = [:]
@@ -78,7 +78,7 @@ final class CardsProvider: CardsProviding {
     }
 
     init(
-        progressManager: CardsProviderProgressReading,
+        progressManager: CardsProviderProgressReader,
         dataSource: any CardsDataSource = BundleCardsDataSource()
     ) {
         self.progressTracker = progressManager

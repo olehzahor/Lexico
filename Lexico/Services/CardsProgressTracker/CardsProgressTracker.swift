@@ -23,7 +23,7 @@ class CardsProgressTracker {
         self.modelContext = modelContext
     }
 
-    // MARK: - CardsProgressTracking
+    // MARK: - CardsProgressTrackerProtocol
     func reviewCard(cardID: Int, grade: ReviewGrade, at date: Date = .now) {
         let progress = getProgress(for: cardID)
         progress.apply(grade, now: date)
@@ -38,7 +38,7 @@ class CardsProgressTracker {
         progressChangesContinuation?.yield(())
     }
 
-    // MARK: - CardsProgressTracking (Read)
+    // MARK: - CardsProgressTrackerProtocol (Read)
     func getAllProgress() -> [CardProgress] {
         let descriptor = FetchDescriptor<CardProgress>()
         return (try? modelContext.fetch(descriptor)) ?? []
@@ -63,7 +63,7 @@ class CardsProgressTracker {
         return try? modelContext.fetch(descriptor).first
     }
 
-    // MARK: - CardsProviderProgressReading
+    // MARK: - CardsProviderProgressReader
     func fetchIgnoredCards() -> [CardProgress] {
         let predicate = #Predicate<CardProgress> { $0.ignored == true }
         let descriptor = FetchDescriptor(predicate: predicate)
@@ -80,7 +80,7 @@ class CardsProgressTracker {
         return (try? modelContext.fetch(descriptor)) ?? []
     }
 
-    // MARK: - SessionMetricsProgressReading
+    // MARK: - SessionMetricsProgressReader
     func fetchReviewedTodayCount(now: Date = .now) -> Int {
         let calendar = Calendar.autoupdatingCurrent
         let dayStart = calendar.startOfDay(for: now)
