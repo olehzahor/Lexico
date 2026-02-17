@@ -49,11 +49,14 @@ struct CardView: View {
             header
             Spacer()
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(data.title)
+                Text(data.word)
                     .fontDesign(.serif)
                     .font(.largeTitle)
+                    .onTapGesture {
+                        // speak
+                    }
             }
-            Text(data.subtitle)
+            Text(data.partOfSpeech)
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
@@ -76,11 +79,11 @@ struct CardView: View {
             Text(data.translation)
                 .fontDesign(.serif)
                 .font(.largeTitle)
-            Text(data.title)
+            Text(data.word)
                 .fontDesign(.serif)
                 .foregroundStyle(Color.secondary)
                 .font(.headline)
-            Text(data.subtitle)
+            Text(data.partOfSpeech)
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
@@ -93,6 +96,9 @@ struct CardView: View {
                 .italic()
                 .font(.title2)
                 .padding(.vertical)
+                .onTapGesture {
+                    // speak
+                }
             Text(data.exampleTranslation)
                 .fontDesign(.serif)
                 .foregroundStyle(Color.secondary)
@@ -144,11 +150,12 @@ struct CardView: View {
         CardView(
             data: .init(
                 cardID: 1,
-                title: "benevolent",
-                subtitle: "adjective",
+                word: "benevolent",
+                partOfSpeech: "adjective",
                 levelBadge: "B2",
                 categoryBadge: "Personality",
                 translation: "доброжелательный",
+                exampleSentenceID: 101,
                 exampleSentence: "She remained benevolent even in difficult negotiations.",
                 exampleTranslation: "Она оставалась доброжелательной даже в сложных переговорах.",
                 isNew: true
@@ -165,11 +172,12 @@ struct CardView: View {
         CardView(
             data: .init(
                 cardID: 42,
-                title: "convey",
-                subtitle: "verb",
+                word: "convey",
+                partOfSpeech: "verb",
                 levelBadge: "B1",
                 categoryBadge: "Communication",
                 translation: "передавать; выражать",
+                exampleSentenceID: 4201,
                 exampleSentence: "The report conveys the main risks clearly.",
                 exampleTranslation: "Отчёт ясно передаёт основные риски.",
                 isNew: false
