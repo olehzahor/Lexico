@@ -15,6 +15,8 @@ struct CardView: View {
 
     private let flipDuration: Double = 0.15
     private let cardCornerRadius: CGFloat = 24
+    
+    private let ttsService: TTSPlaybackServiceProtocol
 
     private var bgColor: Color {
         data.isNew ? .newCardBg : .reviewCardBg
@@ -97,7 +99,7 @@ struct CardView: View {
                 .font(.title2)
                 .padding(.vertical)
                 .onTapGesture {
-                    // speak
+                    ttsService.playSentence(id: data.exampleSentenceID)
                 }
             Text(data.exampleTranslation)
                 .fontDesign(.serif)
@@ -136,11 +138,26 @@ struct CardView: View {
         .onTapGesture {
             isFlipped.toggle()
         }
+        .onAppear {
+            ttsService.playWord(id: data.cardID)
+        }
+        .onChange(of: isFlipped) { _, isFlipped in
+            if isFlipped {
+                ttsService.playSentence(id: data.exampleSentenceID)
+            } else {
+                ttsService.playWord(id: data.cardID)
+            }
+        }
     }
 
-    init(data: Data, onAction: @escaping (UserAction) -> Void) {
+    init(data: Data, ttsService: TTSPlaybackServiceProtocol, onAction: @escaping (UserAction) -> Void) {
         self.data = data
+        self.ttsService = ttsService
         self.onAction = onAction
+    }
+    
+    init(data: Data, onAction: @escaping (UserAction) -> Void) {
+        self.init(data: data, ttsService: TTSPlaybackService.shared, onAction: onAction)
     }
 }
 
