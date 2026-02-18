@@ -14,6 +14,16 @@ final class TTSPlaybackService: TTSPlaybackServiceProtocol {
     private let mediaURLProvider: any MediaURLProvider
     private let audioPlayer: any AudioPlayer
 
+    func prepareWord(id: Int) {
+        guard let url = mediaURLProvider.wordURL(for: id) else { return }
+        audioPlayer.prepare(url: url)
+    }
+
+    func prepareSentence(id: Int) {
+        guard let url = mediaURLProvider.sentenceURL(for: id) else { return }
+        audioPlayer.prepare(url: url)
+    }
+
     func playWord(id: Int) {
         guard let url = mediaURLProvider.wordURL(for: id) else { return }
         audioPlayer.play(url: url)

@@ -55,7 +55,7 @@ struct CardView: View {
                     .fontDesign(.serif)
                     .font(.largeTitle)
                     .onTapGesture {
-                        // speak
+                        ttsService.playWord(id: data.cardID)
                     }
             }
             Text(data.partOfSpeech)
@@ -139,6 +139,8 @@ struct CardView: View {
             isFlipped.toggle()
         }
         .onAppear {
+            ttsService.prepareWord(id: data.cardID)
+            ttsService.prepareSentence(id: data.exampleSentenceID)
             ttsService.playWord(id: data.cardID)
         }
         .onChange(of: isFlipped) { _, isFlipped in

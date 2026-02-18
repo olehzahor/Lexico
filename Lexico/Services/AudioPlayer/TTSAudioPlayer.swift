@@ -13,17 +13,28 @@ final class TTSAudioPlayer: AudioPlayer {
     static let shared = TTSAudioPlayer()
 
     private let player: AVPlayer
+    private let itemCache: AudioPlayerItemCache
     private var isAudioSessionConfigured = false
 
-    private init(player: AVPlayer = AVPlayer()) {
-        self.player = player
+    func prepare(url: URL) {
+        configureAudioSessionIfNeeded()
+        itemCache.prepare(url: url, makeItem: makeItem)
     }
 
     func play(url: URL) {
-        stop()
         configureAudioSessionIfNeeded()
-        player.replaceCurrentItem(with: AVPlayerItem(url: url))
-        player.play()
+
+        let item = itemCache.item(for: url, makeItem: makeItem)
+        if player.currentItem !== item {
+            player.replaceCurrentItem(with: item)
+        }
+
+        if shouldRestartFromBeginning(item) {
+            item.seek(to: .zero, completionHandler: nil)
+        }
+
+        player.automaticallyWaitsToMinimizeStalling = false
+        player.playImmediately(atRate: 1.0)
     }
 
     func stop() {
@@ -42,5 +53,22 @@ final class TTSAudioPlayer: AudioPlayer {
         } catch {
             // TODO: Add logs
         }
+    }
+
+    private func makeItem(url: URL) -> AVPlayerItem {
+        let item = AVPlayerItem(url: url)
+        item.preferredForwardBufferDuration = 0
+        return item
+    }
+
+    private func shouldRestartFromBeginning(_ item: AVPlayerItem) -> Bool {
+        let durationSeconds = item.duration.seconds
+        guard durationSeconds.isFinite, durationSeconds > 0 else { return false }
+        return item.currentTime().seconds >= (durationSeconds - 0.05)
+    }
+
+    private init(player: AVPlayer = AVPlayer()) {
+        self.player = player
+        self.itemCache = AudioPlayerItemCache(maxItems: 50)
     }
 }

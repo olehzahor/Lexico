@@ -9,6 +9,7 @@ import Foundation
 
 @MainActor
 protocol AudioPlayer: AnyObject {
+    func prepare(url: URL)
     func play(url: URL)
     func stop()
 }
