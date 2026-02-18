@@ -124,7 +124,9 @@ struct CardView: View {
             content()
                 .padding()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: cardCornerRadius))
+        .clipped()
     }
 
     var body: some View {
@@ -134,6 +136,7 @@ struct CardView: View {
             front: { cardFace { frontContent } },
             back: { cardFace { backContent } }
         )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onTapGesture {
             isFlipped.toggle()
         }

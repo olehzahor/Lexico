@@ -21,8 +21,9 @@ struct SessionView: View {
                         viewModel.handleCardAction(action, for: activeCard.cardID)
                     }
                     .id(activeCard.cardID)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding()
-                    .asymmetricTransition(duration: 0.35)
+                    .asymmetricTransition()
                     .zIndex(1)
                 } else {
                     ContentUnavailableView(
