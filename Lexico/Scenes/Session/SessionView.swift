@@ -20,7 +20,10 @@ struct SessionView: View {
                     CardView(data: activeCard) { action in
                         viewModel.handleCardAction(action, for: activeCard.cardID)
                     }
+                    .id(activeCard.cardID)
                     .padding()
+                    .asymmetricTransition(duration: 0.35)
+                    .zIndex(1)
                 } else {
                     ContentUnavailableView(
                         "You're all caught up",
@@ -28,6 +31,7 @@ struct SessionView: View {
                         description: Text("No cards are available right now. Come back later for more reviews.")
                     )
                     .foregroundStyle(.white)
+                    .zIndex(0)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

@@ -23,7 +23,6 @@ struct CardView: View {
     }
 
     private func complete(with action: UserAction) {
-        isFlipped = false
         onAction(action)
     }
 
