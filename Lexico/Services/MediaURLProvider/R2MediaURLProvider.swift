@@ -61,7 +61,7 @@ final class R2MediaURLProvider: MediaURLProvider {
             return nil
         }
 
-        let objectKey = "\(directory)/\(id).\(fileExtension)"
+        let objectKey = "\(directory)/\(formattedFileID(id)).\(fileExtension)"
         let canonicalURI = "/\(bucket)/\(objectKey)"
         let host = endpointURL.host() ?? ""
         guard host.isEmpty == false else { return nil }
@@ -113,6 +113,13 @@ final class R2MediaURLProvider: MediaURLProvider {
         components?.percentEncodedPath = canonicalURI
         components?.percentEncodedQuery = finalQuery
         return components?.url
+    }
+
+    private func formattedFileID(_ id: Int) -> String {
+        if id > 0 && id < 100 {
+            return String(format: "%03d", id)
+        }
+        return String(id)
     }
 }
 

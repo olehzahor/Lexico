@@ -146,10 +146,13 @@ extension CardProgress {
         let learningState = CardState.learning.rawValue
         let reviewState = CardState.review.rawValue
         return #Predicate<CardProgress> { progress in
-            progress.ignored == false &&
-            (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
-            progress.dueAt != nil &&
-            progress.dueAt! <= date
+            if let dueAt = progress.dueAt {
+                return progress.ignored == false &&
+                (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
+                dueAt <= date
+            } else {
+                return false
+            }
         }
     }
 
@@ -167,11 +170,14 @@ extension CardProgress {
         let learningState = CardState.learning.rawValue
         let reviewState = CardState.review.rawValue
         return #Predicate<CardProgress> { progress in
-            cardIDs.contains(progress.cardID) &&
-            progress.ignored == false &&
-            (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
-            progress.dueAt != nil &&
-            progress.dueAt! <= date
+            if let dueAt = progress.dueAt {
+                return cardIDs.contains(progress.cardID) &&
+                progress.ignored == false &&
+                (progress.stateRaw == learningState || progress.stateRaw == reviewState) &&
+                dueAt <= date
+            } else {
+                return false
+            }
         }
     }
 }
