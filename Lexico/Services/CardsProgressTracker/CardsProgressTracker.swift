@@ -81,15 +81,19 @@ class CardsProgressTracker {
     }
 
     // MARK: - SessionMetricsProgressReader
-    func fetchReviewedTodayCount(now: Date = .now) -> Int {
+    func fetchNewCardsLearnedTodayCount(now: Date = .now) -> Int {
         let calendar = Calendar.autoupdatingCurrent
         let dayStart = calendar.startOfDay(for: now)
         let nextDayStart = calendar.date(byAdding: .day, value: 1, to: dayStart) ?? now
 
         let predicate = #Predicate<CardProgress> { progress in
-            progress.lastReviewed != nil &&
-            progress.lastReviewed! >= dayStart &&
-            progress.lastReviewed! < nextDayStart
+            if let lastReviewed = progress.lastReviewed {
+                return  progress.reps == 1 &&
+                lastReviewed >= dayStart &&
+                lastReviewed < nextDayStart
+            } else {
+                return false
+            }
         }
         let descriptor = FetchDescriptor(predicate: predicate)
         return (try? modelContext.fetch(descriptor).count) ?? 0

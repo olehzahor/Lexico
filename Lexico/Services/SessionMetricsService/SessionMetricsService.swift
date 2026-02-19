@@ -12,7 +12,7 @@ import Observation
 @Observable
 final class SessionMetricsService {
     struct Metrics {
-        var todayReviewedCount: Int
+        var todayLearnedNewCardsCount: Int
         var currentLevel: String
         var reviewCountOnCurrentLevel: Int
         var dueReviewCountOnCurrentLevel: Int
@@ -37,7 +37,7 @@ final class SessionMetricsService {
         self.language = language
         self.defaultLevel = defaultLevel
         self.metrics = Metrics(
-            todayReviewedCount: 0,
+            todayLearnedNewCardsCount: 0,
             currentLevel: defaultLevel,
             reviewCountOnCurrentLevel: 0,
             dueReviewCountOnCurrentLevel: 0,
@@ -58,7 +58,7 @@ final class SessionMetricsService {
         let allCards = cardsProvider.getAllCards(for: language)
         guard allCards.isEmpty == false else {
             metrics = Metrics(
-                todayReviewedCount: 0,
+                todayLearnedNewCardsCount: 0,
                 currentLevel: defaultLevel,
                 reviewCountOnCurrentLevel: 0,
                 dueReviewCountOnCurrentLevel: 0,
@@ -71,7 +71,7 @@ final class SessionMetricsService {
         let currentLevel = allCards.first(where: { $0.id == highestSeenID })?.level ?? defaultLevel
         let levelCardIDs = Set(allCards.filter { $0.level == currentLevel }.map(\.id))
 
-        let todayReviewedCount = progressTracker.fetchReviewedTodayCount(now: now)
+        let todayLearnedNewCardsCount = progressTracker.fetchNewCardsLearnedTodayCount(now: now)
         let reviewCountOnCurrentLevel = progressTracker.fetchReviewCount(forCardIDs: levelCardIDs)
         let dueReviewCountOnCurrentLevel = progressTracker.fetchDueReviewCount(forCardIDs: levelCardIDs, at: now)
         let ignoredCountOnCurrentLevel = progressTracker.fetchIgnoredCount(forCardIDs: levelCardIDs)
@@ -80,7 +80,7 @@ final class SessionMetricsService {
         let completion = eligibleCount == 0 ? 0 : Double(reviewCountOnCurrentLevel) / Double(eligibleCount)
 
         metrics = Metrics(
-            todayReviewedCount: todayReviewedCount,
+            todayLearnedNewCardsCount: todayLearnedNewCardsCount,
             currentLevel: currentLevel,
             reviewCountOnCurrentLevel: reviewCountOnCurrentLevel,
             dueReviewCountOnCurrentLevel: dueReviewCountOnCurrentLevel,

@@ -39,7 +39,7 @@ struct SessionView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     SessionMetricsHeaderView(
-                        goalText: "\(String(localized: "Today's goal", comment: "Session metrics daily goal label")): \(viewModel.todayReviewsCount)/\(viewModel.dailyGoal)",
+                        goalText: "\(String(localized: "Today's goal", comment: "Session metrics daily goal label")): \(viewModel.todayLearnedNewCardsCount)/\(viewModel.dailyGoal)",
                         completionText: viewModel.currentLevelTitle
                     )
                 }

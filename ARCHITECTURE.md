@@ -84,6 +84,24 @@ Exception:
 
 - Keep initializers as the last methods in a type declaration (C-style convention used in this project).
 
+## SwiftData Optional Predicates
+
+When building `#Predicate` for SwiftData, treat optional handling as part of query design.
+
+- Never use forced unwrap (`!`) inside predicates. It can compile but fail at runtime with `unsupportedPredicate`.
+- Prefer nil-coalescing for optional scalars in boolean conditions:
+  - `(progress.lastReviewed ?? .distantPast) >= dayStart`
+  - `(progress.dueAt ?? .distantFuture) <= now`
+- Optional binding is allowed, but keep predicate body as a single expression (`if/else` expression only; no extra trailing `return`).
+- Direct equality on optionals is supported and preferred when it matches semantics:
+  - `$0.optionalName == "value"`
+  - `$0.optionalRelation?.name == "value"`
+- Keep optional chains shallow and test SQL-backed behavior for complex chains/relationships.
+- For optional to-many relationships, validate with integration tests before relying on predicate translation.
+
+Query safety rule:
+- If a predicate compiles but behavior is critical, add a test that verifies fetched rows from the store (not only in-memory evaluation).
+
 ## Naming Rules
 
 - Prefer domain names over generic names.

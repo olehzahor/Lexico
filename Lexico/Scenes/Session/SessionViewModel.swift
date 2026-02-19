@@ -21,8 +21,8 @@ final class SessionViewModel {
     private(set) var activeCard: Card?
     private(set) var activeCardData: CardView.Data?
 
-    var todayReviewsCount: Int {
-        metricsService.metrics.todayReviewedCount
+    var todayLearnedNewCardsCount: Int {
+        metricsService.metrics.todayLearnedNewCardsCount
     }
 
     var currentLevelCompletionText: String {

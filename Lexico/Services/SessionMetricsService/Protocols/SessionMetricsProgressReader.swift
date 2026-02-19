@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 protocol SessionMetricsProgressReader: AnyObject {
-    func fetchReviewedTodayCount(now: Date) -> Int
+    func fetchNewCardsLearnedTodayCount(now: Date) -> Int
     func fetchHighestSeenCardID() -> Int?
     func fetchReviewCount(forCardIDs cardIDs: Set<Int>) -> Int
     func fetchDueReviewCount(forCardIDs cardIDs: Set<Int>, at date: Date) -> Int
