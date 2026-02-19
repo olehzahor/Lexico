@@ -87,10 +87,9 @@ class CardsProgressTracker {
         let nextDayStart = calendar.date(byAdding: .day, value: 1, to: dayStart) ?? now
 
         let predicate = #Predicate<CardProgress> { progress in
-            if let lastReviewed = progress.lastReviewed {
-                return  progress.reps == 1 &&
-                lastReviewed >= dayStart &&
-                lastReviewed < nextDayStart
+            if let firstReviewed = progress.firstReviewed {
+                return firstReviewed >= dayStart &&
+                firstReviewed < nextDayStart
             } else {
                 return false
             }

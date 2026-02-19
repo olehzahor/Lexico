@@ -19,9 +19,11 @@ struct CardsRowView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(data.word)
                         .font(.headline)
+                        .lineLimit(1)
                     Text(data.meta)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
                 }
 
                 Spacer()

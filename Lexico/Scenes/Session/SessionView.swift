@@ -48,6 +48,7 @@ struct SessionView: View {
         .onAppear {
             viewModel.refresh()
         }
+        .statusBarStyle(.lightContent)
     }
     
     init(
@@ -76,14 +77,14 @@ private struct SessionMetricsHeaderView: View {
     var body: some View {
         VStack(spacing: 2) {
             Text(goalText)
-                .font(.caption)
+                .font(.headline)
                 .foregroundStyle(.white)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .minimumScaleFactor(0.85)
 
             Text(completionText)
-                .font(.caption2)
+                .font(.subheadline)
                 .foregroundStyle(.gray)
                 .lineLimit(1)
                 .minimumScaleFactor(0.85)

@@ -31,6 +31,7 @@ final class CardProgress {
     var intervalDays: Int
     var reps: Int
     
+    var firstReviewed: Date?
     var lastReviewed: Date?
     var dueAt: Date?
     
@@ -88,7 +89,7 @@ extension CardProgress {
                 intervalDays = 3
                 dueAt = addDays(intervalDays, to: now)
             }
-
+            firstReviewed = now
         case .learning:
             switch grade {
             case .hard:
