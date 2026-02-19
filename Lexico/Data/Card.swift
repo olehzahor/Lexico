@@ -63,6 +63,10 @@ struct Card: Codable, Identifiable {
 }
 
 extension Card {
+    var localizedCategory: String {
+        String(localized: .init(category), table: "Category")
+    }
+    
     func getRandomSentence(translation: String) -> (id: Int, text: String, translation: String) {
         if let sentence = sentences.randomElement() {
             return (id: sentence.id, text: sentence.sentences[language] ?? "", translation: sentence.sentences[translation] ?? "")

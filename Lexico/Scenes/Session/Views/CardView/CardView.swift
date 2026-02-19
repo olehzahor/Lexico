@@ -53,6 +53,7 @@ struct CardView: View {
                 Text(data.word)
                     .fontDesign(.serif)
                     .font(.largeTitle)
+                    .foregroundStyle(.black)
                     .onTapGesture {
                         ttsService.playWord(id: data.cardID)
                     }
@@ -61,7 +62,7 @@ struct CardView: View {
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.gray)
 
             Spacer()
 
@@ -80,15 +81,16 @@ struct CardView: View {
             Text(data.translation)
                 .fontDesign(.serif)
                 .font(.largeTitle)
+                .foregroundStyle(.black)
             Text(data.word)
                 .fontDesign(.serif)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.gray)
                 .font(.headline)
             Text(data.partOfSpeech)
                 .fontDesign(.serif)
                 .font(.headline)
                 .fontWeight(.thin)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.gray)
 
             Divider().padding(.vertical)
 
@@ -96,18 +98,19 @@ struct CardView: View {
                 .fontDesign(.serif)
                 .italic()
                 .font(.title2)
+                .foregroundStyle(.black)
                 .padding(.vertical)
                 .onTapGesture {
                     ttsService.playSentence(id: data.exampleSentenceID)
                 }
             Text(data.exampleTranslation)
                 .fontDesign(.serif)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.gray)
                 .font(.default)
 
             Spacer()
 
-            HStack(spacing: 32) {
+            HStack {
                 completionButton(bgColor: .green, .easy)
                 completionButton(.good)
                 completionButton(bgColor: .orange, .hard)

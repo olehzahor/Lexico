@@ -49,9 +49,9 @@ final class CardsProvider: CardsProviderProtocol {
         return allCards.filter { allReviewIDs.contains($0.id) }
     }
 
-    func getCardsReadyForReview(for lang: String, at date: Date = .now) -> [Card] {
+    func getCardsReadyForReview(for lang: String, at date: Date? = nil) -> [Card] {
         let allCards = getAllCards(for: lang)
-        let dueProgress = progressTracker.fetchCardsDueForReview(at: date)
+        let dueProgress = progressTracker.fetchCardsDueForReview(at: date ?? .now)
         let dueCardIDs = Set(dueProgress.map(\.cardID))
         return allCards.filter { dueCardIDs.contains($0.id) }
     }
@@ -69,8 +69,8 @@ final class CardsProvider: CardsProviderProtocol {
         return allCards.filter { ignoredIDs.contains($0.id) == false && allReviewIDs.contains($0.id) == false }
     }
 
-    func getNextCard(for lang: String) -> Card? {
-        if let reviewCard = getCardsReadyForReview(for: lang).first {
+    func getNextCard(for lang: String, at date: Date? = nil) -> Card? {
+        if let reviewCard = getCardsReadyForReview(for: lang, at: date).first {
             return reviewCard
         }
 

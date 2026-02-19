@@ -43,7 +43,7 @@ final class R2MediaURLProvider: MediaURLProvider {
     }
 
     func wordURL(for id: Int) -> URL? {
-        mediaURL(directory: "word", id: id, fileExtension: "m4a")
+        mediaURL(directory: "words", id: id, fileExtension: "m4a")
     }
 
     func sentenceURL(for id: Int) -> URL? {

@@ -41,10 +41,14 @@ final class CardsViewModel {
             self.items = cardsProvider.getReviewQueue(for: language).map { CardsRowView.Data(reviewItem: $0) }
             self.emptyState = .review
         case .unseen:
-            self.items = cardsProvider.getUnseenCards(for: language).map { CardsRowView.Data(card: $0, status: "Unseen") }
+            self.items = cardsProvider.getUnseenCards(for: language).map {
+                CardsRowView.Data(card: $0, status: String(localized: "Unseen", comment: "Cards status label"))
+            }
             self.emptyState = .unseen
         case .ignored:
-            self.items = cardsProvider.getIgnoredCards(for: language).map { CardsRowView.Data(card: $0, status: "Ignored") }
+            self.items = cardsProvider.getIgnoredCards(for: language).map {
+                CardsRowView.Data(card: $0, status: String(localized: "Ignored", comment: "Cards status label"))
+            }
             self.emptyState = .ignored
         }
     }

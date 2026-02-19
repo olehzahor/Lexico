@@ -20,7 +20,7 @@ extension CardsRowView {
             self.id = "card-\(card.id)"
             self.cardID = card.id
             self.word = card.word
-            self.meta = "\(card.level) · \(card.category)"
+            self.meta = "\(card.level) · \(card.localizedCategory)"
             self.status = status
             self.dueAt = nil
         }
@@ -29,7 +29,7 @@ extension CardsRowView {
             self.id = "review-\(reviewItem.card.id)"
             self.cardID = reviewItem.card.id
             self.word = reviewItem.card.word
-            self.meta = "\(reviewItem.card.level) · \(reviewItem.card.category)"
+            self.meta = "\(reviewItem.card.level) · \(reviewItem.card.localizedCategory)"
             self.status = nil
             self.dueAt = reviewItem.dueAt
         }

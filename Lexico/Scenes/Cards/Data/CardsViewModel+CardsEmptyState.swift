@@ -14,20 +14,20 @@ extension CardsViewModel {
         let systemImage: String
 
         static let review = CardsEmptyState(
-            title: "No cards to review",
-            description: "Cards will appear here when they become due.",
+            title: String(localized: "No cards to review", comment: "Cards screen empty state title"),
+            description: String(localized: "Cards will appear here when they become due.", comment: "Cards screen empty state description"),
             systemImage: "clock"
         )
 
         static let unseen = CardsEmptyState(
-            title: "No unseen cards",
-            description: "New cards will appear here.",
+            title: String(localized: "No unseen cards", comment: "Cards screen empty state title"),
+            description: String(localized: "New cards will appear here.", comment: "Cards screen empty state description"),
             systemImage: "clock"
         )
 
         static let ignored = CardsEmptyState(
-            title: "No ignored cards",
-            description: "You haven't ignored any cards yet.",
+            title: String(localized: "No ignored cards", comment: "Cards screen empty state title"),
+            description: String(localized: "You haven't ignored any cards yet.", comment: "Cards screen empty state description"),
             systemImage: "clock"
         )
     }

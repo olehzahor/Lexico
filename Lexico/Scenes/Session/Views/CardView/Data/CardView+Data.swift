@@ -30,7 +30,7 @@ extension CardView.Data {
         self.word = card.word
         self.partOfSpeech = card.partOfSpeech
         self.levelBadge = card.level
-        self.categoryBadge = card.category
+        self.categoryBadge = card.localizedCategory
         self.translation = card.getTranslation(nativeLanguage)
         self.exampleSentenceID = sentence.id
         self.exampleSentence = sentence.text

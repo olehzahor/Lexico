@@ -31,7 +31,7 @@ final class SessionViewModel {
     }
 
     var currentLevelTitle: String {
-        "\(metricsService.metrics.currentLevel) completion: \(currentLevelCompletionText)"
+        "\(metricsService.metrics.currentLevel) \(String(localized: "completion", comment: "Session metrics label")): \(currentLevelCompletionText)"
     }
 
     func refresh() {

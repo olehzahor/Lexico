@@ -16,10 +16,14 @@ extension CardView {
 
         var title: String {
             switch self {
-            case .easy: return "Easy"
-            case .good: return "Good"
-            case .hard: return "Hard"
-            case .ignore: return "Ignore"
+            case .easy:
+                return String(localized: "Easy", comment: "Card action button title")
+            case .good:
+                return String(localized: "Good", comment: "Card action button title")
+            case .hard:
+                return String(localized: "Hard", comment: "Card action button title")
+            case .ignore:
+                return String(localized: "Ignore", comment: "Card action button title")
             }
         }
     }

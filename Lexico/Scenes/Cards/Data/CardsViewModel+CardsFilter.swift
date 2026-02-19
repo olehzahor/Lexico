@@ -17,9 +17,12 @@ extension CardsViewModel {
 
         var title: String {
             switch self {
-            case .review: "Review"
-            case .unseen: "Unseen"
-            case .ignored: "Ignored"
+            case .review:
+                String(localized: "Review", comment: "Cards filter option")
+            case .unseen:
+                String(localized: "Unseen", comment: "Cards filter option")
+            case .ignored:
+                String(localized: "Ignored", comment: "Cards filter option")
             }
         }
     }
