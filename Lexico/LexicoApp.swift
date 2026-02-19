@@ -9,7 +9,10 @@ import SwiftUI
 import SwiftData
 
 @main
-struct LexicoApp: App {
+struct LexicoApp: App {    
+    @AppStorage("didSeedInitialIgnoredCards")
+    private var didSeedInitialIgnoredCards: Bool = false
+
     private var cardsProgressTracker: CardsProgressTracker
     private var cardsProvider: CardsProvider
     
@@ -36,5 +39,12 @@ struct LexicoApp: App {
     init() {
         self.cardsProgressTracker = CardsProgressTracker(modelContext: sharedModelContainer.mainContext)
         self.cardsProvider = CardsProvider(progressManager: cardsProgressTracker)
+
+        if !didSeedInitialIgnoredCards {
+            for i in 0..<92 {
+                cardsProgressTracker.ignoreCard(cardID: i, ignored: true)
+            }
+            didSeedInitialIgnoredCards = true
+        }
     }
 }
