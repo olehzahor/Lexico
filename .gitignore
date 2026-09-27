@@ -20,3 +20,4 @@ Package.resolved
 # Local private data (do not commit)
 private.local.env
 /Lexico/Data/LocalSecrets.swift
+/cloudflare.local.env
