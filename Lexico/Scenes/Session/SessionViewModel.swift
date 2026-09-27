@@ -18,6 +18,7 @@ final class SessionViewModel {
     private let language: String
     private let settingsStore: SettingsStoreProtocol
 
+    private(set) var shownDeckID: String
     private(set) var dailyGoal: Int
 
     private(set) var activeCard: Card?
@@ -38,6 +39,11 @@ final class SessionViewModel {
 
     func refresh() {
         dailyGoal = max(1, settingsStore.get(.dailyGoal, default: .int(20)).int ?? 20)
+        let deckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"
+        if shownDeckID != deckID {
+            shownDeckID = deckID
+            setActiveCard(nil)
+        }
         metricsService.refresh()
         if activeCard == nil {
             setActiveCard(cardsProvider.getNextCard(for: language))
@@ -82,6 +88,7 @@ final class SessionViewModel {
         self.progressTracker = progressTracker
         self.language = language
         self.settingsStore = settingsStore
+        self.shownDeckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"
         self.dailyGoal = max(1, settingsStore.get(.dailyGoal, default: .int(20)).int ?? 20)
         self.metricsService = metricsService
         setActiveCard(cardsProvider.getNextCard(for: language))

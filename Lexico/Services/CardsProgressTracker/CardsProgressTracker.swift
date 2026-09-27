@@ -11,6 +11,8 @@ import SwiftData
 @MainActor
 class CardsProgressTracker {
     private let modelContext: ModelContext
+    private let settingsStore: SettingsStoreProtocol
+    var activeDeckID: String { settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default" }
     private var progressChangesContinuation: AsyncStream<Void>.Continuation?
     lazy var progressChanges: AsyncStream<Void> = {
         AsyncStream { [weak self] continuation in
@@ -19,8 +21,25 @@ class CardsProgressTracker {
     }()
 
     // MARK: - Lifecycle
-    init(modelContext: ModelContext) {
+    init(modelContext: ModelContext, settingsStore: SettingsStoreProtocol? = nil) {
         self.modelContext = modelContext
+        self.settingsStore = settingsStore ?? SettingsStore()
+        migrateLegacyRecords()
+    }
+
+    private func migrateLegacyRecords() {
+        for progress in (try? modelContext.fetch(FetchDescriptor<CardProgress>())) ?? [] where progress.deckID == nil {
+            progress.deckID = "default"
+        }
+        for history in (try? modelContext.fetch(FetchDescriptor<CardHistory>())) ?? [] where history.deckID == nil {
+            history.deckID = "default"
+        }
+        try? modelContext.save()
+    }
+
+    private func currentProgress() -> [CardProgress] {
+        let deckID = activeDeckID
+        return ((try? modelContext.fetch(FetchDescriptor<CardProgress>())) ?? []).filter { ($0.deckID ?? "default") == deckID }
     }
 
     // MARK: - CardsProgressTrackerProtocol
@@ -39,100 +58,44 @@ class CardsProgressTracker {
     }
 
     // MARK: - CardsProgressTrackerProtocol (Read)
-    func getAllProgress() -> [CardProgress] {
-        let descriptor = FetchDescriptor<CardProgress>()
-        return (try? modelContext.fetch(descriptor)) ?? []
-    }
-    
+    func getAllProgress() -> [CardProgress] { currentProgress() }
+
     func getProgress(for cardID: Int) -> CardProgress {
-        let predicate = #Predicate<CardProgress> { $0.cardID == cardID }
-        let descriptor = FetchDescriptor(predicate: predicate)
-
-        if let existing = try? modelContext.fetch(descriptor).first {
-            return existing
-        }
-
-        let newProgress = CardProgress(cardID: cardID)
-        modelContext.insert(newProgress)
-        return newProgress
+        if let existing = getProgressIfExists(for: cardID) { return existing }
+        let progress = CardProgress(cardID: cardID, deckID: activeDeckID)
+        modelContext.insert(progress)
+        return progress
     }
-    
+
     func getProgressIfExists(for cardID: Int) -> CardProgress? {
-        let predicate = #Predicate<CardProgress> { $0.cardID == cardID }
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return try? modelContext.fetch(descriptor).first
+        currentProgress().first { $0.cardID == cardID }
     }
 
     // MARK: - CardsProviderProgressReader
-    func fetchIgnoredCards() -> [CardProgress] {
-        let predicate = #Predicate<CardProgress> { $0.ignored == true }
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return (try? modelContext.fetch(descriptor)) ?? []
-    }
-
+    func fetchIgnoredCards() -> [CardProgress] { currentProgress().filter(\.ignored) }
     func fetchAllCardsForReview() -> [CardProgress] {
-        let descriptor = FetchDescriptor(predicate: CardProgress.allCardsForReviewFilter())
-        return (try? modelContext.fetch(descriptor)) ?? []
+        currentProgress().filter { !$0.ignored && ($0.state == .learning || $0.state == .review) }
     }
-
     func fetchCardsDueForReview(at date: Date) -> [CardProgress] {
-        let descriptor = FetchDescriptor(predicate: CardProgress.cardsDueForReviewFilter(at: date))
-        return (try? modelContext.fetch(descriptor)) ?? []
+        fetchAllCardsForReview().filter { ($0.dueAt ?? .distantFuture) <= date }
     }
 
     // MARK: - SessionMetricsProgressReader
     func fetchNewCardsLearnedTodayCount(now: Date = .now) -> Int {
         let calendar = Calendar.autoupdatingCurrent
-        let dayStart = calendar.startOfDay(for: now)
-        let nextDayStart = calendar.date(byAdding: .day, value: 1, to: dayStart) ?? now
-
-        let predicate = #Predicate<CardProgress> { progress in
-            if let firstReviewed = progress.firstReviewed {
-                return firstReviewed >= dayStart &&
-                firstReviewed < nextDayStart
-            } else {
-                return false
-            }
-        }
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return (try? modelContext.fetch(descriptor).count) ?? 0
+        let start = calendar.startOfDay(for: now)
+        let end = calendar.date(byAdding: .day, value: 1, to: start) ?? now
+        return currentProgress().filter { ($0.firstReviewed ?? .distantPast) >= start && ($0.firstReviewed ?? .distantFuture) < end }.count
     }
 
-    func fetchHighestSeenCardID() -> Int? {
-        var descriptor = FetchDescriptor<CardProgress>(
-            predicate: CardProgress.allCardsForReviewFilter(),
-            sortBy: [SortDescriptor(\.cardID, order: .reverse)]
-        )
-        descriptor.fetchLimit = 1
-        return try? modelContext.fetch(descriptor).first?.cardID
+    func fetchHighestSeenCardID() -> Int? { fetchAllCardsForReview().map(\.cardID).max() }
+    func fetchReviewCount(forCardIDs ids: Set<Int>) -> Int {
+        fetchAllCardsForReview().filter { ids.contains($0.cardID) }.count
     }
-
-    func fetchReviewCount(forCardIDs cardIDs: Set<Int>) -> Int {
-        guard cardIDs.isEmpty == false else { return 0 }
-
-        let ids = Array(cardIDs)
-        let predicate = CardProgress.reviewCardsFilter(forCardIDs: ids)
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return (try? modelContext.fetch(descriptor).count) ?? 0
+    func fetchDueReviewCount(forCardIDs ids: Set<Int>, at date: Date = .now) -> Int {
+        fetchCardsDueForReview(at: date).filter { ids.contains($0.cardID) }.count
     }
-
-    func fetchDueReviewCount(forCardIDs cardIDs: Set<Int>, at date: Date = .now) -> Int {
-        guard cardIDs.isEmpty == false else { return 0 }
-
-        let ids = Array(cardIDs)
-        let predicate = CardProgress.dueReviewCardsFilter(forCardIDs: ids, at: date)
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return (try? modelContext.fetch(descriptor).count) ?? 0
-    }
-
-    func fetchIgnoredCount(forCardIDs cardIDs: Set<Int>) -> Int {
-        guard cardIDs.isEmpty == false else { return 0 }
-
-        let ids = Array(cardIDs)
-        let predicate = #Predicate<CardProgress> { progress in
-            ids.contains(progress.cardID) && progress.ignored == true
-        }
-        let descriptor = FetchDescriptor(predicate: predicate)
-        return (try? modelContext.fetch(descriptor).count) ?? 0
+    func fetchIgnoredCount(forCardIDs ids: Set<Int>) -> Int {
+        fetchIgnoredCards().filter { ids.contains($0.cardID) }.count
     }
 }

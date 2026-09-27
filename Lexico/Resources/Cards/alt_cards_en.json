@@ -1,5 +1,6 @@
 {
   "metadata": {
+    "deck": {"id": "alt_cards", "language": "en", "names": {"en": "Alternative Cards", "ru": "Альтернативные карточки"}},
     "source_files": [
       "unknown-words.txt"
     ],
@@ -14,6 +15,32 @@
     "total_words": 75,
     "updated_at_utc": "2026-09-26T15:38:56+00:00",
     "schema_version": "2"
+  },
+  "categories": {
+    "card.category.adjectives": {
+      "en": "Adjectives",
+      "ru": "Прилагательные"
+    },
+    "card.category.adverbs": {
+      "en": "Adverbs",
+      "ru": "Наречия"
+    },
+    "card.category.modal_verbs": {
+      "en": "Modal Verbs",
+      "ru": "Модальные глаголы"
+    },
+    "card.category.nouns": {
+      "en": "Nouns",
+      "ru": "Существительные"
+    },
+    "card.category.prepositions": {
+      "en": "Prepositions",
+      "ru": "Предлоги"
+    },
+    "card.category.verbs": {
+      "en": "Verbs",
+      "ru": "Глаголы"
+    }
   },
   "words": [
     {

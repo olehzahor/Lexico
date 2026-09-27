@@ -20,7 +20,7 @@ struct SessionView: View {
                     CardView(data: activeCard) { action in
                         viewModel.handleCardAction(action, for: activeCard.cardID)
                     }
-                    .id(activeCard.cardID)
+                    .id("\(viewModel.shownDeckID):\(activeCard.cardID)")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding()
                     .asymmetricTransition()

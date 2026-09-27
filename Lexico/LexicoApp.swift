@@ -16,6 +16,7 @@ struct LexicoApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             CardProgress.self,
+            CardHistory.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

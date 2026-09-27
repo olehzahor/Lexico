@@ -47,6 +47,8 @@ struct Card: Codable, Identifiable {
     let partOfSpeech: String
     let level: String
     let category: String
+    // Filled from the deck's top-level categories after decoding.
+    var categoryNames: [String: String] = [:]
     let translations: [Translation]
     let sentences: [SentenceSet]
 
@@ -64,7 +66,13 @@ struct Card: Codable, Identifiable {
 
 extension Card {
     var localizedCategory: String {
-        String(localized: .init(category), table: "Category")
+        let language = Bundle.main.preferredLocalizations.first ?? "en"
+        return categoryName(for: language)
+    }
+
+    func categoryName(for language: String) -> String {
+        let code = String(language.split(separator: "-").first ?? "en")
+        return categoryNames[code] ?? categoryNames["en"] ?? category
     }
     
     func getRandomSentence(translation: String) -> (id: Int, text: String, translation: String) {

@@ -10,16 +10,19 @@ import Foundation
 final class CardsProvider: CardsProviderProtocol {
     private let progressTracker: CardsProviderProgressReader
     private let dataSource: any CardsDataSource
+    private let settingsStore: SettingsStoreProtocol
 
     private var cardsCache: [String: [Card]] = [:]
 
     func getAllCards(for lang: String) -> [Card] {
-        if let cachedCards = cardsCache[lang] {
+        let deckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"
+        let cacheKey = "\(deckID):\(lang)"
+        if let cachedCards = cardsCache[cacheKey] {
             return cachedCards
         }
 
-        let cards = dataSource.fetchCards(for: lang)
-        cardsCache[lang] = cards
+        let cards = dataSource.fetchCards(for: lang, deckID: deckID)
+        cardsCache[cacheKey] = cards
         return cards
     }
 
@@ -79,9 +82,11 @@ final class CardsProvider: CardsProviderProtocol {
 
     init(
         progressManager: CardsProviderProgressReader,
-        dataSource: any CardsDataSource = BundleCardsDataSource()
+        dataSource: any CardsDataSource = BundleCardsDataSource(),
+        settingsStore: SettingsStoreProtocol = SettingsStore()
     ) {
         self.progressTracker = progressManager
         self.dataSource = dataSource
+        self.settingsStore = settingsStore
     }
 }

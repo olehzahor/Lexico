@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Active deck" : {
+
+    },
     "Allow notifications in System Settings to receive reminders." : {
 
     },
@@ -52,6 +55,9 @@
       }
     },
     "Daily goal" : {
+
+    },
+    "Deck" : {
 
     },
     "Easy" : {

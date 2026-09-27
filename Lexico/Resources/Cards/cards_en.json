@@ -1,5 +1,6 @@
 {
   "metadata": {
+    "deck": {"id": "default", "language": "en", "names": {"en": "Default Cards", "ru": "Обычные карточки"}},
     "source_files": [
       "a1.json",
       "a2.json",
@@ -18,6 +19,428 @@
     "total_words": 2756,
     "updated_at_utc": "2026-02-13T19:19:39+00:00",
     "schema_version": "2"
+  },
+  "categories": {
+    "card.category.abstract_nouns": {
+      "en": "Abstract Nouns",
+      "ru": "Абстрактные существительные"
+    },
+    "card.category.adjectives_age_and_condition": {
+      "en": "Adjectives - Age & Condition",
+      "ru": "Прилагательные: возраст и состояние"
+    },
+    "card.category.adjectives_appearance": {
+      "en": "Adjectives - Appearance",
+      "ru": "Прилагательные: внешность"
+    },
+    "card.category.adjectives_characteristics": {
+      "en": "Adjectives - Characteristics",
+      "ru": "Прилагательные: характеристики"
+    },
+    "card.category.adjectives_colors": {
+      "en": "Adjectives - Colors",
+      "ru": "Прилагательные: цвета"
+    },
+    "card.category.adjectives_feelings": {
+      "en": "Adjectives - Feelings",
+      "ru": "Прилагательные: чувства"
+    },
+    "card.category.adjectives_location_and_origin": {
+      "en": "Adjectives - Location & Origin",
+      "ru": "Прилагательные: местоположение и происхождение"
+    },
+    "card.category.adjectives_other": {
+      "en": "Adjectives - Other",
+      "ru": "Прилагательные: другое"
+    },
+    "card.category.adjectives_personality": {
+      "en": "Adjectives - Personality",
+      "ru": "Прилагательные: личностные качества"
+    },
+    "card.category.adjectives_position_and_location": {
+      "en": "Adjectives - Position & Location",
+      "ru": "Прилагательные: позиция и местоположение"
+    },
+    "card.category.adjectives_quality": {
+      "en": "Adjectives - Quality",
+      "ru": "Прилагательные: качество"
+    },
+    "card.category.adjectives_safety_and_health": {
+      "en": "Adjectives - Safety & Health",
+      "ru": "Прилагательные: безопасность и здоровье"
+    },
+    "card.category.adjectives_size": {
+      "en": "Adjectives - Size",
+      "ru": "Прилагательные: размер"
+    },
+    "card.category.adjectives_social_and_personal": {
+      "en": "Adjectives - Social & Personal",
+      "ru": "Прилагательные: социальное и личные"
+    },
+    "card.category.adjectives_states": {
+      "en": "Adjectives - States",
+      "ru": "Прилагательные: состояния"
+    },
+    "card.category.adjectives_technology_and_materials": {
+      "en": "Adjectives - Technology & Materials",
+      "ru": "Прилагательные: технологии и материалы"
+    },
+    "card.category.adjectives_temperature_and_taste": {
+      "en": "Adjectives - Temperature & Taste",
+      "ru": "Прилагательные: температура и вкус"
+    },
+    "card.category.adjectives_time": {
+      "en": "Adjectives - Time",
+      "ru": "Прилагательные: Время"
+    },
+    "card.category.adverbs_degree": {
+      "en": "Adverbs - Degree",
+      "ru": "Наречия: степень"
+    },
+    "card.category.adverbs_direction": {
+      "en": "Adverbs - Direction",
+      "ru": "Наречия: направление"
+    },
+    "card.category.adverbs_direction_and_place": {
+      "en": "Adverbs - Direction & Place",
+      "ru": "Наречия: направление и место"
+    },
+    "card.category.adverbs_frequency": {
+      "en": "Adverbs - Frequency",
+      "ru": "Наречия: частота"
+    },
+    "card.category.adverbs_manner": {
+      "en": "Adverbs - Manner",
+      "ru": "Наречия: образ действия"
+    },
+    "card.category.adverbs_other": {
+      "en": "Adverbs - Other",
+      "ru": "Наречия: другое"
+    },
+    "card.category.adverbs_time": {
+      "en": "Adverbs - Time",
+      "ru": "Наречия: Время"
+    },
+    "card.category.animals": {
+      "en": "Animals",
+      "ru": "Животные"
+    },
+    "card.category.body_parts": {
+      "en": "Body Parts",
+      "ru": "Части тела"
+    },
+    "card.category.clothes": {
+      "en": "Clothes",
+      "ru": "Одежда"
+    },
+    "card.category.clothes_and_accessories": {
+      "en": "Clothes & Accessories",
+      "ru": "Одежда и аксессуары"
+    },
+    "card.category.colors": {
+      "en": "Colors",
+      "ru": "Цвета"
+    },
+    "card.category.communication": {
+      "en": "Communication",
+      "ru": "Общение"
+    },
+    "card.category.conjunctions": {
+      "en": "Conjunctions",
+      "ru": "Союзы"
+    },
+    "card.category.conjunctions_other": {
+      "en": "Conjunctions - Other",
+      "ru": "Союзы: другое"
+    },
+    "card.category.determiners": {
+      "en": "Determiners",
+      "ru": "Определители"
+    },
+    "card.category.drinks": {
+      "en": "Drinks",
+      "ru": "Напитки"
+    },
+    "card.category.education_items": {
+      "en": "Education - Items",
+      "ru": "Образование: предметы"
+    },
+    "card.category.entertainment": {
+      "en": "Entertainment",
+      "ru": "Развлечения"
+    },
+    "card.category.entertainment_general": {
+      "en": "Entertainment - General",
+      "ru": "Развлечения: общее"
+    },
+    "card.category.entertainment_media": {
+      "en": "Entertainment - Media",
+      "ru": "Развлечения: Медиа"
+    },
+    "card.category.expressions": {
+      "en": "Expressions",
+      "ru": "Выражения"
+    },
+    "card.category.food_and_cooking": {
+      "en": "Food & Cooking",
+      "ru": "Еда и приготовление"
+    },
+    "card.category.food_basics": {
+      "en": "Food - Basics",
+      "ru": "Еда: основы"
+    },
+    "card.category.food_fruits_and_vegetables": {
+      "en": "Food - Fruits & Vegetables",
+      "ru": "Еда: фрукты и овощи"
+    },
+    "card.category.food_general": {
+      "en": "Food - General",
+      "ru": "Еда: общее"
+    },
+    "card.category.food_meals": {
+      "en": "Food - Meals",
+      "ru": "Еда: приёмы пищи"
+    },
+    "card.category.food_other": {
+      "en": "Food - Other",
+      "ru": "Еда: другое"
+    },
+    "card.category.food_products": {
+      "en": "Food - Products",
+      "ru": "Еда: продукты"
+    },
+    "card.category.geography": {
+      "en": "Geography",
+      "ru": "География"
+    },
+    "card.category.government_and_politics": {
+      "en": "Government & Politics",
+      "ru": "Государство и политика"
+    },
+    "card.category.health_and_medicine": {
+      "en": "Health & Medicine",
+      "ru": "Здоровье и медицина"
+    },
+    "card.category.home_and_objects": {
+      "en": "Home & Objects",
+      "ru": "Дом и предметы"
+    },
+    "card.category.home_furniture": {
+      "en": "Home - Furniture",
+      "ru": "Дом: мебель"
+    },
+    "card.category.home_general": {
+      "en": "Home - General",
+      "ru": "Дом: общее"
+    },
+    "card.category.home_objects": {
+      "en": "Home - Objects",
+      "ru": "Дом: предметы"
+    },
+    "card.category.home_rooms": {
+      "en": "Home - Rooms",
+      "ru": "Дом: комнаты"
+    },
+    "card.category.law_and_crime": {
+      "en": "Law & Crime",
+      "ru": "Право и преступность"
+    },
+    "card.category.measurement": {
+      "en": "Measurement",
+      "ru": "Измерения"
+    },
+    "card.category.media": {
+      "en": "Media",
+      "ru": "Медиа"
+    },
+    "card.category.media_news": {
+      "en": "Media - News",
+      "ru": "Медиа: новости"
+    },
+    "card.category.money_and_finance": {
+      "en": "Money & Finance",
+      "ru": "Деньги и финансы"
+    },
+    "card.category.nature": {
+      "en": "Nature",
+      "ru": "Природа"
+    },
+    "card.category.nature_environment": {
+      "en": "Nature - Environment",
+      "ru": "Природа: окружающая среда"
+    },
+    "card.category.nouns_other": {
+      "en": "Nouns - Other",
+      "ru": "Существительные: другое"
+    },
+    "card.category.other_nouns": {
+      "en": "Other Nouns",
+      "ru": "Другие существительные"
+    },
+    "card.category.people_family": {
+      "en": "People - Family",
+      "ru": "Люди: семья"
+    },
+    "card.category.people_family_and_social": {
+      "en": "People - Family & Social",
+      "ru": "Люди: семья и социальное"
+    },
+    "card.category.people_general": {
+      "en": "People - General",
+      "ru": "Люди: общее"
+    },
+    "card.category.people_professions": {
+      "en": "People - Professions",
+      "ru": "Люди: профессии"
+    },
+    "card.category.places_and_geography": {
+      "en": "Places & Geography",
+      "ru": "Места и география"
+    },
+    "card.category.places_city": {
+      "en": "Places - City",
+      "ru": "Места: город"
+    },
+    "card.category.places_education": {
+      "en": "Places - Education",
+      "ru": "Места: Образование"
+    },
+    "card.category.places_nature": {
+      "en": "Places - Nature",
+      "ru": "Места: Природа"
+    },
+    "card.category.places_public": {
+      "en": "Places - Public",
+      "ru": "Места: общественные места"
+    },
+    "card.category.prepositions": {
+      "en": "Prepositions",
+      "ru": "Предлоги"
+    },
+    "card.category.prepositions_other": {
+      "en": "Prepositions - Other",
+      "ru": "Предлоги: другое"
+    },
+    "card.category.prepositions_place": {
+      "en": "Prepositions - Place",
+      "ru": "Предлоги: место"
+    },
+    "card.category.prepositions_time": {
+      "en": "Prepositions - Time",
+      "ru": "Предлоги: Время"
+    },
+    "card.category.pronouns_demonstrative": {
+      "en": "Pronouns - Demonstrative",
+      "ru": "Местоимения: указательные"
+    },
+    "card.category.pronouns_indefinite": {
+      "en": "Pronouns - Indefinite",
+      "ru": "Местоимения: неопределённые"
+    },
+    "card.category.pronouns_interrogative": {
+      "en": "Pronouns - Interrogative",
+      "ru": "Местоимения: вопросительные"
+    },
+    "card.category.pronouns_other": {
+      "en": "Pronouns - Other",
+      "ru": "Местоимения: другое"
+    },
+    "card.category.pronouns_personal": {
+      "en": "Pronouns - Personal",
+      "ru": "Местоимения: личные"
+    },
+    "card.category.pronouns_possessive": {
+      "en": "Pronouns - Possessive",
+      "ru": "Местоимения: притяжательные"
+    },
+    "card.category.pronouns_reflexive": {
+      "en": "Pronouns - Reflexive",
+      "ru": "Местоимения: возвратные"
+    },
+    "card.category.science_and_history": {
+      "en": "Science & History",
+      "ru": "Наука и история"
+    },
+    "card.category.sports": {
+      "en": "Sports",
+      "ru": "Спорт"
+    },
+    "card.category.sports_and_fitness": {
+      "en": "Sports & Fitness",
+      "ru": "Спорт и фитнес"
+    },
+    "card.category.technology": {
+      "en": "Technology",
+      "ru": "Технологии"
+    },
+    "card.category.technology_devices": {
+      "en": "Technology - Devices",
+      "ru": "Технологии: устройства"
+    },
+    "card.category.technology_internet": {
+      "en": "Technology - Internet",
+      "ru": "Технологии: интернет"
+    },
+    "card.category.time_days": {
+      "en": "Time - Days",
+      "ru": "Время: дни"
+    },
+    "card.category.time_general": {
+      "en": "Time - General",
+      "ru": "Время: общее"
+    },
+    "card.category.time_months": {
+      "en": "Time - Months",
+      "ru": "Время: месяцы"
+    },
+    "card.category.transport": {
+      "en": "Transport",
+      "ru": "Транспорт"
+    },
+    "card.category.transport_related": {
+      "en": "Transport - Related",
+      "ru": "Транспорт: связанное"
+    },
+    "card.category.transport_vehicles": {
+      "en": "Transport - Vehicles",
+      "ru": "Транспорт: транспортные средства"
+    },
+    "card.category.verbs_actions": {
+      "en": "Verbs - Actions",
+      "ru": "Глаголы: действия"
+    },
+    "card.category.verbs_be_and_have": {
+      "en": "Verbs - BE & Have",
+      "ru": "Глаголы: быть и иметь"
+    },
+    "card.category.verbs_communication": {
+      "en": "Verbs - Communication",
+      "ru": "Глаголы: общение"
+    },
+    "card.category.verbs_essential": {
+      "en": "Verbs - Essential",
+      "ru": "Глаголы: базовые"
+    },
+    "card.category.verbs_modal": {
+      "en": "Verbs - Modal",
+      "ru": "Глаголы: модальные"
+    },
+    "card.category.verbs_other": {
+      "en": "Verbs - Other",
+      "ru": "Глаголы: другое"
+    },
+    "card.category.work": {
+      "en": "Work",
+      "ru": "Работа"
+    },
+    "card.category.work_and_business": {
+      "en": "Work & Business",
+      "ru": "Работа и бизнес"
+    },
+    "card.category.work_general": {
+      "en": "Work - General",
+      "ru": "Работа: общее"
+    }
   },
   "words": [
     {

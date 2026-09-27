@@ -1,0 +1,635 @@
+{
+  "metadata": {
+    "deck": {"id": "example", "language": "en", "names": {"en": "Example Cards", "ru": "Пример карточек"}},
+    "source_files": [
+      "cards_en.json"
+    ],
+    "source_counts": {
+      "cards_en.json": 4
+    },
+    "levels_included": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "total_words": 4,
+    "updated_at_utc": "2026-09-27T11:57:40.402226+00:00",
+    "schema_version": "2"
+  },
+  "categories": {
+    "card.category.abstract_nouns": {
+      "en": "Abstract Nouns",
+      "ru": "Абстрактные существительные"
+    },
+    "card.category.adjectives_location_and_origin": {
+      "en": "Adjectives - Location & Origin",
+      "ru": "Прилагательные: местоположение и происхождение"
+    },
+    "card.category.home_objects": {
+      "en": "Home - Objects",
+      "ru": "Дом: предметы"
+    },
+    "card.category.pronouns_personal": {
+      "en": "Pronouns - Personal",
+      "ru": "Местоимения: личные"
+    }
+  },
+  "words": [
+    {
+      "word": "he",
+      "part_of_speech": "pron",
+      "level": "A1",
+      "category": "card.category.pronouns_personal",
+      "id": 1,
+      "translations": [
+        {
+          "text": "он",
+          "language": "ru"
+        },
+        {
+          "text": "его",
+          "language": "ru"
+        },
+        {
+          "text": "ему",
+          "language": "ru"
+        }
+      ],
+      "sentences": [
+        {
+          "id": 101,
+          "sentences": [
+            {
+              "text": "He likes to play soccer after school with his friends.",
+              "language": "en"
+            },
+            {
+              "text": "Он любит играть в футбол после школы с друзьями.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "sentences": [
+            {
+              "text": "He is reading a short story in the classroom right now.",
+              "language": "en"
+            },
+            {
+              "text": "Он сейчас читает рассказ в классе.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "sentences": [
+            {
+              "text": "Yesterday, he helped his mother bake chocolate chip cookies together.",
+              "language": "en"
+            },
+            {
+              "text": "Вчера он помог маме испечь печенье с шоколадной крошкой.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 104,
+          "sentences": [
+            {
+              "text": "He will visit his grandparents next weekend during the holiday.",
+              "language": "en"
+            },
+            {
+              "text": "Он на следующей неделе в выходные на каникулах навестит бабушку и дедушку.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 105,
+          "sentences": [
+            {
+              "text": "Every morning, he brushes his teeth and washes his face.",
+              "language": "en"
+            },
+            {
+              "text": "Каждое утро он чистит зубы и умывается.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 106,
+          "sentences": [
+            {
+              "text": "He can swim very well after taking swimming lessons last summer.",
+              "language": "en"
+            },
+            {
+              "text": "Он умеет очень хорошо плавать после того, как прошёл уроки плавания прошлым летом.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "sentences": [
+            {
+              "text": "In the park, he found a lost kitten and gave it food.",
+              "language": "en"
+            },
+            {
+              "text": "В парке он нашёл потерявшегося котёнка и дал ему еду.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 108,
+          "sentences": [
+            {
+              "text": "He enjoys listening to music while doing his homework at night.",
+              "language": "en"
+            },
+            {
+              "text": "Он любит слушать музыку, делая домашнее задание вечером.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 109,
+          "sentences": [
+            {
+              "text": "Sometimes, he rides his bike to the store to buy milk.",
+              "language": "en"
+            },
+            {
+              "text": "Иногда он едет на велосипеде в магазин за молоком.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 110,
+          "sentences": [
+            {
+              "text": "He always says thank you when someone helps him with tasks.",
+              "language": "en"
+            },
+            {
+              "text": "Он всегда говорит «спасибо», когда кто‑то помогает ему с делами.",
+              "language": "ru"
+            }
+          ]
+        }
+      ],
+      "language": "en"
+    },
+    {
+      "word": "book",
+      "part_of_speech": "n",
+      "level": "A1",
+      "category": "card.category.home_objects",
+      "id": 2,
+      "translations": [
+        {
+          "text": "книга",
+          "language": "ru"
+        }
+      ],
+      "sentences": [
+        {
+          "id": 201,
+          "sentences": [
+            {
+              "text": "I read a book before I go to sleep every night.",
+              "language": "en"
+            },
+            {
+              "text": "Я читаю книгу перед сном каждую ночь.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "sentences": [
+            {
+              "text": "She bought a new book from the small shop on Main Street.",
+              "language": "en"
+            },
+            {
+              "text": "Она купила новую книгу в небольшом магазине на Главной улице.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 203,
+          "sentences": [
+            {
+              "text": "The teacher gave each student a book to study for the test.",
+              "language": "en"
+            },
+            {
+              "text": "Учитель дал каждому ученику книгу для подготовки к тесту.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 204,
+          "sentences": [
+            {
+              "text": "My brother likes to draw pictures inside his favorite book.",
+              "language": "en"
+            },
+            {
+              "text": "Моему брату нравится рисовать картинки в своей любимой книге.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 205,
+          "sentences": [
+            {
+              "text": "We opened the book and looked at the colorful pictures together.",
+              "language": "en"
+            },
+            {
+              "text": "Мы открыли книгу и вместе посмотрели на яркие картинки.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 206,
+          "sentences": [
+            {
+              "text": "Can you please bring the book to the library tomorrow morning?",
+              "language": "en"
+            },
+            {
+              "text": "Не могли бы вы принести книгу в библиотеку завтра утром?",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 207,
+          "sentences": [
+            {
+              "text": "The little girl found a hidden book under the bed yesterday.",
+              "language": "en"
+            },
+            {
+              "text": "Вчера маленькая девочка нашла спрятанную книгу под кроватью.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 208,
+          "sentences": [
+            {
+              "text": "He writes his name on the cover of every book he owns.",
+              "language": "en"
+            },
+            {
+              "text": "Он пишет своё имя на обложке каждой своей книги.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 209,
+          "sentences": [
+            {
+              "text": "During the trip, I carried a small book in my backpack.",
+              "language": "en"
+            },
+            {
+              "text": "Во время поездки я носил небольшую книгу в рюкзаке.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 210,
+          "sentences": [
+            {
+              "text": "They shared one book and read it aloud at the park.",
+              "language": "en"
+            },
+            {
+              "text": "Они делились одной книгой и читали её вслух в парке.",
+              "language": "ru"
+            }
+          ]
+        }
+      ],
+      "language": "en"
+    },
+    {
+      "word": "alternative",
+      "part_of_speech": "n",
+      "level": "A2",
+      "category": "card.category.abstract_nouns",
+      "id": 3,
+      "translations": [
+        {
+          "text": "альтернатива",
+          "language": "ru"
+        },
+        {
+          "text": "вариант",
+          "language": "ru"
+        }
+      ],
+      "sentences": [
+        {
+          "id": 301,
+          "sentences": [
+            {
+              "text": "We need an alternative plan if the weather becomes rainy tomorrow.",
+              "language": "en"
+            },
+            {
+              "text": "Нам нужен альтернативный план, если завтра пойдёт дождь.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 302,
+          "sentences": [
+            {
+              "text": "She chose an alternative route to avoid the heavy traffic jam.",
+              "language": "en"
+            },
+            {
+              "text": "Она выбрала альтернативный путь, чтобы избежать сильной пробки.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 303,
+          "sentences": [
+            {
+              "text": "The teacher offered an alternative solution for the difficult math problem.",
+              "language": "en"
+            },
+            {
+              "text": "Учитель предложил альтернативное решение сложной математической задачи.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 304,
+          "sentences": [
+            {
+              "text": "Can you suggest an alternative gift for my friend's birthday celebration?",
+              "language": "en"
+            },
+            {
+              "text": "Можете предложить альтернативный подарок на день рождения моего друга?",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 305,
+          "sentences": [
+            {
+              "text": "Using bicycles is a healthy alternative to driving cars in the city.",
+              "language": "en"
+            },
+            {
+              "text": "Использовать велосипеды — здоровая альтернатива вождению машин в городе.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 306,
+          "sentences": [
+            {
+              "text": "The menu includes a vegetarian alternative for people who avoid meat.",
+              "language": "en"
+            },
+            {
+              "text": "В меню есть вегетарианская альтернатива для тех, кто не ест мясо.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 307,
+          "sentences": [
+            {
+              "text": "When the first movie was sold out, we looked for an alternative showtime.",
+              "language": "en"
+            },
+            {
+              "text": "Когда первый сеанс фильма распродали, мы искали альтернативное время показа.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 308,
+          "sentences": [
+            {
+              "text": "He bought an alternative brand because the original was too expensive.",
+              "language": "en"
+            },
+            {
+              "text": "Он купил альтернативный бренд, потому что оригинал был слишком дорогим.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 309,
+          "sentences": [
+            {
+              "text": "The school provides an alternative activity for students during lunch break.",
+              "language": "en"
+            },
+            {
+              "text": "Школа предлагает альтернативное занятие для учеников во время обеденного перерыва.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 310,
+          "sentences": [
+            {
+              "text": "Finding an alternative source of water helped the village survive the drought.",
+              "language": "en"
+            },
+            {
+              "text": "Нахождение альтернативного источника воды помогло деревне пережить засуху.",
+              "language": "ru"
+            }
+          ]
+        }
+      ],
+      "language": "en"
+    },
+    {
+      "word": "alternative",
+      "part_of_speech": "adj",
+      "level": "B1",
+      "category": "card.category.adjectives_location_and_origin",
+      "id": 4,
+      "translations": [
+        {
+          "text": "альтернативный",
+          "language": "ru"
+        }
+      ],
+      "sentences": [
+        {
+          "id": 401,
+          "sentences": [
+            {
+              "text": "We need an alternative solution because the original plan failed.",
+              "language": "en"
+            },
+            {
+              "text": "Нам нужен альтернативный вариант, потому что первоначальный план не сработал.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 402,
+          "sentences": [
+            {
+              "text": "She offered an alternative route that avoided the heavy traffic.",
+              "language": "en"
+            },
+            {
+              "text": "Она предложила альтернативный маршрут, который избегал сильной пробки.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 403,
+          "sentences": [
+            {
+              "text": "The teacher suggested an alternative method for solving the math problem.",
+              "language": "en"
+            },
+            {
+              "text": "Учитель предложил альтернативный способ решения математической задачи.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 404,
+          "sentences": [
+            {
+              "text": "If you don't like coffee, there is an alternative drink available.",
+              "language": "en"
+            },
+            {
+              "text": "Если вам не нравится кофе, можно выбрать альтернативный напиток.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 405,
+          "sentences": [
+            {
+              "text": "They chose an alternative energy source to reduce their electricity costs.",
+              "language": "en"
+            },
+            {
+              "text": "Они выбрали альтернативный источник энергии, чтобы сократить расходы на электроэнергию.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 406,
+          "sentences": [
+            {
+              "text": "Our company is looking for an alternative supplier after the contract ended.",
+              "language": "en"
+            },
+            {
+              "text": "Наша компания ищет альтернативного поставщика после окончания контракта.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 407,
+          "sentences": [
+            {
+              "text": "He found an alternative way to fix the computer without calling support.",
+              "language": "en"
+            },
+            {
+              "text": "Он нашёл альтернативный способ починить компьютер без обращения в службу поддержки.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 408,
+          "sentences": [
+            {
+              "text": "The restaurant provides an alternative menu for customers with dietary restrictions.",
+              "language": "en"
+            },
+            {
+              "text": "Ресторан предлагает альтернативное меню для клиентов с особыми диетическими ограничениями.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 409,
+          "sentences": [
+            {
+              "text": "She considered an alternative career after graduating from university.",
+              "language": "en"
+            },
+            {
+              "text": "Она рассмотрела альтернативную карьеру после окончания университета.",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": 410,
+          "sentences": [
+            {
+              "text": "We should explore an alternative strategy before making a final decision.",
+              "language": "en"
+            },
+            {
+              "text": "Нам следует изучить альтернативную стратегию перед тем, как принять окончательное решение.",
+              "language": "ru"
+            }
+          ]
+        }
+      ],
+      "language": "en"
+    }
+  ]
+}

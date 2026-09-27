@@ -20,4 +20,9 @@ Package.resolved
 # Local private data (do not commit)
 private.local.env
 /Lexico/Data/LocalSecrets.swift
-/cloudflare.local.env
+/Utilities/cloudflare.local.env
+/Utilities/tts/.venv/
+/Utilities/tts/output/
+/Utilities/tts/models/
+/Utilities/card-deck-generation/work/
+__pycache__/

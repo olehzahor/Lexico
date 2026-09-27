@@ -7,6 +7,11 @@ final class SettingsViewModel {
     private let store: SettingsStoreProtocol
     private let reminders: ReminderSchedulingProtocol
 
+    let decks: [Deck]
+    var activeDeckID: String {
+        didSet { store.set(.activeDeckID, value: .string(activeDeckID)) }
+    }
+
     var dailyGoal: Int {
         didSet { store.set(.dailyGoal, value: .int(dailyGoal)) }
     }
@@ -24,6 +29,9 @@ final class SettingsViewModel {
     init(store: SettingsStoreProtocol, reminders: ReminderSchedulingProtocol) {
         self.store = store
         self.reminders = reminders
+        decks = BundleCardsDataSource.availableDecks()
+        let savedDeckID = store.get(.activeDeckID, default: .string("default")).string ?? "default"
+        activeDeckID = decks.contains { $0.id == savedDeckID } ? savedDeckID : "default"
         dailyGoal = max(1, store.get(.dailyGoal, default: .int(20)).int ?? 20)
         let hour = store.get(.reminderHour, default: .int(19)).int ?? 19
         let minute = store.get(.reminderMinute, default: .int(0)).int ?? 0

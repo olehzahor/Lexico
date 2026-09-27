@@ -6,6 +6,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section("Deck") {
+                    Picker("Active deck", selection: $viewModel.activeDeckID) {
+                        ForEach(viewModel.decks) { deck in
+                            Text(deck.localizedName).tag(deck.id)
+                        }
+                    }
+                }
                 Section("Daily goal") {
                     Stepper(value: $viewModel.dailyGoal, in: 1...100, step: 1) {
                         LabeledContent("New cards per day", value: "\(viewModel.dailyGoal)")

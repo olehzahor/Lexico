@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CardsDataSource {
-    func fetchCards(for lang: String) -> [Card]
+    func fetchCards(for lang: String, deckID: String) -> [Card]
 }

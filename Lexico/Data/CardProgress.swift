@@ -19,6 +19,7 @@ enum ReviewGrade: Double, Codable, CaseIterable {
 @Model
 final class CardProgress {
     var cardID: Int
+    var deckID: String?
     
     private var stateRaw: Int
     
@@ -37,8 +38,9 @@ final class CardProgress {
     
     var ignored: Bool
     
-    init(cardID: Int) {
+    init(cardID: Int, deckID: String = "default") {
         self.cardID = cardID
+        self.deckID = deckID
         self.stateRaw = CardState.new.rawValue
         
         self.easeFactor = 2.3

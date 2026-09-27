@@ -105,8 +105,18 @@ Use template: `docs/adr/0000-template.md`.
 
 - Card progress is keyed by card ID. Treat IDs as stable identifiers, not positions in a bundled JSON file. Never seed ignored or reviewed progress from a numeric ID range; use explicit IDs from the intended set.
 - Keep the bundled card source and progress state separate. Replacing a card file must not silently change existing progress or mark new cards ignored.
+- Card and sentence IDs are local to a deck. A card ID collision across separate deck directories is valid; before making multiple decks available in one app database, include a deck identifier in persisted progress keys.
+- Each deck JSON owns its `categories` map. Every card's `category` key must have nonempty `en` and `ru` names in that map. Choose categories that fit the deck; do not add deck category names to a global string catalog. See `docs/adr/0008-deck-owned-category-localization.md`.
+- Keep `Lexico/Resources/Cards/example_cards_en.json` small and representative for deck generation prompts; see `docs/prompts/generate-card-deck.md`.
 - Store user preferences through `SettingsStoreProtocol`. Views bind to observable ViewModel state; other features read the same store so changes appear when those features become active.
 - The daily goal counts new cards learned today. Keep its default and allowed range consistent between the settings screen and session metrics.
 - Schedule reminder notifications through `ReminderSchedulingProtocol`. Request notification permission only when the user enables a reminder, and remove obsolete pending requests when the selected days or time change.
 - Represent reminder days using calendar weekday values (`1` = Sunday through `7` = Saturday). An empty selection means reminders are off.
 - Test preference persistence, denied notification permission, weekday selection, and rescheduling after time changes. Verify the app builds with all Swift files in the synchronized Xcode target, including previews.
+
+## 11. Audio Utilities and Cloudflare
+
+- Keep local audio generation in `Utilities/tts/` and R2 upload code in `Utilities/cloudflare-upload/`.
+- Save generated audio and manifests under `Utilities/tts/output/`; keep that directory and downloaded model files out of Git.
+- Keep real R2 credentials only in ignored `Utilities/cloudflare.local.env`. Maintain `Utilities/cloudflare.local.env.example` without secrets, and never log or commit credential values.
+- Scope R2 upload credentials to the intended bucket. Make upload tooling reviewable with a dry run and verification of uploaded objects.
