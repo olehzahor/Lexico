@@ -100,3 +100,13 @@ Create an ADR entry for decisions that affect:
 - cross-feature architecture patterns.
 
 Use template: `docs/adr/0000-template.md`.
+
+## 10. Cards and Settings
+
+- Card progress is keyed by card ID. Treat IDs as stable identifiers, not positions in a bundled JSON file. Never seed ignored or reviewed progress from a numeric ID range; use explicit IDs from the intended set.
+- Keep the bundled card source and progress state separate. Replacing a card file must not silently change existing progress or mark new cards ignored.
+- Store user preferences through `SettingsStoreProtocol`. Views bind to observable ViewModel state; other features read the same store so changes appear when those features become active.
+- The daily goal counts new cards learned today. Keep its default and allowed range consistent between the settings screen and session metrics.
+- Schedule reminder notifications through `ReminderSchedulingProtocol`. Request notification permission only when the user enables a reminder, and remove obsolete pending requests when the selected days or time change.
+- Represent reminder days using calendar weekday values (`1` = Sunday through `7` = Saturday). An empty selection means reminders are off.
+- Test preference persistence, denied notification permission, weekday selection, and rescheduling after time changes. Verify the app builds with all Swift files in the synchronized Xcode target, including previews.

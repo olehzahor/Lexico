@@ -23,7 +23,7 @@ struct RootView: View {
                     Label("Cards", systemImage: "square.stack.3d.up")
                 }
             
-            Text("Hey")
+            SettingsView(viewModel: SettingsViewModel(store: SettingsStore(), reminders: ReminderScheduler()))
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

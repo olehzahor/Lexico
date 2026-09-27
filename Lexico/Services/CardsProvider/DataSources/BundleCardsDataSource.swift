@@ -11,7 +11,7 @@ struct BundleCardsDataSource: CardsDataSource {
     private static let jsonDecoder = JSONDecoder()
 
     func fetchCards(for lang: String) -> [Card] {
-        guard let url = Bundle.main.url(forResource: "cards_\(lang)", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "alt_cards_\(lang)", withExtension: "json") else {
             print("⚠️ Could not find cards_\(lang).json")
             return []
         }

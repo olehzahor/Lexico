@@ -64,7 +64,8 @@ struct SessionView: View {
             initialValue: SessionViewModel(
                 cardsProvider: cardsProvider,
                 progressTracker: progressTracker,
-                metricsService: metricsService
+                metricsService: metricsService,
+                settingsStore: SettingsStore()
             )
         )
     }
