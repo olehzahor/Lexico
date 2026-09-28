@@ -74,7 +74,7 @@ final class SessionViewModel {
         }
 
         let isNew = (progressTracker.getProgressIfExists(for: card.id)?.state ?? .new) == .new
-        self.activeCardData = CardView.Data(card: card, isNew: isNew)
+        self.activeCardData = CardView.Data(card: card, deckID: shownDeckID, isNew: isNew)
     }
 
     init(

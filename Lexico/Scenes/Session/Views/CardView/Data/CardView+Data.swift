@@ -10,6 +10,7 @@ import Foundation
 extension CardView {
     struct Data {
         let cardID: Int
+        let deckID: String
         let word: String
         let partOfSpeech: String
         let levelBadge: String
@@ -23,10 +24,11 @@ extension CardView {
 }
 
 extension CardView.Data {
-    init(card: Card, isNew: Bool, nativeLanguage: String = "ru") {
+    init(card: Card, deckID: String, isNew: Bool, nativeLanguage: String = "ru") {
         let sentence = card.getRandomSentence(translation: nativeLanguage)
 
         self.cardID = card.id
+        self.deckID = deckID
         self.word = card.word
         self.partOfSpeech = card.partOfSpeech
         self.levelBadge = card.level

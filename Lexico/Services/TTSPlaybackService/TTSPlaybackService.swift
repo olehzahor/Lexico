@@ -14,23 +14,23 @@ final class TTSPlaybackService: TTSPlaybackServiceProtocol {
     private let mediaURLProvider: any MediaURLProvider
     private let audioPlayer: any AudioPlayer
 
-    func prepareWord(id: Int) {
-        guard let url = mediaURLProvider.wordURL(for: id) else { return }
+    func prepareWord(id: Int, deckID: String) {
+        guard let url = mediaURLProvider.wordURL(for: id, deckID: deckID) else { return }
         audioPlayer.prepare(url: url)
     }
 
-    func prepareSentence(id: Int) {
-        guard let url = mediaURLProvider.sentenceURL(for: id) else { return }
+    func prepareSentence(id: Int, deckID: String) {
+        guard let url = mediaURLProvider.sentenceURL(for: id, deckID: deckID) else { return }
         audioPlayer.prepare(url: url)
     }
 
-    func playWord(id: Int) {
-        guard let url = mediaURLProvider.wordURL(for: id) else { return }
+    func playWord(id: Int, deckID: String) {
+        guard let url = mediaURLProvider.wordURL(for: id, deckID: deckID) else { return }
         audioPlayer.play(url: url)
     }
 
-    func playSentence(id: Int) {
-        guard let url = mediaURLProvider.sentenceURL(for: id) else { return }
+    func playSentence(id: Int, deckID: String) {
+        guard let url = mediaURLProvider.sentenceURL(for: id, deckID: deckID) else { return }
         audioPlayer.play(url: url)
     }
 

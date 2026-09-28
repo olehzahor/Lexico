@@ -2,6 +2,41 @@
 
 Use Codex in the Lexico repository to turn an English word list into one complete deck JSON file. This is a file-writing task: Codex should keep working until the file exists and has been checked. The word list is supplied by the user as a UTF-8 `.txt` file, one word or phrase per line. The reference is `Lexico/Resources/Cards/example_cards_en.json`.
 
+## Resume Alternative: Unsure Words on another computer
+
+The handoff archive contains a small Lexico directory tree with this README, `AGENTS.md`, `unsure-words.txt`, the example deck, and all saved drafts in `work/unsure_words/`. Extract it into an **empty directory** and open that directory as the Codex workspace. The archive is sufficient to continue generation and to assemble the finished JSON; it does not contain the full app or an Xcode project. If a full Lexico checkout is available, copy the archived files into their matching paths there instead.
+
+Current checkpoint: `work/unsure_words/manifest.json` lists 40 complete batches covering source lines **1–215** of 2514. They contain 286 cards and 2860 English–Russian sentence pairs. The next unprocessed source line is **216, `charity`**. The deck ID is `unsure_words`; its English name is `Alternative: Unsure Words` and its Russian name is `Альтернативная: незнакомые слова`. Drafts are first-pass work and still need linguistic review. The separate `work/test*` experiments are not part of this checkpoint.
+
+From the extracted root, check the transfer before continuing:
+
+```sh
+python3 Utilities/card-deck-generation/work/unsure_words/verify_progress.py
+```
+
+Select the **Luna** model in Codex and use this request:
+
+```text
+Read AGENTS.md, Utilities/card-deck-generation/README.md,
+Utilities/card-deck-generation/work/unsure_words/manifest.json,
+Utilities/card-deck-generation/work/unsure_words/assemble.py, and
+Lexico/Resources/Cards/example_cards_en.json.
+
+Continue the Alternative: Unsure Words deck from unsure-words.txt. First run
+verify_progress.py; use its reported next source line rather than assuming this
+README is current. Keep the existing draft format and all README content rules,
+including exactly 10 English sentences and 10 Russian translations per card.
+Generate about five source entries per new batch, save each batch as the next
+batch-NNNN.json in work/unsure_words/, and update manifest.json only after the
+batch file has passed checks. Reuse suitable existing category keys where possible;
+add any new key with en and ru names to CATEGORY_NAMES in assemble.py.
+Continue autonomously through the source list, checking saved progress before
+each resumed session. Do not assemble or present a partial deck as complete.
+After all unique entries are covered, run assemble.py and the final checks below.
+```
+
+Each draft has `source_lines: [first, last]` and an `entries` array. Each card entry has `word`, `part_of_speech`, `level`, `category`, `translations` (Russian strings), and `examples` (ten `[English, Russian]` pairs). Use `source_entry` when the source spelling differs from the dictionary headword, as with `cans` → `can`. The manifest stores the same line range as `lines: "first-last"` and names the draft file. Do not renumber cards or sentences in drafts; `assemble.py` assigns IDs after all source entries are complete. Its output path is `Lexico/Resources/Cards/unsure_words_en.json` relative to the extracted root.
+
 ## Start a run
 
 1. Put the source TXT somewhere Codex can read. Keep the original file unchanged.

@@ -9,9 +9,9 @@ import Foundation
 
 @MainActor
 protocol TTSPlaybackServiceProtocol: AnyObject {
-    func prepareWord(id: Int)
-    func prepareSentence(id: Int)
-    func playWord(id: Int)
-    func playSentence(id: Int)
+    func prepareWord(id: Int, deckID: String)
+    func prepareSentence(id: Int, deckID: String)
+    func playWord(id: Int, deckID: String)
+    func playSentence(id: Int, deckID: String)
     func stop()
 }

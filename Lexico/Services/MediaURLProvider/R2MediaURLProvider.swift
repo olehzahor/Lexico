@@ -42,17 +42,19 @@ final class R2MediaURLProvider: MediaURLProvider {
         self.nowProvider = nowProvider
     }
 
-    func wordURL(for id: Int) -> URL? {
-        mediaURL(directory: "words", id: id, fileExtension: "m4a")
+    func wordURL(for id: Int, deckID: String) -> URL? {
+        mediaURL(directory: "words", id: id, deckID: deckID, fileExtension: "m4a")
     }
 
-    func sentenceURL(for id: Int) -> URL? {
-        mediaURL(directory: "sentences", id: id, fileExtension: "m4a")
+    func sentenceURL(for id: Int, deckID: String) -> URL? {
+        mediaURL(directory: "sentences", id: id, deckID: deckID, fileExtension: "m4a")
     }
 
-    private func mediaURL(directory: String, id: Int, fileExtension: String) -> URL? {
+    private func mediaURL(directory: String, id: Int, deckID: String, fileExtension: String) -> URL? {
         guard
             id > 0,
+            !deckID.isEmpty,
+            deckID.unicodeScalars.allSatisfy({ CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz0123456789_").contains($0) }),
             let endpointURL,
             bucket.isEmpty == false,
             accessKeyID.isEmpty == false,
@@ -61,7 +63,7 @@ final class R2MediaURLProvider: MediaURLProvider {
             return nil
         }
 
-        let objectKey = "\(directory)/\(formattedFileID(id)).\(fileExtension)"
+        let objectKey = "\(deckID)/\(directory)/\(formattedFileID(id)).\(fileExtension)"
         let canonicalURI = "/\(bucket)/\(objectKey)"
         let host = endpointURL.host() ?? ""
         guard host.isEmpty == false else { return nil }

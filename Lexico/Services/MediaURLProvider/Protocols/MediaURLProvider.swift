@@ -8,6 +8,6 @@
 import Foundation
 
 protocol MediaURLProvider: AnyObject {
-    func wordURL(for id: Int) -> URL?
-    func sentenceURL(for id: Int) -> URL?
+    func wordURL(for id: Int, deckID: String) -> URL?
+    func sentenceURL(for id: Int, deckID: String) -> URL?
 }

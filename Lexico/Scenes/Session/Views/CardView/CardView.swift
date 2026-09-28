@@ -55,7 +55,7 @@ struct CardView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.black)
                     .onTapGesture {
-                        ttsService.playWord(id: data.cardID)
+                        ttsService.playWord(id: data.cardID, deckID: data.deckID)
                     }
             }
             Text(data.partOfSpeech)
@@ -101,7 +101,7 @@ struct CardView: View {
                 .foregroundStyle(.black)
                 .padding(.vertical)
                 .onTapGesture {
-                    ttsService.playSentence(id: data.exampleSentenceID)
+                    ttsService.playSentence(id: data.exampleSentenceID, deckID: data.deckID)
                 }
             Text(data.exampleTranslation)
                 .fontDesign(.serif)
@@ -144,15 +144,15 @@ struct CardView: View {
             isFlipped.toggle()
         }
         .onAppear {
-            ttsService.prepareWord(id: data.cardID)
-            ttsService.prepareSentence(id: data.exampleSentenceID)
-            ttsService.playWord(id: data.cardID)
+            ttsService.prepareWord(id: data.cardID, deckID: data.deckID)
+            ttsService.prepareSentence(id: data.exampleSentenceID, deckID: data.deckID)
+            ttsService.playWord(id: data.cardID, deckID: data.deckID)
         }
         .onChange(of: isFlipped) { _, isFlipped in
             if isFlipped {
-                ttsService.playSentence(id: data.exampleSentenceID)
+                ttsService.playSentence(id: data.exampleSentenceID, deckID: data.deckID)
             } else {
-                ttsService.playWord(id: data.cardID)
+                ttsService.playWord(id: data.cardID, deckID: data.deckID)
             }
         }
     }
@@ -174,6 +174,7 @@ struct CardView: View {
         CardView(
             data: .init(
                 cardID: 1,
+                deckID: "default",
                 word: "benevolent",
                 partOfSpeech: "adjective",
                 levelBadge: "B2",
@@ -196,6 +197,7 @@ struct CardView: View {
         CardView(
             data: .init(
                 cardID: 42,
+                deckID: "default",
                 word: "convey",
                 partOfSpeech: "verb",
                 levelBadge: "B1",
