@@ -1,6 +1,6 @@
 # Cloudflare R2 upload
 
-This directory is the home for the audio upload utility. It will read `Utilities/cloudflare.local.env` and upload the generated audio and manifest to an R2 bucket. The utility should support a dry run, skip unchanged objects by hash, and verify object counts and sizes after upload.
+`upload_audio.py` uploads generated M4A audio from `Utilities/tts/output/<deck_id>/<voice>/` to the same `<deck_id>/words/<id>.m4a` and `<deck_id>/sentences/<id>.m4a` layout the app requests. It reads credentials from `Utilities/cloudflare.local.env`, defaults to a dry run, skips objects with matching size and SHA-256 metadata, and verifies uploaded hashes and the final key list. It does not upload the local manifest.
 
 Create an R2 API token in the Cloudflare dashboard with **Object Read & Write** permission scoped to the target bucket. Copy its Access Key ID and Secret Access Key into the ignored `Utilities/cloudflare.local.env`; see `Utilities/cloudflare.local.env.example`. Do not reuse the Wrangler OAuth token or put credentials in source files.
 
@@ -17,3 +17,15 @@ python3 Utilities/cloudflare-upload/migrate_default_audio.py --execute
 ```
 
 The first invocation is a dry run. The execute mode copies each object to `default/`, compares size and ETag, confirms the source is unchanged, then deletes the original key. It verifies that the old prefixes are empty and the destinations exist. It can be rerun after an interruption. Existing destination keys are never overwritten.
+
+## Upload a deck
+
+Install the uploader dependency in the Python environment you will use, then run a dry run and execute the upload:
+
+```sh
+python3 -m pip install -r Utilities/cloudflare-upload/requirements.txt
+python3 Utilities/cloudflare-upload/upload_audio.py --deck-id unsure_words
+python3 Utilities/cloudflare-upload/upload_audio.py --deck-id unsure_words --execute
+```
+
+The uploader uses `Utilities/tts/output/<deck_id>/af_heart` by default. Pass `--audio-dir` to use another prepared audio directory. Uploads can be resumed safely; matching objects are skipped, and changed files at the same stable ID path are uploaded again.

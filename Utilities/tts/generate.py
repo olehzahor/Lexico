@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import shutil
@@ -33,6 +32,15 @@ def load_set(path: Path) -> list[dict]:
     if not isinstance(words, list):
         raise ValueError(f"{path.name}: expected a 'words' array")
     return words
+
+
+def load_deck_id(path: Path) -> str:
+    with path.open(encoding="utf-8") as handle:
+        document = json.load(handle)
+    deck_id = document.get("metadata", {}).get("deck", {}).get("id")
+    if not isinstance(deck_id, str) or not re.fullmatch(r"[a-z0-9_]+", deck_id):
+        raise ValueError(f"{path.name}: expected a valid metadata.deck.id")
+    return deck_id
 
 
 def discover_sets(cards_dir: Path = CARDS_DIR) -> list[tuple[Path, list[dict]]]:
@@ -83,11 +91,10 @@ def collect_items(words: list[dict]) -> list[dict]:
     return items
 
 
-def object_path(item: dict, voice: str) -> Path:
-    fingerprint = hashlib.sha256(
-        json.dumps([MODEL, voice, item["text"]], ensure_ascii=False).encode("utf-8")
-    ).hexdigest()[:12]
-    return Path(item["kind"]) / f"{item['id']}-{fingerprint}.mp3"
+def object_path(item: dict) -> Path:
+    item_id = int(item["id"])
+    filename = f"{item_id:03d}.m4a" if item_id < 100 else f"{item_id}.m4a"
+    return Path(item["kind"]) / filename
 
 
 def download_models() -> tuple[Path, Path]:
@@ -117,14 +124,15 @@ def synthesize(model, text: str, voice: str, target: Path) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as temp_dir:
         wav_path = Path(temp_dir) / "speech.wav"
-        mp3_path = Path(temp_dir) / "speech.mp3"
+        m4a_path = Path(temp_dir) / "speech.m4a"
         sf.write(wav_path, samples, SAMPLE_RATE, subtype="PCM_16")
         subprocess.run(
             ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav_path),
-             "-ac", "1", "-ar", str(SAMPLE_RATE), "-codec:a", "libmp3lame", "-b:a", "96k", str(mp3_path)],
+             "-map_metadata", "-1", "-vn", "-ac", "1", "-ar", str(SAMPLE_RATE),
+             "-codec:a", "aac", "-b:a", "48k", "-movflags", "+faststart", str(m4a_path)],
             check=True,
         )
-        shutil.move(mp3_path, target)
+        shutil.move(m4a_path, target)
 
 
 def main() -> int:
@@ -150,15 +158,38 @@ def main() -> int:
 
     selected_words = words[:args.limit] if args.limit else words
     items = collect_items(selected_words)
-    destination = OUTPUT_DIR / path.stem / args.voice
-    pending = [item for item in items if not (destination / object_path(item, args.voice)).is_file()
-               or (destination / object_path(item, args.voice)).stat().st_size == 0]
+    deck_id = load_deck_id(path)
+    destination = OUTPUT_DIR / deck_id / args.voice
+    manifest_path = destination / "manifest.json"
+    previous_manifest = {}
+    if manifest_path.is_file():
+        try:
+            previous_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            previous_manifest = {}
+    previous_items = {
+        (item.get("kind"), item.get("id")): item
+        for item in previous_manifest.get("items", [])
+        if isinstance(item, dict)
+    }
+    manifest_matches = previous_manifest.get("model") == MODEL and previous_manifest.get("voice") == args.voice
+    pending = []
+    for item in items:
+        target = destination / object_path(item)
+        previous = previous_items.get((item["kind"], item["id"]), {})
+        if (
+            not target.is_file()
+            or target.stat().st_size == 0
+            or not manifest_matches
+            or previous.get("text") != item["text"]
+        ):
+            pending.append(item)
     print(f"Selected {path.name}: {len(selected_words)} words, {len(items) - len(selected_words)} sentences")
     print(f"Output: {destination} | to generate: {len(pending)} | existing: {len(items) - len(pending)}")
     if args.dry_run:
         return 0
     if pending and not shutil.which("ffmpeg"):
-        parser.error("ffmpeg is required to encode MP3 files")
+        parser.error("ffmpeg is required to encode AAC in M4A files")
     if pending and not shutil.which("espeak-ng"):
         parser.error("espeak-ng is required for English pronunciation (macOS: brew install espeak-ng)")
     if pending:
@@ -170,18 +201,19 @@ def main() -> int:
         model_path, voices_path = download_models()
         model = Kokoro(str(model_path), str(voices_path))
         for index, item in enumerate(pending, 1):
-            target = destination / object_path(item, args.voice)
+            target = destination / object_path(item)
             spoken_text = item["text"] + "." if item["kind"] == "words" else item["text"]
             print(f"[{index}/{len(pending)}] {item['kind']} {item['id']}: {item['text']}", flush=True)
             synthesize(model, spoken_text, args.voice, target)
 
     manifest = {
         "card_set": path.name,
+        "deck_id": deck_id,
         "model": MODEL,
         "voice": args.voice,
-        "format": "MP3, mono, 24 kHz, 96 kb/s",
+        "format": "AAC in M4A container, mono, 24 kHz, 48 kb/s",
         "items": [
-            {**item, "file": str(object_path(item, args.voice))}
+            {**item, "file": str(object_path(item))}
             for item in items
         ],
     }
