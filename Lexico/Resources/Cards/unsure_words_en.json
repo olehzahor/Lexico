@@ -3,9 +3,10 @@
     "deck": {
       "id": "unsure_words",
       "language": "en",
+      "leveled": false,
       "names": {
         "en": "Alternative: Unsure Words",
-        "ru": "Альтернативная: незнакомые слова"
+        "ru": "Альтернативная: неуверенные слова"
       }
     },
     "source_files": [

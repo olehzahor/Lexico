@@ -186,6 +186,17 @@
     "OK" : {
 
     },
+    "Overall progress" : {
+      "comment" : "Session metrics label for decks without levels",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общий прогресс"
+          }
+        }
+      }
+    },
     "Practice your cards and work toward today's goal." : {
       "comment" : "Reminder notification body"
     },

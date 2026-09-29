@@ -8,6 +8,7 @@
 import Foundation
 
 protocol CardsProviderProtocol: AnyObject {
+    func getActiveDeck(for language: String) -> Deck?
     func getAllCards(for lang: String) -> [Card]
     func getReviewQueue(for lang: String) -> [ReviewQueueItem]
     func getAllCardsForReview(for lang: String) -> [Card]

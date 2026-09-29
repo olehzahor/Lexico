@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "deck": {"id": "example", "language": "en", "names": {"en": "Example Cards", "ru": "Пример карточек"}},
+    "deck": {"id": "example", "language": "en", "leveled": false, "names": {"en": "Example Cards", "ru": "Пример карточек"}},
     "source_files": [
       "cards_en.json"
     ],

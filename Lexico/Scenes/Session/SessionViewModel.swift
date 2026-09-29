@@ -37,6 +37,16 @@ final class SessionViewModel {
         "\(metricsService.metrics.currentLevel) \(String(localized: "completion", comment: "Session metrics label")): \(currentLevelCompletionText)"
     }
 
+    var completionTitle: String {
+        if metricsService.metrics.isLeveledDeck {
+            return currentLevelTitle
+        }
+
+        let overallCompletion = metricsService.metrics.overallCompletion
+            .formatted(.percent.precision(.fractionLength(2)))
+        return "\(String(localized: "Overall progress", comment: "Session metrics label for decks without levels")): \(overallCompletion)"
+    }
+
     func refresh() {
         dailyGoal = max(1, settingsStore.get(.dailyGoal, default: .int(20)).int ?? 20)
         let deckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"

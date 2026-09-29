@@ -13,10 +13,12 @@ import Observation
 final class SessionMetricsService {
     struct Metrics {
         var todayLearnedNewCardsCount: Int
+        var isLeveledDeck: Bool
         var currentLevel: String
         var reviewCountOnCurrentLevel: Int
         var dueReviewCountOnCurrentLevel: Int
         var currentLevelCompletion: Double
+        var overallCompletion: Double
     }
 
     var metrics: Metrics
@@ -38,10 +40,12 @@ final class SessionMetricsService {
         self.defaultLevel = defaultLevel
         self.metrics = Metrics(
             todayLearnedNewCardsCount: 0,
+            isLeveledDeck: false,
             currentLevel: defaultLevel,
             reviewCountOnCurrentLevel: 0,
             dueReviewCountOnCurrentLevel: 0,
-            currentLevelCompletion: 0
+            currentLevelCompletion: 0,
+            overallCompletion: 0
         )
 
         let progressChanges = progressTracker.progressChanges
@@ -55,14 +59,17 @@ final class SessionMetricsService {
     }
 
     func refresh(now: Date = .now) {
+        let isLeveledDeck = cardsProvider.getActiveDeck(for: language)?.leveled ?? false
         let allCards = cardsProvider.getAllCards(for: language)
         guard allCards.isEmpty == false else {
             metrics = Metrics(
                 todayLearnedNewCardsCount: 0,
+                isLeveledDeck: isLeveledDeck,
                 currentLevel: defaultLevel,
                 reviewCountOnCurrentLevel: 0,
                 dueReviewCountOnCurrentLevel: 0,
-                currentLevelCompletion: 0
+                currentLevelCompletion: 0,
+                overallCompletion: 0
             )
             return
         }
@@ -79,12 +86,22 @@ final class SessionMetricsService {
         let eligibleCount = max(0, levelCardIDs.count - ignoredCountOnCurrentLevel)
         let completion = eligibleCount == 0 ? 0 : Double(reviewCountOnCurrentLevel) / Double(eligibleCount)
 
+        let allCardIDs = Set(allCards.map(\.id))
+        let reviewCountOverall = progressTracker.fetchReviewCount(forCardIDs: allCardIDs)
+        let ignoredCountOverall = progressTracker.fetchIgnoredCount(forCardIDs: allCardIDs)
+        let eligibleOverallCount = max(0, allCardIDs.count - ignoredCountOverall)
+        let overallCompletion = eligibleOverallCount == 0
+            ? 0
+            : Double(reviewCountOverall) / Double(eligibleOverallCount)
+
         metrics = Metrics(
             todayLearnedNewCardsCount: todayLearnedNewCardsCount,
+            isLeveledDeck: isLeveledDeck,
             currentLevel: currentLevel,
             reviewCountOnCurrentLevel: reviewCountOnCurrentLevel,
             dueReviewCountOnCurrentLevel: dueReviewCountOnCurrentLevel,
-            currentLevelCompletion: completion
+            currentLevelCompletion: completion,
+            overallCompletion: overallCompletion
         )
     }
 }

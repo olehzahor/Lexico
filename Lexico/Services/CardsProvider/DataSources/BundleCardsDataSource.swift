@@ -17,11 +17,18 @@ struct BundleCardsDataSource: CardsDataSource {
         let urls = Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) ?? []
         return urls.compactMap { url in
             guard url.deletingPathExtension().lastPathComponent.hasSuffix("_en"),
-                  !url.lastPathComponent.hasPrefix("example_"),
                   let data = try? Data(contentsOf: url),
                   let metadata = try? jsonDecoder.decode(DeckMetadataResponse.self, from: data) else { return nil }
             return metadata.metadata.deck
         }.sorted { $0.id < $1.id }
+    }
+
+    func fetchDeck(for deckID: String, language: String) -> Deck? {
+        let prefix = filePrefix ?? (deckID == "default" ? "cards" : deckID)
+        guard let url = Bundle.main.url(forResource: "\(prefix)_\(language)", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let metadata = try? Self.jsonDecoder.decode(DeckMetadataResponse.self, from: data) else { return nil }
+        return metadata.metadata.deck
     }
 
     func fetchCards(for lang: String, deckID: String) -> [Card] {

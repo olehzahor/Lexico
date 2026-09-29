@@ -13,6 +13,19 @@ final class CardsProvider: CardsProviderProtocol {
     private let settingsStore: SettingsStoreProtocol
 
     private var cardsCache: [String: [Card]] = [:]
+    private var deckCache: [String: Deck] = [:]
+
+    func getActiveDeck(for language: String) -> Deck? {
+        let deckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"
+        let cacheKey = "\(deckID):\(language)"
+        if let cachedDeck = deckCache[cacheKey] {
+            return cachedDeck
+        }
+
+        guard let deck = dataSource.fetchDeck(for: deckID, language: language) else { return nil }
+        deckCache[cacheKey] = deck
+        return deck
+    }
 
     func getAllCards(for lang: String) -> [Card] {
         let deckID = settingsStore.get(.activeDeckID, default: .string("default")).string ?? "default"

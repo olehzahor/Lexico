@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "deck": {"id": "default", "language": "en", "names": {"en": "Default Cards", "ru": "Обычные карточки"}},
+    "deck": {"id": "default", "language": "en", "leveled": true, "names": {"en": "Default Cards", "ru": "Обычные карточки"}},
     "source_files": [
       "a1.json",
       "a2.json",
