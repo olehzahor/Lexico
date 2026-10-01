@@ -13,31 +13,59 @@ final class TTSAudioPlayer: AudioPlayer {
     static let shared = TTSAudioPlayer()
 
     private let player: AVPlayer
+    private let fileCache: AudioFileCache
     private let itemCache: AudioPlayerItemCache
     private var isAudioSessionConfigured = false
+    private var playbackRequestID = UUID()
 
     func prepare(url: URL) {
-        configureAudioSessionIfNeeded()
-        itemCache.prepare(url: url, makeItem: makeItem)
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let localURL = try await fileCache.fileURL(for: url)
+                itemCache.prepare(url: localURL, makeItem: makeItem)
+            } catch {
+                // Playback retries the download if preparation fails.
+            }
+        }
     }
 
     func play(url: URL) {
-        configureAudioSessionIfNeeded()
+        playbackRequestID = UUID()
+        let requestID = playbackRequestID
+        player.pause()
+        player.replaceCurrentItem(with: nil)
 
-        let item = itemCache.item(for: url, makeItem: makeItem)
-        if player.currentItem !== item {
-            player.replaceCurrentItem(with: item)
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let localURL = try await fileCache.fileURL(for: url)
+                guard playbackRequestID == requestID else { return }
+
+                let item = itemCache.item(for: localURL, makeItem: makeItem)
+                guard try await item.asset.load(.isPlayable) else { return }
+                guard playbackRequestID == requestID else { return }
+
+                configureAudioSessionIfNeeded()
+                player.replaceCurrentItem(with: item)
+                player.automaticallyWaitsToMinimizeStalling = true
+
+                let seekCompleted: Bool = await withCheckedContinuation { continuation in
+                    player.seek(to: .zero, toleranceBefore: .zero, toleranceAfter: .zero) { completed in
+                        continuation.resume(returning: completed)
+                    }
+                }
+                guard seekCompleted, playbackRequestID == requestID else { return }
+
+                player.play()
+            } catch {
+                // A later tap can retry the request.
+            }
         }
-
-        if shouldRestartFromBeginning(item) {
-            item.seek(to: .zero, completionHandler: nil)
-        }
-
-        player.automaticallyWaitsToMinimizeStalling = false
-        player.playImmediately(atRate: 1.0)
     }
 
     func stop() {
+        playbackRequestID = UUID()
         player.pause()
         player.replaceCurrentItem(with: nil)
     }
@@ -56,19 +84,12 @@ final class TTSAudioPlayer: AudioPlayer {
     }
 
     private func makeItem(url: URL) -> AVPlayerItem {
-        let item = AVPlayerItem(url: url)
-        item.preferredForwardBufferDuration = 0
-        return item
-    }
-
-    private func shouldRestartFromBeginning(_ item: AVPlayerItem) -> Bool {
-        let durationSeconds = item.duration.seconds
-        guard durationSeconds.isFinite, durationSeconds > 0 else { return false }
-        return item.currentTime().seconds >= (durationSeconds - 0.05)
+        AVPlayerItem(url: url)
     }
 
     private init(player: AVPlayer = AVPlayer()) {
         self.player = player
+        self.fileCache = AudioFileCache()
         self.itemCache = AudioPlayerItemCache(maxItems: 50)
     }
 }

@@ -57,6 +57,20 @@ class CardsProgressTracker {
         progressChangesContinuation?.yield(())
     }
 
+    func preignoreCards(_ cardIDs: Set<Int>) {
+        let existingIDs = Set(currentProgress().map(\.cardID))
+        let newIDs = cardIDs.subtracting(existingIDs)
+        guard newIDs.isEmpty == false else { return }
+
+        for cardID in newIDs.sorted() {
+            let progress = CardProgress(cardID: cardID, deckID: activeDeckID)
+            progress.setIgnored(true)
+            modelContext.insert(progress)
+        }
+        try? modelContext.save()
+        progressChangesContinuation?.yield(())
+    }
+
     // MARK: - CardsProgressTrackerProtocol (Read)
     func getAllProgress() -> [CardProgress] { currentProgress() }
 

@@ -9,6 +9,7 @@ import Foundation
 
 final class CardsProvider: CardsProviderProtocol {
     private let progressTracker: CardsProviderProgressReader
+    private let progressSeeder: CardsProviderProgressSeeder
     private let dataSource: any CardsDataSource
     private let settingsStore: SettingsStoreProtocol
 
@@ -35,6 +36,10 @@ final class CardsProvider: CardsProviderProtocol {
         }
 
         let cards = dataSource.fetchCards(for: lang, deckID: deckID)
+        if let deck = getActiveDeck(for: lang) {
+            let cardIDs = Set(cards.map(\.id))
+            progressSeeder.preignoreCards(Set(deck.preignoredWords).intersection(cardIDs))
+        }
         cardsCache[cacheKey] = cards
         return cards
     }
@@ -94,11 +99,12 @@ final class CardsProvider: CardsProviderProtocol {
     }
 
     init(
-        progressManager: CardsProviderProgressReader,
+        progressManager: CardsProviderProgressReader & CardsProviderProgressSeeder,
         dataSource: any CardsDataSource = BundleCardsDataSource(),
         settingsStore: SettingsStoreProtocol = SettingsStore()
     ) {
         self.progressTracker = progressManager
+        self.progressSeeder = progressManager
         self.dataSource = dataSource
         self.settingsStore = settingsStore
     }

@@ -66,7 +66,7 @@ extension CardProgress {
     }
 
     private func addDays(_ days: Int, to date: Date) -> Date {
-        Calendar.current.date(byAdding: .day, value: days, to: date) ?? date
+        date.addingTimeInterval(TimeInterval(days) * 24 * 60 * 60 - 60 * 60)
     }
 
     // MARK: - Public API
